@@ -1,0 +1,30 @@
+{
+  "approach_1_reference": {
+    "name": "Closed-Form Date Modifiers",
+    "technique": "Direct date arithmetic using SQLite 'weekday N' modifier",
+    "time_complexity": "O(1) per row",
+    "memory_overhead": "O(1) auxiliary space (no intermediate row generation)",
+    "portability": "SQLite-specific date modifier semantics",
+    "key_constructs": [
+      "date()",
+      "printf()",
+      "'weekday ' || dayofweek_num",
+      "CASE"
+    ]
+  },
+  "approach_2_alternative": {
+    "name": "Recursive Calendar Expansion",
+    "technique": "Generates complete monthly calendar via recursive CTE, maps weekdays, and filters via window functions",
+    "time_complexity": "O(days_in_month) ~ O(31) per row",
+    "memory_overhead": "Intermediate table of 28-31 rows generated per record",
+    "portability": "Standard SQL recursive CTE and window functions",
+    "key_constructs": [
+      "WITH RECURSIVE",
+      "strftime('%w')",
+      "ROW_NUMBER() OVER",
+      "BETWEEN 13 AND 19"
+    ]
+  },
+  "genuinely_different": true,
+  "both_passed_all_tests": true
+}

@@ -1,0 +1,952 @@
+[
+  {
+    "description": "when teenth Monday is the 13th, the first day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Monday is the 19th, the last day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Monday is some day in the middle of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Tuesday is the 19th, the last day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Tuesday is some day in the middle of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Tuesday is the 13th, the first day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Wednesday is some day in the middle of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Wednesday is the 13th, the first day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Wednesday is the 19th, the last day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Thursday is some day in the middle of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Thursday is the 13th, the first day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Thursday is the 19th, the last day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Friday is the 19th, the last day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Friday is some day in the middle of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Friday is the 13th, the first day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Saturday is some day in the middle of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Saturday is the 13th, the first day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Saturday is the 19th, the last day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Sunday is the 19th, the last day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Sunday is some day in the middle of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when teenth Sunday is the 13th, the first day of the teenth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Monday is some day in the middle of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Monday is the 1st, the first day of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Tuesday is the 7th, the last day of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Tuesday is some day in the middle of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Wednesday is some day in the middle of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Wednesday is the 7th, the last day of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Thursday is some day in the middle of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Thursday is another day in the middle of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Friday is the 1st, the first day of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Friday is some day in the middle of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Saturday is some day in the middle of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Saturday is another day in the middle of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Sunday is some day in the middle of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Sunday is the 7th, the last day of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Monday is some day in the middle of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Monday is the 8th, the first day of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Tuesday is the 14th, the last day of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Tuesday is some day in the middle of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Wednesday is some day in the middle of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Wednesday is the 14th, the last day of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Thursday is some day in the middle of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Thursday is another day in the middle of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Friday is the 8th, the first day of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Friday is some day in the middle of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Saturday is some day in the middle of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Saturday is another day in the middle of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Sunday is some day in the middle of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when second Sunday is the 14th, the last day of the second week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Monday is some day in the middle of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Monday is the 15th, the first day of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Tuesday is the 21st, the last day of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Tuesday is some day in the middle of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Wednesday is some day in the middle of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Wednesday is the 21st, the last day of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Thursday is some day in the middle of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Thursday is another day in the middle of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Friday is the 15th, the first day of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Friday is some day in the middle of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Saturday is some day in the middle of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Saturday is another day in the middle of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Sunday is some day in the middle of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when third Sunday is the 21st, the last day of the third week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Monday is some day in the middle of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Monday is the 22nd, the first day of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Tuesday is the 28th, the last day of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Tuesday is some day in the middle of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Wednesday is some day in the middle of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Wednesday is the 28th, the last day of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Thursday is some day in the middle of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Thursday is another day in the middle of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Friday is the 22nd, the first day of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Friday is some day in the middle of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Saturday is some day in the middle of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Saturday is another day in the middle of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Sunday is some day in the middle of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when fourth Sunday is the 28th, the last day of the fourth week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Monday in a month with four Mondays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Monday in a month with five Mondays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Tuesday in a month with four Tuesdays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Tuesday in another month with four Tuesdays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Wednesday in a month with five Wednesdays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Wednesday in a month with four Wednesdays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Thursday in a month with four Thursdays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Thursday in a month with five Thursdays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Friday in a month with five Fridays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Friday in a month with four Fridays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Saturday in a month with four Saturdays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Saturday in another month with four Saturdays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Sunday in a month with five Sundays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Sunday in a month with four Sundays",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when last Wednesday in February in a leap year is the 29th",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "last Wednesday in December that is also the last day of the year",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when last Sunday in February in a non-leap year is not the 29th",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  },
+  {
+    "description": "when first Friday is the 7th, the last day of the first week",
+    "status": "pass",
+    "uuid": null,
+    "year": null,
+    "month": null,
+    "week": null,
+    "dayofweek": null,
+    "expected_result": null
+  }
+]

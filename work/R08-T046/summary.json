@@ -1,0 +1,12 @@
+{
+  "task": "R08-T046",
+  "exercise": "exercises/practice/meetup",
+  "reference_approach": "Closed-Form Date Modifiers",
+  "alternative_approach": "Recursive Calendar Expansion",
+  "executed_test_cases": 95,
+  "reference_all_passed": true,
+  "alternative_all_passed": true,
+  "learner_stub_unsolved": true,
+  "approaches_distinct": true,
+  "hints_guidance_verified": true
+}
