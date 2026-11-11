@@ -1,0 +1,32 @@
+{
+  "scenario_1_real_reference": {
+    "description": "Run isolated runner against real reference implementation",
+    "expected_exit_code": 0,
+    "actual_exit_code": 0,
+    "status": "success",
+    "test_count": 9,
+    "passed_count": 9,
+    "failed_count": 0,
+    "hashes_preserved": true
+  },
+  "scenario_2_failing_reference": {
+    "description": "Run isolated runner against deliberately failing reference implementation",
+    "expected_exit_code": 1,
+    "actual_exit_code": 1,
+    "status": "assertion_failure",
+    "test_count": 9,
+    "passed_count": 5,
+    "failed_count": 4,
+    "hashes_preserved": true
+  },
+  "scenario_3_empty_tests": {
+    "description": "Run isolated runner with zero tests selected",
+    "expected_exit_code": 2,
+    "actual_exit_code": 2,
+    "status": "zero_tests",
+    "test_count": 0,
+    "passed_count": 0,
+    "failed_count": 0,
+    "hashes_preserved": true
+  }
+}
