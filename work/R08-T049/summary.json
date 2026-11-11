@@ -1,0 +1,12 @@
+{
+  "task": "R08-T049",
+  "exercise": "exercises/practice/leap",
+  "runner": "tools/course_checks/r08-t049.py",
+  "documentation": "docs/maintenance/leap.md",
+  "executed_test_cases": 9,
+  "all_tests_passed": true,
+  "learner_stub_unsolved": true,
+  "runner_scenarios_verified": true,
+  "learner_hashes_preserved": true,
+  "documentation_verified": true
+}
