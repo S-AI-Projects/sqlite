@@ -1,0 +1,11 @@
+{
+  "task": "R08-T045",
+  "exercise": "exercises/practice/isogram",
+  "executed_test_cases": 14,
+  "reference_all_passed": true,
+  "learner_stub_unsolved": true,
+  "scaling_benchmark_verified": true,
+  "benchmark_cases_count": 3,
+  "complexity_comment_verified": true,
+  "maintenance_docs_verified": true
+}
