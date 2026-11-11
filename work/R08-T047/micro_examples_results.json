@@ -1,0 +1,16 @@
+{
+  "micro_example_1": {
+    "title": "Duplicate-preserving operations (UNION ALL)",
+    "query": "SELECT '777' AS slice\nUNION ALL\nSELECT '777' AS slice;",
+    "expected_output": "777\n777",
+    "actual_output": "777\n777",
+    "status": "pass"
+  },
+  "micro_example_2": {
+    "title": "Set union operations pitfall (UNION)",
+    "query": "SELECT '777' AS slice\nUNION\nSELECT '777' AS slice;",
+    "expected_output": "777",
+    "actual_output": "777",
+    "status": "pass"
+  }
+}

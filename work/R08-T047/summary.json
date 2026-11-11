@@ -1,0 +1,10 @@
+{
+  "task": "R08-T047",
+  "exercise": "exercises/practice/series",
+  "construct": "UNION ALL (duplicate-preserving operations vs set operations)",
+  "executed_test_cases": 11,
+  "all_tests_passed": true,
+  "learner_stub_unsolved": true,
+  "micro_examples_verified": true,
+  "hints_guidance_verified": true
+}

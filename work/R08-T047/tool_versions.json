@@ -1,0 +1,8 @@
+{
+  "sqlite3": "3.51.0 2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl (64-bit)",
+  "python3": "3.15.2 (main, Oct 25 2026, 16:57:51) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "bash": "GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)",
+  "jq": "jq-1.7.1-apple",
+  "git_branch": "student/e26b07f0878/R08-T047",
+  "git_commit": "ca95e50bbd40a2baff7755fa59fde0e232f49fbb"
+}
