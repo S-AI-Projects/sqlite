@@ -1,0 +1,99 @@
+{
+  "subprocess_startup_overhead": {
+    "repetitions": 5,
+    "timings_ms": [
+      5.495916993822902,
+      4.784667020430788,
+      4.868374991929159,
+      4.437625000718981,
+      5.147833988303319
+    ],
+    "median_ms": 4.87
+  },
+  "cases": [
+    {
+      "category": "Small",
+      "phrase": "isogram",
+      "length_L": 7,
+      "letter_count_K": 7,
+      "correctness_asserted": true,
+      "expected_is_isogram": 1,
+      "actual_is_isogram": 1,
+      "operation_counts": {
+        "chars_rows": 8,
+        "letters_rows": 7,
+        "unique_letters_rows": 7,
+        "total_intermediate_rows": 22
+      },
+      "timing": {
+        "repetitions": 5,
+        "timings_us": [
+          120.0,
+          94.67,
+          85.33,
+          82.25,
+          87.04
+        ],
+        "median_in_engine_us": 87.04,
+        "median_subprocess_ms": 4.87,
+        "ratio_process_to_algorithm": 55.9
+      }
+    },
+    {
+      "category": "Medium",
+      "phrase": "subdermatoglyphic",
+      "length_L": 17,
+      "letter_count_K": 17,
+      "correctness_asserted": true,
+      "expected_is_isogram": 1,
+      "actual_is_isogram": 1,
+      "operation_counts": {
+        "chars_rows": 18,
+        "letters_rows": 17,
+        "unique_letters_rows": 17,
+        "total_intermediate_rows": 52
+      },
+      "timing": {
+        "repetitions": 5,
+        "timings_us": [
+          95.25,
+          91.29,
+          89.46,
+          88.88,
+          88.08
+        ],
+        "median_in_engine_us": 89.46,
+        "median_subprocess_ms": 4.87,
+        "ratio_process_to_algorithm": 54.4
+      }
+    },
+    {
+      "category": "Large",
+      "phrase": "Emily Jung Schwartzkopf",
+      "length_L": 23,
+      "letter_count_K": 21,
+      "correctness_asserted": true,
+      "expected_is_isogram": 1,
+      "actual_is_isogram": 1,
+      "operation_counts": {
+        "chars_rows": 24,
+        "letters_rows": 21,
+        "unique_letters_rows": 21,
+        "total_intermediate_rows": 66
+      },
+      "timing": {
+        "repetitions": 5,
+        "timings_us": [
+          182.54,
+          129.12,
+          105.04,
+          99.33,
+          97.46
+        ],
+        "median_in_engine_us": 105.04,
+        "median_subprocess_ms": 4.87,
+        "ratio_process_to_algorithm": 46.3
+      }
+    }
+  ]
+}
