@@ -1,0 +1,90 @@
+[
+  {
+    "description": "slices of one from one",
+    "status": "pass",
+    "input": "1",
+    "slice_length": 1,
+    "expected_result": "1",
+    "expected_error": null
+  },
+  {
+    "description": "slices of one from two",
+    "status": "pass",
+    "input": "12",
+    "slice_length": 1,
+    "expected_result": "1\n2",
+    "expected_error": null
+  },
+  {
+    "description": "slices of two",
+    "status": "pass",
+    "input": "35",
+    "slice_length": 2,
+    "expected_result": "35",
+    "expected_error": null
+  },
+  {
+    "description": "slices of two overlap",
+    "status": "pass",
+    "input": "9142",
+    "slice_length": 2,
+    "expected_result": "91\n14\n42",
+    "expected_error": null
+  },
+  {
+    "description": "slices can include duplicates",
+    "status": "pass",
+    "input": "777777",
+    "slice_length": 3,
+    "expected_result": "777\n777\n777\n777",
+    "expected_error": null
+  },
+  {
+    "description": "slices of a long series",
+    "status": "pass",
+    "input": "918493904243",
+    "slice_length": 5,
+    "expected_result": "91849\n18493\n84939\n49390\n93904\n39042\n90424\n04243",
+    "expected_error": null
+  },
+  {
+    "description": "slice length is too large",
+    "status": "pass",
+    "input": "12345",
+    "slice_length": 6,
+    "expected_result": null,
+    "expected_error": "slice length cannot be greater than series length"
+  },
+  {
+    "description": "slice length is way too large",
+    "status": "pass",
+    "input": "12345",
+    "slice_length": 42,
+    "expected_result": null,
+    "expected_error": "slice length cannot be greater than series length"
+  },
+  {
+    "description": "slice length cannot be zero",
+    "status": "pass",
+    "input": "12345",
+    "slice_length": 0,
+    "expected_result": null,
+    "expected_error": "slice length cannot be zero"
+  },
+  {
+    "description": "slice length cannot be negative",
+    "status": "pass",
+    "input": "123",
+    "slice_length": -1,
+    "expected_result": null,
+    "expected_error": "slice length cannot be negative"
+  },
+  {
+    "description": "empty series is invalid",
+    "status": "pass",
+    "input": "",
+    "slice_length": 1,
+    "expected_result": null,
+    "expected_error": "series cannot be empty"
+  }
+]
