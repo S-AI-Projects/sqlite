@@ -1,0 +1,14 @@
+{
+  "task": "R08-T042",
+  "exercise": "exercises/practice/acronym",
+  "reusable_tool": "tools/course_checks/r08-t042.py",
+  "documentation": "docs/maintenance/acronym.md",
+  "executed_test_cases": 9,
+  "reference_all_passed": true,
+  "learner_stub_unsolved": true,
+  "round_trip_verified": true,
+  "generations_identical": true,
+  "dropped_cases_count": 0,
+  "maintenance_docs_verified": true,
+  "reusable_tool_verified": true
+}
