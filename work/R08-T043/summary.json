@@ -1,0 +1,12 @@
+{
+  "task": "R08-T043",
+  "exercise": "exercises/practice/kindergarten-garden",
+  "total_canonical_cases": 17,
+  "reference_all_passed": true,
+  "learner_stub_unsolved": true,
+  "mutant_rejected": true,
+  "minimal_rejecting_test_uuid": "1fc316ed-17ab-4fba-88ef-3ae78296b692",
+  "minimal_rejecting_test_name": "garden with single student",
+  "hints_documented": true,
+  "maintenance_docs_verified": true
+}

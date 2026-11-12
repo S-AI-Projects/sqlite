@@ -1,0 +1,143 @@
+{
+  "total_executed": 17,
+  "passed": 17,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "garden with single student",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "different garden with single student",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "garden with two students",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "second student's garden",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "third student's garden",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Alice, first student's garden",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Bob, second student's garden",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Charlie",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for David",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Eve",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Fred",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Ginny",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Harriet",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Ileana",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Joseph",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Kincaid, second to last student's garden",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Larry, last student's garden",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    }
+  ]
+}
