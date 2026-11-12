@@ -1,0 +1,9 @@
+{
+  "task": "R08-T044",
+  "exercise": "exercises/practice/anagram",
+  "total_cases": 16,
+  "reference_all_passed": true,
+  "learner_stub_unsolved": true,
+  "before_after_parity_verified": true,
+  "refactor_documented": true
+}

@@ -1,0 +1,135 @@
+{
+  "total_executed": 16,
+  "passed": 16,
+  "failed": 0,
+  "cases": [
+    {
+      "description": "no matches",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "detects two anagrams",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "does not detect anagram subsets",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "detects anagram",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "detects three anagrams",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "detects multiple anagrams with different case",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "does not detect non-anagrams with identical checksum",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "detects anagrams case-insensitively",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "detects anagrams using case-insensitive subject",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "detects anagrams using case-insensitive possible matches",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "does not detect an anagram if the original word is repeated",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "anagrams must use all letters exactly once",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "words are not anagrams of themselves",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "words are not anagrams of themselves even if letter case is partially different",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "words are not anagrams of themselves even if letter case is completely different",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "description": "words other than themselves can be anagrams",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    }
+  ]
+}
