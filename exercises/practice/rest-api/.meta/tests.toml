@@ -9,14 +9,23 @@
 # As user-added comments (using the # character) will be removed when this file
 # is regenerated, comments can be added via a `comment` key.
 
+# 5be01ffb-a814-47a8-a19f-490a5622ba07: Baseline empty user list for GET /users.
+# Handled via LEFT JOIN on json_each() with IIF(json_type(...) IS NULL, json_array(), ...).
 [5be01ffb-a814-47a8-a19f-490a5622ba07]
 description = "user management -> no users"
+comment = "Tests baseline GET /users on an empty database; verifies json_each empty iteration yields empty JSON array via IIF and json_object."
 
+# 382b70cc-9f6c-486d-9bee-fda2df81c803: User creation for POST /add.
+# Extracts username via json_extract() and constructs bare User object with empty owes/owed_by.
 [382b70cc-9f6c-486d-9bee-fda2df81c803]
 description = "user management -> add user"
+comment = "Tests POST /add user creation; constructs a bare User object with initialized empty owes/owed_by JSON objects and 0.0 balance."
 
+# d624e5e5-1abb-4f18-95b3-45d55c818dc3: Filtered user lookup for GET /users.
+# Joins database users with payload users array on json_extract(DB.value, '$.name') = PL.value.
 [d624e5e5-1abb-4f18-95b3-45d55c818dc3]
 description = "user management -> get single user"
+comment = "Tests GET /users filtered by payload; joins json_each on database.users with json_each on payload.users on name equality."
 
 [7a81b82c-7276-433e-8fce-29ce983a7c56]
 description = "iou -> both users have 0 balance"
