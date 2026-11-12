@@ -1,0 +1,10 @@
+{
+  "task": "R08-T048",
+  "exercise": "exercises/practice/resistor-color-duo",
+  "real_metadata_valid": true,
+  "invalid_fixtures_tested": 3,
+  "total_canonical_cases": 6,
+  "reference_all_passed": true,
+  "learner_stub_unsolved": true,
+  "maintenance_docs_verified": true
+}
