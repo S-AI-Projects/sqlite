@@ -1,0 +1,10 @@
+{
+  "task": "R08-T050",
+  "exercise": "exercises/practice/hello-world",
+  "canonical_cases_count": 1,
+  "reference_all_passed": true,
+  "learner_stub_unsolved": true,
+  "decision_table_cases_verified": 7,
+  "hints_documented": true,
+  "maintenance_docs_verified": true
+}

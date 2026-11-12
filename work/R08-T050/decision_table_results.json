@@ -1,0 +1,65 @@
+[
+  {
+    "case": "canonical_solution",
+    "sql": "INSERT INTO hello_world (greeting) VALUES ('Hello, World!');",
+    "inserted_value": "Hello, World!",
+    "expected_status": "pass",
+    "actual_status": "pass",
+    "verified": true,
+    "contract_rule": "Exact string literal specified by canonical problem specification."
+  },
+  {
+    "case": "unsolved_stub_default",
+    "sql": "INSERT INTO hello_world (greeting) VALUES ('Goodbye, Mars!');",
+    "inserted_value": "Goodbye, Mars!",
+    "expected_status": "fail",
+    "actual_status": "fail",
+    "verified": true,
+    "contract_rule": "Default stub greeting differs from target string."
+  },
+  {
+    "case": "lowercase_mismatch",
+    "sql": "INSERT INTO hello_world (greeting) VALUES ('hello, world!');",
+    "inserted_value": "hello, world!",
+    "expected_status": "fail",
+    "actual_status": "fail",
+    "verified": true,
+    "contract_rule": "SQLite binary collation requires exact character case match."
+  },
+  {
+    "case": "missing_comma",
+    "sql": "INSERT INTO hello_world (greeting) VALUES ('Hello World!');",
+    "inserted_value": "Hello World!",
+    "expected_status": "fail",
+    "actual_status": "fail",
+    "verified": true,
+    "contract_rule": "Punctuation mismatch fails string equality."
+  },
+  {
+    "case": "missing_exclamation",
+    "sql": "INSERT INTO hello_world (greeting) VALUES ('Hello, World');",
+    "inserted_value": "Hello, World",
+    "expected_status": "fail",
+    "actual_status": "fail",
+    "verified": true,
+    "contract_rule": "Missing trailing punctuation fails string equality."
+  },
+  {
+    "case": "extra_whitespace",
+    "sql": "INSERT INTO hello_world (greeting) VALUES (' Hello, World! ');",
+    "inserted_value": " Hello, World! ",
+    "expected_status": "fail",
+    "actual_status": "fail",
+    "verified": true,
+    "contract_rule": "Leading/trailing whitespace fails exact character match."
+  },
+  {
+    "case": "null_greeting",
+    "sql": "INSERT INTO hello_world (greeting) VALUES (NULL);",
+    "inserted_value": null,
+    "expected_status": "fail",
+    "actual_status": "fail",
+    "verified": true,
+    "contract_rule": "NULL comparison yields NULL, failing the WHERE filter."
+  }
+]

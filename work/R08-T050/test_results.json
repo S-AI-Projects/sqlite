@@ -1,0 +1,15 @@
+{
+  "total_executed": 1,
+  "passed": 1,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "Say Hi!",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    }
+  ]
+}
