@@ -1,0 +1,155 @@
+{
+  "mutant_type": "column_major_traversal",
+  "description": "Mutated plant cup order from row-major (1, 2, row2+1, row2+2) to column-major (1, row2+1, 2, row2+2)",
+  "minimal_rejecting_test": {
+    "name": "garden with single student",
+    "uuid": "1fc316ed-17ab-4fba-88ef-3ae78296b692",
+    "diagram": "RC\\nGG",
+    "student": "Alice",
+    "expected": "radishes,clover,grass,grass",
+    "actual_mutant_output": "radishes,grass,clover,grass",
+    "status": "fail",
+    "failure_message": "Result for \"RC\nGG\" and \"Alice\" is <radishes,grass,clover,grass> but should be <radishes,clover,grass,grass>"
+  },
+  "total_cases": 17,
+  "passed_cases": 5,
+  "failed_cases": 12,
+  "all_cases": [
+    {
+      "name": "garden with single student",
+      "status": "fail",
+      "message": "Result for \"RC\nGG\" and \"Alice\" is <radishes,grass,clover,grass> but should be <radishes,clover,grass,grass>",
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "different garden with single student",
+      "status": "fail",
+      "message": "Result for \"VC\nRC\" and \"Alice\" is <violets,radishes,clover,clover> but should be <violets,clover,radishes,clover>",
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "garden with two students",
+      "status": "fail",
+      "message": "Result for \"VVCG\nVVRC\" and \"Bob\" is <clover,radishes,grass,clover> but should be <clover,grass,radishes,clover>",
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "second student's garden",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "third student's garden",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Alice, first student's garden",
+      "status": "fail",
+      "message": "Result for \"VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV\" and \"Alice\" is <violets,violets,radishes,radishes> but should be <violets,radishes,violets,radishes>",
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Bob, second student's garden",
+      "status": "fail",
+      "message": "Result for \"VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV\" and \"Bob\" is <clover,clover,grass,clover> but should be <clover,grass,clover,clover>",
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Charlie",
+      "status": "fail",
+      "message": "Result for \"VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV\" and \"Charlie\" is <violets,clover,violets,grass> but should be <violets,violets,clover,grass>",
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for David",
+      "status": "fail",
+      "message": "Result for \"VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV\" and \"David\" is <radishes,clover,violets,radishes> but should be <radishes,violets,clover,radishes>",
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Eve",
+      "status": "fail",
+      "message": "Result for \"VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV\" and \"Eve\" is <clover,radishes,grass,grass> but should be <clover,grass,radishes,grass>",
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Fred",
+      "status": "fail",
+      "message": "Result for \"VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV\" and \"Fred\" is <grass,violets,clover,clover> but should be <grass,clover,violets,clover>",
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Ginny",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Harriet",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Ileana",
+      "status": "fail",
+      "message": "Result for \"VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV\" and \"Ileana\" is <grass,violets,clover,clover> but should be <grass,clover,violets,clover>",
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Joseph",
+      "status": "fail",
+      "message": "Result for \"VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV\" and \"Joseph\" is <violets,violets,clover,grass> but should be <violets,clover,violets,grass>",
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Kincaid, second to last student's garden",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "for Larry, last student's garden",
+      "status": "fail",
+      "message": "Result for \"VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV\" and \"Larry\" is <grass,clover,violets,violets> but should be <grass,violets,clover,violets>",
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    }
+  ]
+}
