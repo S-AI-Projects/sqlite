@@ -1,0 +1,14 @@
+{
+  "before": {
+    "total": 9,
+    "included": 9,
+    "excluded": 0
+  },
+  "after": {
+    "total": 9,
+    "included": 9,
+    "excluded": 0
+  },
+  "changed_inclusions": 0,
+  "note": "All 9 canonical cases remain included and passing against reference solution."
+}

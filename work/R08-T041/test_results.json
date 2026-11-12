@@ -1,0 +1,79 @@
+{
+  "total_executed": 9,
+  "passed": 9,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "no users",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "add user",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "get single user",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "both users have 0 balance",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "borrower has negative balance",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "lender has negative balance",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "lender owes borrower",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "lender owes borrower less than new loan",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "lender owes borrower same as new loan",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    }
+  ]
+}

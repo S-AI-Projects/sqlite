@@ -1,0 +1,12 @@
+{
+  "task": "R08-T041",
+  "exercise": "exercises/practice/rest-api",
+  "total_canonical_cases": 9,
+  "reference_all_passed": true,
+  "learner_stub_unsolved": true,
+  "selected_rationales_verified": 3,
+  "toml_valid": true,
+  "included_cases": 9,
+  "excluded_cases": 0,
+  "maintenance_docs_verified": true
+}

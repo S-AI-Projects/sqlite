@@ -1,0 +1,26 @@
+[
+  {
+    "uuid": "5be01ffb-a814-47a8-a19f-490a5622ba07",
+    "description": "user management -> no users",
+    "endpoint": "GET /users",
+    "sqlite_operation": "LEFT JOIN json_each() with IIF(json_type(DB.value) IS NULL, json_array(), json_array(json(DB.value)))",
+    "rationale": "Tests baseline GET /users on an empty database; verifies json_each empty iteration yields empty JSON array via IIF and json_object.",
+    "included": true
+  },
+  {
+    "uuid": "382b70cc-9f6c-486d-9bee-fda2df81c803",
+    "description": "user management -> add user",
+    "endpoint": "POST /add",
+    "sqlite_operation": "json_extract(payload, '$.user') and json_object('name', ..., 'owes', json_object(), 'owed_by', json_object(), 'balance', 0)",
+    "rationale": "Tests POST /add user creation; constructs a bare User object with initialized empty owes/owed_by JSON objects and 0.0 balance.",
+    "included": true
+  },
+  {
+    "uuid": "d624e5e5-1abb-4f18-95b3-45d55c818dc3",
+    "description": "user management -> get single user",
+    "endpoint": "GET /users",
+    "sqlite_operation": "LEFT JOIN json_each(RA.payload, '$.users') with json_each(RA.database, '$.users') on name equality",
+    "rationale": "Tests GET /users filtered by payload; joins json_each on database.users with json_each on payload.users on name equality.",
+    "included": true
+  }
+]
