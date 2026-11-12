@@ -1,0 +1,32 @@
+{
+  "real_config_status": "valid",
+  "declared_roles": [
+    "solution",
+    "test",
+    "example",
+    "editor"
+  ],
+  "fixtures": [
+    {
+      "fixture": "missing-reference",
+      "expected_rejection": "FileNotFoundError",
+      "actual_rejection": "FileNotFoundError",
+      "error_message": "Declared file for role 'example' not found: '.meta/missing_example.sql'",
+      "passed_rejection_check": true
+    },
+    {
+      "fixture": "missing-test",
+      "expected_rejection": "FileNotFoundError",
+      "actual_rejection": "FileNotFoundError",
+      "error_message": "Declared file for role 'test' not found: 'missing_test.sql'",
+      "passed_rejection_check": true
+    },
+    {
+      "fixture": "outside-exercise",
+      "expected_rejection": "ValueError",
+      "actual_rejection": "ValueError",
+      "error_message": "Security violation: path '../outside.sql' in role 'example' traverses outside exercise directory",
+      "passed_rejection_check": true
+    }
+  ]
+}
