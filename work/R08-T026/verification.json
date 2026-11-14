@@ -1,0 +1,932 @@
+{
+  "task": "R08-T026",
+  "status": "passed",
+  "checker_command": "python3 work/R08-T026/check.py",
+  "tool_versions": {
+    "python": "3.15.1 (main, Oct 21 2026, 05:55:12) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "sqlite_cli": "3.51.0 2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl (64-bit)"
+  },
+  "environment": {
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "expected_test_count": 9,
+  "runs": [
+    {
+      "implementation": "reference",
+      "source": "exercises/practice/saddle-points/.meta/example.sql",
+      "command": "sqlite3 -bail (stdin: configured saddle-points_test.sql followed by a read-only results query)",
+      "return_code": 0,
+      "stdout": "+--------------------------------------------------------------+--------+---------+\n|                         description                          | status | message |\n+--------------------------------------------------------------+--------+---------+\n| Can identify single saddle point                             | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify that empty matrix has no saddle points          | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify lack of saddle points when there are none       | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify multiple saddle points in a column              | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify multiple saddle points in a row                 | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify saddle point in bottom right corner             | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify saddle points in a non square matrix            | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify that saddle points in a single column matrix ar | pass   |         |\n| e those with the minimum value                               |        |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify that saddle points in a single row matrix are t | pass   |         |\n| hose with the maximum value                                  |        |         |\n+--------------------------------------------------------------+--------+---------+\n__R08_T026_CASE_RESULTS_BEGIN__\n[{\"uuid\":\"3e374e63-a2e0-4530-a39a-d53c560382bd\",\"description\":\"Can identify single saddle point\",\"matrix\":\"[[9,8,7],[5,3,2],[6,6,7]]\",\"expected\":\"[{\\\"row\\\":2,\\\"column\\\":1}]\",\"actual_result\":\"[{\\\"row\\\":2,\\\"column\\\":1}]\"},\n{\"uuid\":\"6b501e2b-6c1f-491f-b1bb-7f278f760534\",\"description\":\"Can identify that empty matrix has no saddle points\",\"matrix\":\"[[]]\",\"expected\":\"[]\",\"actual_result\":\"[]\"},\n{\"uuid\":\"8c27cc64-e573-4fcb-a099-f0ae863fb02f\",\"description\":\"Can identify lack of saddle points when there are none\",\"matrix\":\"[[1,2,3],[3,1,2],[2,3,1]]\",\"expected\":\"[]\",\"actual_result\":\"[]\"},\n{\"uuid\":\"6d1399bd-e105-40fd-a2c9-c6609507d7a3\",\"description\":\"Can identify multiple saddle points in a column\",\"matrix\":\"[[4,5,4],[3,5,5],[1,5,4]]\",\"expected\":\"[{\\\"row\\\":1,\\\"column\\\":2},{\\\"row\\\":2,\\\"column\\\":2},{\\\"row\\\":3,\\\"column\\\":2}]\",\"actual_result\":\"[{\\\"row\\\":1,\\\"column\\\":2},{\\\"row\\\":2,\\\"column\\\":2},{\\\"row\\\":3,\\\"column\\\":2}]\"},\n{\"uuid\":\"3e81dce9-53b3-44e6-bf26-e328885fd5d1\",\"description\":\"Can identify multiple saddle points in a row\",\"matrix\":\"[[6,7,8],[5,5,5],[7,5,6]]\",\"expected\":\"[{\\\"row\\\":2,\\\"column\\\":1},{\\\"row\\\":2,\\\"column\\\":2},{\\\"row\\\":2,\\\"column\\\":3}]\",\"actual_result\":\"[{\\\"row\\\":2,\\\"column\\\":1},{\\\"row\\\":2,\\\"column\\\":2},{\\\"row\\\":2,\\\"column\\\":3}]\"},\n{\"uuid\":\"88868621-b6f4-4837-bb8b-3fad8b25d46b\",\"description\":\"Can identify saddle point in bottom right corner\",\"matrix\":\"[[8,7,9],[6,7,6],[3,2,5]]\",\"expected\":\"[{\\\"row\\\":3,\\\"column\\\":3}]\",\"actual_result\":\"[{\\\"row\\\":3,\\\"column\\\":3}]\"},\n{\"uuid\":\"5b9499ca-fcea-4195-830a-9c4584a0ee79\",\"description\":\"Can identify saddle points in a non square matrix\",\"matrix\":\"[[3,1,3],[3,2,4]]\",\"expected\":\"[{\\\"row\\\":1,\\\"column\\\":3},{\\\"row\\\":1,\\\"column\\\":1}]\",\"actual_result\":\"[{\\\"row\\\":1,\\\"column\\\":1},{\\\"row\\\":1,\\\"column\\\":3}]\"},\n{\"uuid\":\"ee99ccd2-a1f1-4283-ad39-f8c70f0cf594\",\"description\":\"Can identify that saddle points in a single column matrix are those with the minimum value\",\"matrix\":\"[[2],[1],[4],[1]]\",\"expected\":\"[{\\\"row\\\":2,\\\"column\\\":1},{\\\"row\\\":4,\\\"column\\\":1}]\",\"actual_result\":\"[{\\\"row\\\":2,\\\"column\\\":1},{\\\"row\\\":4,\\\"column\\\":1}]\"},\n{\"uuid\":\"63abf709-a84b-407f-a1b3-456638689713\",\"description\":\"Can identify that saddle points in a single row matrix are those with the maximum value\",\"matrix\":\"[[2,5,3,5]]\",\"expected\":\"[{\\\"row\\\":1,\\\"column\\\":2},{\\\"row\\\":1,\\\"column\\\":4}]\",\"actual_result\":\"[{\\\"row\\\":1,\\\"column\\\":2},{\\\"row\\\":1,\\\"column\\\":4}]\"}]\n__R08_T026_CASE_RESULTS_END__\n",
+      "stderr": "",
+      "output_json": [
+        {
+          "description": "Can identify single saddle point",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify that empty matrix has no saddle points",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify lack of saddle points when there are none",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify multiple saddle points in a column",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify multiple saddle points in a row",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify saddle point in bottom right corner",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify saddle points in a non square matrix",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify that saddle points in a single column matrix are those with the minimum value",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify that saddle points in a single row matrix are those with the maximum value",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        }
+      ],
+      "output_json_error": null,
+      "case_results": [
+        {
+          "uuid": "3e374e63-a2e0-4530-a39a-d53c560382bd",
+          "description": "Can identify single saddle point",
+          "matrix": "[[9,8,7],[5,3,2],[6,6,7]]",
+          "expected": "[{\"row\":2,\"column\":1}]",
+          "actual_result": "[{\"row\":2,\"column\":1}]"
+        },
+        {
+          "uuid": "6b501e2b-6c1f-491f-b1bb-7f278f760534",
+          "description": "Can identify that empty matrix has no saddle points",
+          "matrix": "[[]]",
+          "expected": "[]",
+          "actual_result": "[]"
+        },
+        {
+          "uuid": "8c27cc64-e573-4fcb-a099-f0ae863fb02f",
+          "description": "Can identify lack of saddle points when there are none",
+          "matrix": "[[1,2,3],[3,1,2],[2,3,1]]",
+          "expected": "[]",
+          "actual_result": "[]"
+        },
+        {
+          "uuid": "6d1399bd-e105-40fd-a2c9-c6609507d7a3",
+          "description": "Can identify multiple saddle points in a column",
+          "matrix": "[[4,5,4],[3,5,5],[1,5,4]]",
+          "expected": "[{\"row\":1,\"column\":2},{\"row\":2,\"column\":2},{\"row\":3,\"column\":2}]",
+          "actual_result": "[{\"row\":1,\"column\":2},{\"row\":2,\"column\":2},{\"row\":3,\"column\":2}]"
+        },
+        {
+          "uuid": "3e81dce9-53b3-44e6-bf26-e328885fd5d1",
+          "description": "Can identify multiple saddle points in a row",
+          "matrix": "[[6,7,8],[5,5,5],[7,5,6]]",
+          "expected": "[{\"row\":2,\"column\":1},{\"row\":2,\"column\":2},{\"row\":2,\"column\":3}]",
+          "actual_result": "[{\"row\":2,\"column\":1},{\"row\":2,\"column\":2},{\"row\":2,\"column\":3}]"
+        },
+        {
+          "uuid": "88868621-b6f4-4837-bb8b-3fad8b25d46b",
+          "description": "Can identify saddle point in bottom right corner",
+          "matrix": "[[8,7,9],[6,7,6],[3,2,5]]",
+          "expected": "[{\"row\":3,\"column\":3}]",
+          "actual_result": "[{\"row\":3,\"column\":3}]"
+        },
+        {
+          "uuid": "5b9499ca-fcea-4195-830a-9c4584a0ee79",
+          "description": "Can identify saddle points in a non square matrix",
+          "matrix": "[[3,1,3],[3,2,4]]",
+          "expected": "[{\"row\":1,\"column\":3},{\"row\":1,\"column\":1}]",
+          "actual_result": "[{\"row\":1,\"column\":1},{\"row\":1,\"column\":3}]"
+        },
+        {
+          "uuid": "ee99ccd2-a1f1-4283-ad39-f8c70f0cf594",
+          "description": "Can identify that saddle points in a single column matrix are those with the minimum value",
+          "matrix": "[[2],[1],[4],[1]]",
+          "expected": "[{\"row\":2,\"column\":1},{\"row\":4,\"column\":1}]",
+          "actual_result": "[{\"row\":2,\"column\":1},{\"row\":4,\"column\":1}]"
+        },
+        {
+          "uuid": "63abf709-a84b-407f-a1b3-456638689713",
+          "description": "Can identify that saddle points in a single row matrix are those with the maximum value",
+          "matrix": "[[2,5,3,5]]",
+          "expected": "[{\"row\":1,\"column\":2},{\"row\":1,\"column\":4}]",
+          "actual_result": "[{\"row\":1,\"column\":2},{\"row\":1,\"column\":4}]"
+        }
+      ],
+      "case_results_error": null,
+      "executed_test_count": 9,
+      "passed_test_count": 9,
+      "failed_test_count": 0,
+      "expected_vs_actual": [
+        {
+          "uuid": "3e374e63-a2e0-4530-a39a-d53c560382bd",
+          "description": "Can identify single saddle point",
+          "input": [
+            [
+              9,
+              8,
+              7
+            ],
+            [
+              5,
+              3,
+              2
+            ],
+            [
+              6,
+              6,
+              7
+            ]
+          ],
+          "expected": [
+            {
+              "row": 2,
+              "column": 1
+            }
+          ],
+          "actual": [
+            {
+              "row": 2,
+              "column": 1
+            }
+          ]
+        },
+        {
+          "uuid": "6b501e2b-6c1f-491f-b1bb-7f278f760534",
+          "description": "Can identify that empty matrix has no saddle points",
+          "input": [
+            []
+          ],
+          "expected": [],
+          "actual": []
+        },
+        {
+          "uuid": "8c27cc64-e573-4fcb-a099-f0ae863fb02f",
+          "description": "Can identify lack of saddle points when there are none",
+          "input": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              3,
+              1,
+              2
+            ],
+            [
+              2,
+              3,
+              1
+            ]
+          ],
+          "expected": [],
+          "actual": []
+        },
+        {
+          "uuid": "6d1399bd-e105-40fd-a2c9-c6609507d7a3",
+          "description": "Can identify multiple saddle points in a column",
+          "input": [
+            [
+              4,
+              5,
+              4
+            ],
+            [
+              3,
+              5,
+              5
+            ],
+            [
+              1,
+              5,
+              4
+            ]
+          ],
+          "expected": [
+            {
+              "row": 1,
+              "column": 2
+            },
+            {
+              "row": 2,
+              "column": 2
+            },
+            {
+              "row": 3,
+              "column": 2
+            }
+          ],
+          "actual": [
+            {
+              "row": 1,
+              "column": 2
+            },
+            {
+              "row": 2,
+              "column": 2
+            },
+            {
+              "row": 3,
+              "column": 2
+            }
+          ]
+        },
+        {
+          "uuid": "3e81dce9-53b3-44e6-bf26-e328885fd5d1",
+          "description": "Can identify multiple saddle points in a row",
+          "input": [
+            [
+              6,
+              7,
+              8
+            ],
+            [
+              5,
+              5,
+              5
+            ],
+            [
+              7,
+              5,
+              6
+            ]
+          ],
+          "expected": [
+            {
+              "row": 2,
+              "column": 1
+            },
+            {
+              "row": 2,
+              "column": 2
+            },
+            {
+              "row": 2,
+              "column": 3
+            }
+          ],
+          "actual": [
+            {
+              "row": 2,
+              "column": 1
+            },
+            {
+              "row": 2,
+              "column": 2
+            },
+            {
+              "row": 2,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "uuid": "88868621-b6f4-4837-bb8b-3fad8b25d46b",
+          "description": "Can identify saddle point in bottom right corner",
+          "input": [
+            [
+              8,
+              7,
+              9
+            ],
+            [
+              6,
+              7,
+              6
+            ],
+            [
+              3,
+              2,
+              5
+            ]
+          ],
+          "expected": [
+            {
+              "row": 3,
+              "column": 3
+            }
+          ],
+          "actual": [
+            {
+              "row": 3,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "uuid": "5b9499ca-fcea-4195-830a-9c4584a0ee79",
+          "description": "Can identify saddle points in a non square matrix",
+          "input": [
+            [
+              3,
+              1,
+              3
+            ],
+            [
+              3,
+              2,
+              4
+            ]
+          ],
+          "expected": [
+            {
+              "row": 1,
+              "column": 3
+            },
+            {
+              "row": 1,
+              "column": 1
+            }
+          ],
+          "actual": [
+            {
+              "row": 1,
+              "column": 1
+            },
+            {
+              "row": 1,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "uuid": "ee99ccd2-a1f1-4283-ad39-f8c70f0cf594",
+          "description": "Can identify that saddle points in a single column matrix are those with the minimum value",
+          "input": [
+            [
+              2
+            ],
+            [
+              1
+            ],
+            [
+              4
+            ],
+            [
+              1
+            ]
+          ],
+          "expected": [
+            {
+              "row": 2,
+              "column": 1
+            },
+            {
+              "row": 4,
+              "column": 1
+            }
+          ],
+          "actual": [
+            {
+              "row": 2,
+              "column": 1
+            },
+            {
+              "row": 4,
+              "column": 1
+            }
+          ]
+        },
+        {
+          "uuid": "63abf709-a84b-407f-a1b3-456638689713",
+          "description": "Can identify that saddle points in a single row matrix are those with the maximum value",
+          "input": [
+            [
+              2,
+              5,
+              3,
+              5
+            ]
+          ],
+          "expected": [
+            {
+              "row": 1,
+              "column": 2
+            },
+            {
+              "row": 1,
+              "column": 4
+            }
+          ],
+          "actual": [
+            {
+              "row": 1,
+              "column": 2
+            },
+            {
+              "row": 1,
+              "column": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "implementation": "alternative",
+      "source": "work/R08-T026/alternative.sql",
+      "command": "sqlite3 -bail (stdin: configured saddle-points_test.sql followed by a read-only results query)",
+      "return_code": 0,
+      "stdout": "+--------------------------------------------------------------+--------+---------+\n|                         description                          | status | message |\n+--------------------------------------------------------------+--------+---------+\n| Can identify single saddle point                             | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify that empty matrix has no saddle points          | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify lack of saddle points when there are none       | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify multiple saddle points in a column              | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify multiple saddle points in a row                 | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify saddle point in bottom right corner             | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify saddle points in a non square matrix            | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify that saddle points in a single column matrix ar | pass   |         |\n| e those with the minimum value                               |        |         |\n+--------------------------------------------------------------+--------+---------+\n| Can identify that saddle points in a single row matrix are t | pass   |         |\n| hose with the maximum value                                  |        |         |\n+--------------------------------------------------------------+--------+---------+\n__R08_T026_CASE_RESULTS_BEGIN__\n[{\"uuid\":\"3e374e63-a2e0-4530-a39a-d53c560382bd\",\"description\":\"Can identify single saddle point\",\"matrix\":\"[[9,8,7],[5,3,2],[6,6,7]]\",\"expected\":\"[{\\\"row\\\":2,\\\"column\\\":1}]\",\"actual_result\":\"[{\\\"row\\\":2,\\\"column\\\":1}]\"},\n{\"uuid\":\"6b501e2b-6c1f-491f-b1bb-7f278f760534\",\"description\":\"Can identify that empty matrix has no saddle points\",\"matrix\":\"[[]]\",\"expected\":\"[]\",\"actual_result\":\"[]\"},\n{\"uuid\":\"8c27cc64-e573-4fcb-a099-f0ae863fb02f\",\"description\":\"Can identify lack of saddle points when there are none\",\"matrix\":\"[[1,2,3],[3,1,2],[2,3,1]]\",\"expected\":\"[]\",\"actual_result\":\"[]\"},\n{\"uuid\":\"6d1399bd-e105-40fd-a2c9-c6609507d7a3\",\"description\":\"Can identify multiple saddle points in a column\",\"matrix\":\"[[4,5,4],[3,5,5],[1,5,4]]\",\"expected\":\"[{\\\"row\\\":1,\\\"column\\\":2},{\\\"row\\\":2,\\\"column\\\":2},{\\\"row\\\":3,\\\"column\\\":2}]\",\"actual_result\":\"[{\\\"row\\\":1,\\\"column\\\":2},{\\\"row\\\":2,\\\"column\\\":2},{\\\"row\\\":3,\\\"column\\\":2}]\"},\n{\"uuid\":\"3e81dce9-53b3-44e6-bf26-e328885fd5d1\",\"description\":\"Can identify multiple saddle points in a row\",\"matrix\":\"[[6,7,8],[5,5,5],[7,5,6]]\",\"expected\":\"[{\\\"row\\\":2,\\\"column\\\":1},{\\\"row\\\":2,\\\"column\\\":2},{\\\"row\\\":2,\\\"column\\\":3}]\",\"actual_result\":\"[{\\\"row\\\":2,\\\"column\\\":1},{\\\"row\\\":2,\\\"column\\\":2},{\\\"row\\\":2,\\\"column\\\":3}]\"},\n{\"uuid\":\"88868621-b6f4-4837-bb8b-3fad8b25d46b\",\"description\":\"Can identify saddle point in bottom right corner\",\"matrix\":\"[[8,7,9],[6,7,6],[3,2,5]]\",\"expected\":\"[{\\\"row\\\":3,\\\"column\\\":3}]\",\"actual_result\":\"[{\\\"row\\\":3,\\\"column\\\":3}]\"},\n{\"uuid\":\"5b9499ca-fcea-4195-830a-9c4584a0ee79\",\"description\":\"Can identify saddle points in a non square matrix\",\"matrix\":\"[[3,1,3],[3,2,4]]\",\"expected\":\"[{\\\"row\\\":1,\\\"column\\\":3},{\\\"row\\\":1,\\\"column\\\":1}]\",\"actual_result\":\"[{\\\"row\\\":1,\\\"column\\\":1},{\\\"row\\\":1,\\\"column\\\":3}]\"},\n{\"uuid\":\"ee99ccd2-a1f1-4283-ad39-f8c70f0cf594\",\"description\":\"Can identify that saddle points in a single column matrix are those with the minimum value\",\"matrix\":\"[[2],[1],[4],[1]]\",\"expected\":\"[{\\\"row\\\":2,\\\"column\\\":1},{\\\"row\\\":4,\\\"column\\\":1}]\",\"actual_result\":\"[{\\\"row\\\":2,\\\"column\\\":1},{\\\"row\\\":4,\\\"column\\\":1}]\"},\n{\"uuid\":\"63abf709-a84b-407f-a1b3-456638689713\",\"description\":\"Can identify that saddle points in a single row matrix are those with the maximum value\",\"matrix\":\"[[2,5,3,5]]\",\"expected\":\"[{\\\"row\\\":1,\\\"column\\\":2},{\\\"row\\\":1,\\\"column\\\":4}]\",\"actual_result\":\"[{\\\"row\\\":1,\\\"column\\\":2},{\\\"row\\\":1,\\\"column\\\":4}]\"}]\n__R08_T026_CASE_RESULTS_END__\n",
+      "stderr": "",
+      "output_json": [
+        {
+          "description": "Can identify single saddle point",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify that empty matrix has no saddle points",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify lack of saddle points when there are none",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify multiple saddle points in a column",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify multiple saddle points in a row",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify saddle point in bottom right corner",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify saddle points in a non square matrix",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify that saddle points in a single column matrix are those with the minimum value",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "Can identify that saddle points in a single row matrix are those with the maximum value",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        }
+      ],
+      "output_json_error": null,
+      "case_results": [
+        {
+          "uuid": "3e374e63-a2e0-4530-a39a-d53c560382bd",
+          "description": "Can identify single saddle point",
+          "matrix": "[[9,8,7],[5,3,2],[6,6,7]]",
+          "expected": "[{\"row\":2,\"column\":1}]",
+          "actual_result": "[{\"row\":2,\"column\":1}]"
+        },
+        {
+          "uuid": "6b501e2b-6c1f-491f-b1bb-7f278f760534",
+          "description": "Can identify that empty matrix has no saddle points",
+          "matrix": "[[]]",
+          "expected": "[]",
+          "actual_result": "[]"
+        },
+        {
+          "uuid": "8c27cc64-e573-4fcb-a099-f0ae863fb02f",
+          "description": "Can identify lack of saddle points when there are none",
+          "matrix": "[[1,2,3],[3,1,2],[2,3,1]]",
+          "expected": "[]",
+          "actual_result": "[]"
+        },
+        {
+          "uuid": "6d1399bd-e105-40fd-a2c9-c6609507d7a3",
+          "description": "Can identify multiple saddle points in a column",
+          "matrix": "[[4,5,4],[3,5,5],[1,5,4]]",
+          "expected": "[{\"row\":1,\"column\":2},{\"row\":2,\"column\":2},{\"row\":3,\"column\":2}]",
+          "actual_result": "[{\"row\":1,\"column\":2},{\"row\":2,\"column\":2},{\"row\":3,\"column\":2}]"
+        },
+        {
+          "uuid": "3e81dce9-53b3-44e6-bf26-e328885fd5d1",
+          "description": "Can identify multiple saddle points in a row",
+          "matrix": "[[6,7,8],[5,5,5],[7,5,6]]",
+          "expected": "[{\"row\":2,\"column\":1},{\"row\":2,\"column\":2},{\"row\":2,\"column\":3}]",
+          "actual_result": "[{\"row\":2,\"column\":1},{\"row\":2,\"column\":2},{\"row\":2,\"column\":3}]"
+        },
+        {
+          "uuid": "88868621-b6f4-4837-bb8b-3fad8b25d46b",
+          "description": "Can identify saddle point in bottom right corner",
+          "matrix": "[[8,7,9],[6,7,6],[3,2,5]]",
+          "expected": "[{\"row\":3,\"column\":3}]",
+          "actual_result": "[{\"row\":3,\"column\":3}]"
+        },
+        {
+          "uuid": "5b9499ca-fcea-4195-830a-9c4584a0ee79",
+          "description": "Can identify saddle points in a non square matrix",
+          "matrix": "[[3,1,3],[3,2,4]]",
+          "expected": "[{\"row\":1,\"column\":3},{\"row\":1,\"column\":1}]",
+          "actual_result": "[{\"row\":1,\"column\":1},{\"row\":1,\"column\":3}]"
+        },
+        {
+          "uuid": "ee99ccd2-a1f1-4283-ad39-f8c70f0cf594",
+          "description": "Can identify that saddle points in a single column matrix are those with the minimum value",
+          "matrix": "[[2],[1],[4],[1]]",
+          "expected": "[{\"row\":2,\"column\":1},{\"row\":4,\"column\":1}]",
+          "actual_result": "[{\"row\":2,\"column\":1},{\"row\":4,\"column\":1}]"
+        },
+        {
+          "uuid": "63abf709-a84b-407f-a1b3-456638689713",
+          "description": "Can identify that saddle points in a single row matrix are those with the maximum value",
+          "matrix": "[[2,5,3,5]]",
+          "expected": "[{\"row\":1,\"column\":2},{\"row\":1,\"column\":4}]",
+          "actual_result": "[{\"row\":1,\"column\":2},{\"row\":1,\"column\":4}]"
+        }
+      ],
+      "case_results_error": null,
+      "executed_test_count": 9,
+      "passed_test_count": 9,
+      "failed_test_count": 0,
+      "expected_vs_actual": [
+        {
+          "uuid": "3e374e63-a2e0-4530-a39a-d53c560382bd",
+          "description": "Can identify single saddle point",
+          "input": [
+            [
+              9,
+              8,
+              7
+            ],
+            [
+              5,
+              3,
+              2
+            ],
+            [
+              6,
+              6,
+              7
+            ]
+          ],
+          "expected": [
+            {
+              "row": 2,
+              "column": 1
+            }
+          ],
+          "actual": [
+            {
+              "row": 2,
+              "column": 1
+            }
+          ]
+        },
+        {
+          "uuid": "6b501e2b-6c1f-491f-b1bb-7f278f760534",
+          "description": "Can identify that empty matrix has no saddle points",
+          "input": [
+            []
+          ],
+          "expected": [],
+          "actual": []
+        },
+        {
+          "uuid": "8c27cc64-e573-4fcb-a099-f0ae863fb02f",
+          "description": "Can identify lack of saddle points when there are none",
+          "input": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              3,
+              1,
+              2
+            ],
+            [
+              2,
+              3,
+              1
+            ]
+          ],
+          "expected": [],
+          "actual": []
+        },
+        {
+          "uuid": "6d1399bd-e105-40fd-a2c9-c6609507d7a3",
+          "description": "Can identify multiple saddle points in a column",
+          "input": [
+            [
+              4,
+              5,
+              4
+            ],
+            [
+              3,
+              5,
+              5
+            ],
+            [
+              1,
+              5,
+              4
+            ]
+          ],
+          "expected": [
+            {
+              "row": 1,
+              "column": 2
+            },
+            {
+              "row": 2,
+              "column": 2
+            },
+            {
+              "row": 3,
+              "column": 2
+            }
+          ],
+          "actual": [
+            {
+              "row": 1,
+              "column": 2
+            },
+            {
+              "row": 2,
+              "column": 2
+            },
+            {
+              "row": 3,
+              "column": 2
+            }
+          ]
+        },
+        {
+          "uuid": "3e81dce9-53b3-44e6-bf26-e328885fd5d1",
+          "description": "Can identify multiple saddle points in a row",
+          "input": [
+            [
+              6,
+              7,
+              8
+            ],
+            [
+              5,
+              5,
+              5
+            ],
+            [
+              7,
+              5,
+              6
+            ]
+          ],
+          "expected": [
+            {
+              "row": 2,
+              "column": 1
+            },
+            {
+              "row": 2,
+              "column": 2
+            },
+            {
+              "row": 2,
+              "column": 3
+            }
+          ],
+          "actual": [
+            {
+              "row": 2,
+              "column": 1
+            },
+            {
+              "row": 2,
+              "column": 2
+            },
+            {
+              "row": 2,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "uuid": "88868621-b6f4-4837-bb8b-3fad8b25d46b",
+          "description": "Can identify saddle point in bottom right corner",
+          "input": [
+            [
+              8,
+              7,
+              9
+            ],
+            [
+              6,
+              7,
+              6
+            ],
+            [
+              3,
+              2,
+              5
+            ]
+          ],
+          "expected": [
+            {
+              "row": 3,
+              "column": 3
+            }
+          ],
+          "actual": [
+            {
+              "row": 3,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "uuid": "5b9499ca-fcea-4195-830a-9c4584a0ee79",
+          "description": "Can identify saddle points in a non square matrix",
+          "input": [
+            [
+              3,
+              1,
+              3
+            ],
+            [
+              3,
+              2,
+              4
+            ]
+          ],
+          "expected": [
+            {
+              "row": 1,
+              "column": 3
+            },
+            {
+              "row": 1,
+              "column": 1
+            }
+          ],
+          "actual": [
+            {
+              "row": 1,
+              "column": 1
+            },
+            {
+              "row": 1,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "uuid": "ee99ccd2-a1f1-4283-ad39-f8c70f0cf594",
+          "description": "Can identify that saddle points in a single column matrix are those with the minimum value",
+          "input": [
+            [
+              2
+            ],
+            [
+              1
+            ],
+            [
+              4
+            ],
+            [
+              1
+            ]
+          ],
+          "expected": [
+            {
+              "row": 2,
+              "column": 1
+            },
+            {
+              "row": 4,
+              "column": 1
+            }
+          ],
+          "actual": [
+            {
+              "row": 2,
+              "column": 1
+            },
+            {
+              "row": 4,
+              "column": 1
+            }
+          ]
+        },
+        {
+          "uuid": "63abf709-a84b-407f-a1b3-456638689713",
+          "description": "Can identify that saddle points in a single row matrix are those with the maximum value",
+          "input": [
+            [
+              2,
+              5,
+              3,
+              5
+            ]
+          ],
+          "expected": [
+            {
+              "row": 1,
+              "column": 2
+            },
+            {
+              "row": 1,
+              "column": 4
+            }
+          ],
+          "actual": [
+            {
+              "row": 1,
+              "column": 2
+            },
+            {
+              "row": 1,
+              "column": 4
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "The SQLite harness compares result JSON text; the checker matches its ordering convention by sorting expected objects by their JSON value.",
+    "Runtime and memory costs of the SQL approaches were not benchmarked."
+  ]
+}
