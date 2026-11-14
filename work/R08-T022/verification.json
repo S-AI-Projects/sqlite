@@ -1,0 +1,233 @@
+{
+  "success": true,
+  "canonical_input": "/Users/girishprasadsharma/sqlite/work/R08-T022/canonical-data.json",
+  "canonical_sha256": "40cb4dd318315f75eb11c3a7bbd5f31dec4eafb43709f46d3626766324c20f43",
+  "case_count": 3,
+  "cases": [
+    {
+      "uuid": "1cf3e15a-a3d7-4a87-aeb3-ba1b43bc8dce",
+      "name": "no name given",
+      "input": "",
+      "expected": "One for you, one for me."
+    },
+    {
+      "uuid": "b4c6dbb8-b4fb-42c2-bafd-10785abe7709",
+      "name": "a name given",
+      "input": "Alice",
+      "expected": "One for Alice, one for me."
+    },
+    {
+      "uuid": "3549048d-1a6e-4653-9a79-b0bda163e8d5",
+      "name": "another name given",
+      "input": "Bob",
+      "expected": "One for Bob, one for me."
+    }
+  ],
+  "generation": {
+    "command": [
+      "/Users/girishprasadsharma/sqlite/.venv/bin/python",
+      "bin/generate_tests",
+      "--no-pull",
+      "two-fer"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "canonical_input_sha256": "40cb4dd318315f75eb11c3a7bbd5f31dec4eafb43709f46d3626766324c20f43",
+    "outputs": {
+      "data.csv": {
+        "template": ".meta/template.data.j2",
+        "matches_working_copy": true,
+        "rows": [
+          [
+            "",
+            ""
+          ],
+          [
+            "Alice",
+            ""
+          ],
+          [
+            "Bob",
+            ""
+          ]
+        ]
+      },
+      "create_test_table.sql": {
+        "template_present": false,
+        "generated": false
+      },
+      "test_reporter.sql": {
+        "template_present": false,
+        "modified": false
+      }
+    },
+    "protected_files_unchanged_in_copy": {
+      "two-fer.sql": true,
+      "two-fer_test.sql": true,
+      "test_reporter.sql": true
+    }
+  },
+  "sql_tests": {
+    "command": [
+      "sqlite3",
+      "-bail",
+      "<",
+      "two-fer_test.sql"
+    ],
+    "returncode": 0,
+    "stdout": "+--------------------+--------+---------+\n|        name        | status | message |\n+--------------------+--------+---------+\n| no name given      | pass   |         |\n| a name given       | pass   |         |\n| another name given | pass   |         |\n+--------------------+--------+---------+\n__R08_T022_CASE_ROWS__\n[{\"uuid\":\"1cf3e15a-a3d7-4a87-aeb3-ba1b43bc8dce\",\"name\":\"no name given\",\"input\":\"\",\"expected\":\"One for you, one for me.\"},\n{\"uuid\":\"b4c6dbb8-b4fb-42c2-bafd-10785abe7709\",\"name\":\"a name given\",\"input\":\"Alice\",\"expected\":\"One for Alice, one for me.\"},\n{\"uuid\":\"3549048d-1a6e-4653-9a79-b0bda163e8d5\",\"name\":\"another name given\",\"input\":\"Bob\",\"expected\":\"One for Bob, one for me.\"}]\n",
+    "stderr": "",
+    "test_count": 3,
+    "passed": 3,
+    "failed": 0,
+    "expected_rows": [
+      {
+        "uuid": "1cf3e15a-a3d7-4a87-aeb3-ba1b43bc8dce",
+        "name": "no name given",
+        "input": "",
+        "expected": "One for you, one for me."
+      },
+      {
+        "uuid": "b4c6dbb8-b4fb-42c2-bafd-10785abe7709",
+        "name": "a name given",
+        "input": "Alice",
+        "expected": "One for Alice, one for me."
+      },
+      {
+        "uuid": "3549048d-1a6e-4653-9a79-b0bda163e8d5",
+        "name": "another name given",
+        "input": "Bob",
+        "expected": "One for Bob, one for me."
+      }
+    ],
+    "actual_rows": [
+      {
+        "uuid": "1cf3e15a-a3d7-4a87-aeb3-ba1b43bc8dce",
+        "name": "no name given",
+        "input": "",
+        "expected": "One for you, one for me."
+      },
+      {
+        "uuid": "b4c6dbb8-b4fb-42c2-bafd-10785abe7709",
+        "name": "a name given",
+        "input": "Alice",
+        "expected": "One for Alice, one for me."
+      },
+      {
+        "uuid": "3549048d-1a6e-4653-9a79-b0bda163e8d5",
+        "name": "another name given",
+        "input": "Bob",
+        "expected": "One for Bob, one for me."
+      }
+    ],
+    "results": [
+      {
+        "name": "no name given",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "a name given",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "another name given",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      }
+    ]
+  },
+  "working_files_unchanged": true,
+  "working_file_sha256": {
+    "two-fer.sql": "aa722da4ebe46e377dc3613dd23ed06f143ef7b4847e17f45da564bd4be2aad7",
+    "two-fer_test.sql": "5bf7847f07a00c9a859703dd22c9df372d44cd35ec80ef924d19177d1f06ff2c",
+    "test_reporter.sql": "3fe7badfa60ea67c237c9e38fb656d1552b9eaee61bfdf094044b7e52319d5c1",
+    "data.csv": "85110f0af104b7d950dbda99244ce9a051159d7853297be33f2f0b04427aafc8"
+  },
+  "missing_result_regression": {
+    "description": "Three SQL case rows but only one passing output.json result",
+    "sql_case_rows": 3,
+    "output_json_results": 1,
+    "expected_missing_names": [
+      "a name given",
+      "another name given"
+    ],
+    "returncode": 1,
+    "diagnostic": "{\n  \"success\": false,\n  \"error\": \"output.json result mismatch: expected_count=3, actual_count=1, missing=['a name given', 'another name given'], duplicated=[], unexpected=[], malformed_indexes=[]\"\n}",
+    "passed": true
+  },
+  "tools": {
+    "python": "3.15.1 (main, Oct 21 2026, 05:55:12) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "sqlite": "3.51.0 2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl (64-bit)",
+    "jinja2": "3.1.6",
+    "configlet": "not installed; no configlet command run"
+  },
+  "input_provenance": {
+    "canonical_source": "exercism/problem-specifications@84a96854db1bda581317164d3e6ac6aa01723182:exercises/two-fer/canonical-data.json",
+    "canonical_sha256": "40cb4dd318315f75eb11c3a7bbd5f31dec4eafb43709f46d3626766324c20f43"
+  },
+  "focused_check_returncode": 0,
+  "focused_check_stderr": "",
+  "failure_probes": [
+    {
+      "case": "zero_tests",
+      "expected": "non-zero and diagnostic contains 'Zero tests executed'",
+      "returncode": 1,
+      "diagnostic_found": true,
+      "passed": true
+    },
+    {
+      "case": "failed_assertion",
+      "expected": "non-zero and diagnostic contains 'output.json tests did not pass'",
+      "returncode": 1,
+      "diagnostic_found": true,
+      "passed": true
+    },
+    {
+      "case": "sqlite_child_nonzero",
+      "expected": "non-zero and diagnostic contains 'sqlite3 exited with status 23'",
+      "returncode": 1,
+      "diagnostic_found": true,
+      "passed": true
+    },
+    {
+      "case": "duplicate_result_name",
+      "expected": "non-zero and diagnostic contains 'duplicated='",
+      "returncode": 1,
+      "diagnostic_found": true,
+      "passed": true
+    },
+    {
+      "case": "extra_result",
+      "expected": "non-zero and diagnostic contains 'expected_count=3, actual_count=4'",
+      "returncode": 1,
+      "diagnostic_found": true,
+      "passed": true
+    }
+  ],
+  "documented_commands": [
+    ".venv/bin/python tools/course_checks/r08-t022.py --canonical-data work/R08-T022/canonical-data.json",
+    ".venv/bin/python work/R08-T022/check.py"
+  ],
+  "dependencies": {
+    "python_requirement": "3.11 or newer",
+    "python_used": "3.15.1 (main, Oct 21 2026, 05:55:12) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "sqlite_cli_requirement": "SQLite CLI with .mode json and SQL JSON-function support",
+    "sqlite_cli_used": "3.51.0 2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl (64-bit)",
+    "jinja2_requirement": "Jinja2==3.1.6",
+    "jinja2_used": "3.1.6",
+    "dependency_management": "No repository Python dependency manifest exists; commands use a local virtual environment."
+  },
+  "check_command": ".venv/bin/python work/R08-T022/check.py"
+}
