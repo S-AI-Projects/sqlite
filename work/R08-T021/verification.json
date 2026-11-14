@@ -1,0 +1,234 @@
+{
+  "command": "python3 work/R08-T021/check.py",
+  "isolated_checker_result": {
+    "executed": 5,
+    "passed": 5,
+    "failed": 0
+  },
+  "captured_sqlite_run": {
+    "returncode": 0,
+    "results": [
+      {
+        "name": "empty strand",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "can count one nucleotide in single-character input",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "strand with repeated nucleotide",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "strand with multiple nucleotides",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "strand with invalid nucleotides",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      }
+    ],
+    "actual_database_rows": [
+      {
+        "strand": "",
+        "result": "{\"A\":0,\"C\":0,\"G\":0,\"T\":0}"
+      },
+      {
+        "strand": "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC",
+        "result": "{\"A\":20,\"C\":12,\"G\":17,\"T\":21}"
+      },
+      {
+        "strand": "G",
+        "result": "{\"A\":0,\"C\":0,\"G\":1,\"T\":0}"
+      },
+      {
+        "strand": "GGGGGGG",
+        "result": "{\"A\":0,\"C\":0,\"G\":7,\"T\":0}"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "uuid": "3e5c30a8-87e2-4845-a815-a49671ade970",
+      "name": "empty strand",
+      "input": "",
+      "expected": {
+        "A": 0,
+        "C": 0,
+        "G": 0,
+        "T": 0
+      },
+      "metadata": "included",
+      "actual": {
+        "A": 0,
+        "C": 0,
+        "G": 0,
+        "T": 0
+      }
+    },
+    {
+      "uuid": "a0ea42a6-06d9-4ac6-828c-7ccaccf98fec",
+      "name": "can count one nucleotide in single-character input",
+      "input": "G",
+      "expected": {
+        "A": 0,
+        "C": 0,
+        "G": 1,
+        "T": 0
+      },
+      "metadata": "included",
+      "actual": {
+        "A": 0,
+        "C": 0,
+        "G": 1,
+        "T": 0
+      }
+    },
+    {
+      "uuid": "eca0d565-ed8c-43e7-9033-6cefbf5115b5",
+      "name": "strand with repeated nucleotide",
+      "input": "GGGGGGG",
+      "expected": {
+        "A": 0,
+        "C": 0,
+        "G": 7,
+        "T": 0
+      },
+      "metadata": "included",
+      "actual": {
+        "A": 0,
+        "C": 0,
+        "G": 7,
+        "T": 0
+      }
+    },
+    {
+      "uuid": "40a45eac-c83f-4740-901a-20b22d15a39f",
+      "name": "strand with multiple nucleotides",
+      "input": "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC",
+      "expected": {
+        "A": 20,
+        "C": 12,
+        "G": 17,
+        "T": 21
+      },
+      "metadata": "included",
+      "actual": {
+        "A": 20,
+        "C": 12,
+        "G": 17,
+        "T": 21
+      }
+    },
+    {
+      "uuid": "b4c47851-ee9e-4b0a-be70-a86e343bd851",
+      "name": "strand with invalid nucleotides",
+      "input": "AGXXACT",
+      "expected": "error (insertion must be rejected)",
+      "metadata": "excluded",
+      "actual": {
+        "status": "pass",
+        "row_inserted": false
+      },
+      "message": null
+    }
+  ],
+  "metadata_counts": {
+    "before": {
+      "included": 4,
+      "excluded": 1
+    },
+    "after": {
+      "included": 4,
+      "excluded": 1
+    }
+  },
+  "versions": {
+    "python": "Python 3.15.1",
+    "sqlite": "3.51.0 2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl (64-bit)",
+    "configlet": "not run; bin/configlet is absent and only the comment key was added"
+  },
+  "learner_solution_sha256_before_and_after": "df1cf878f2c3da7a040795e92c90b02ac600d64b264e14437800613f373f518b",
+  "checker_failure_probes": [
+    {
+      "case": "zero",
+      "expected": "non-zero with diagnostic No tests executed",
+      "actual_returncode": 1,
+      "diagnostic_found": true,
+      "missing_names_expected": [],
+      "all_expected_missing_names_reported": true,
+      "passed": true
+    },
+    {
+      "case": "fail",
+      "expected": "non-zero with diagnostic intentional failure",
+      "actual_returncode": 1,
+      "diagnostic_found": true,
+      "missing_names_expected": [],
+      "all_expected_missing_names_reported": true,
+      "passed": true
+    },
+    {
+      "case": "sqlite_failure",
+      "expected": "non-zero with diagnostic sqlite3 exited with status",
+      "actual_returncode": 1,
+      "diagnostic_found": true,
+      "missing_names_expected": [],
+      "all_expected_missing_names_reported": true,
+      "passed": true
+    }
+  ],
+  "checker_missing_name_probe": {
+    "case": "missing_names",
+    "expected": "non-zero with diagnostic Missing expected tests:",
+    "actual_returncode": 1,
+    "diagnostic_found": true,
+    "missing_names_expected": [
+      "can count one nucleotide in single-character input",
+      "strand with invalid nucleotides",
+      "strand with multiple nucleotides",
+      "strand with repeated nucleotide"
+    ],
+    "all_expected_missing_names_reported": true,
+    "passed": true
+  },
+  "expected_test_name_check": {
+    "expected_names": [
+      "empty strand",
+      "can count one nucleotide in single-character input",
+      "strand with repeated nucleotide",
+      "strand with multiple nucleotides",
+      "strand with invalid nucleotides"
+    ],
+    "actual_names": [
+      "empty strand",
+      "can count one nucleotide in single-character input",
+      "strand with repeated nucleotide",
+      "strand with multiple nucleotides",
+      "strand with invalid nucleotides"
+    ],
+    "missing_names": [],
+    "passed": true
+  }
+}

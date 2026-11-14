@@ -24,3 +24,4 @@ description = "strand with multiple nucleotides"
 [b4c47851-ee9e-4b0a-be70-a86e343bd851]
 description = "strand with invalid nucleotides"
 include = false
+comment = "Excluded from canonical metadata-driven tests because invalid strands are enforced as rejected SQL inserts, not result rows; the SQL harness tests the insertion constraint separately."
