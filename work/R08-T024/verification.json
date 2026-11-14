@@ -1,0 +1,85 @@
+{
+  "task": "R08-T024",
+  "tools": {
+    "python": "Python 3.15.1",
+    "sqlite": "3.51.0 2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl (64-bit)"
+  },
+  "verification_method": "The complete exercise was copied to a temporary directory, and only the copied configured solution was replaced with the configured example.",
+  "test_command": [
+    "sqlite3",
+    "",
+    "--init",
+    "hamming_test.sql",
+    "-bail",
+    ".exit"
+  ],
+  "test_results": {
+    "before_refactor": {
+      "return_code": 0,
+      "executed": 9,
+      "passed": 9,
+      "failed": 0,
+      "descriptions": [
+        {"description": "empty strands", "status": "pass"},
+        {"description": "single letter identical strands", "status": "pass"},
+        {"description": "single letter different strands", "status": "pass"},
+        {"description": "long identical strands", "status": "pass"},
+        {"description": "long different strands", "status": "pass"},
+        {"description": "disallow first strand longer", "status": "pass"},
+        {"description": "disallow second strand longer", "status": "pass"},
+        {"description": "disallow empty first strand", "status": "pass"},
+        {"description": "disallow empty second strand", "status": "pass"}
+      ]
+    },
+    "after_refactor": {
+      "return_code": 0,
+      "executed": 9,
+      "passed": 9,
+      "failed": 0,
+      "descriptions": [
+        {"description": "empty strands", "status": "pass"},
+        {"description": "single letter identical strands", "status": "pass"},
+        {"description": "single letter different strands", "status": "pass"},
+        {"description": "long identical strands", "status": "pass"},
+        {"description": "long different strands", "status": "pass"},
+        {"description": "disallow first strand longer", "status": "pass"},
+        {"description": "disallow second strand longer", "status": "pass"},
+        {"description": "disallow empty first strand", "status": "pass"},
+        {"description": "disallow empty second strand", "status": "pass"}
+      ]
+    }
+  },
+  "evidence_inputs": [
+    {
+      "input": {"strand1": "AGT", "strand2": "ACG"},
+      "expected": {"result": 2, "error": null},
+      "before_refactor": {"result": 2, "error": null},
+      "after_refactor": {"result": 2, "error": null}
+    },
+    {
+      "input": {"strand1": "", "strand2": ""},
+      "expected": {"result": 0, "error": null},
+      "before_refactor": {"result": 0, "error": null},
+      "after_refactor": {"result": 0, "error": null}
+    },
+    {
+      "input": {"strand1": "AATG", "strand2": "AAA"},
+      "expected": {
+        "result": null,
+        "error": "strands must be of equal length"
+      },
+      "before_refactor": {
+        "result": null,
+        "error": "strands must be of equal length"
+      },
+      "after_refactor": {
+        "result": null,
+        "error": "strands must be of equal length"
+      }
+    }
+  ],
+  "non_fatal_sqlite_stderr": {
+    "warning_count": 9,
+    "warning": "./data.csv:<row>: expected 4 columns but found 3 - filling the rest with NULL"
+  }
+}
