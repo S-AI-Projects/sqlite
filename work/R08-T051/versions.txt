@@ -1,0 +1,5 @@
+git: git version 2.55.0
+jq: jq-1.7.1-apple
+os: Darwin 27.2.0 arm64
+python: Python 3.15.2
+sqlite3: 3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)
