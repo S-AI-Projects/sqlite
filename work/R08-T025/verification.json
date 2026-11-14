@@ -1,0 +1,603 @@
+{
+  "task": "R08-T025",
+  "status": "passed",
+  "tool_versions": {
+    "python": "3.15.1 (main, Oct 21 2026, 05:55:12) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "sqlite_cli": "3.51.0 2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl (64-bit)"
+  },
+  "environment": {
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "correctness": {
+    "command": "sqlite3 -bail < line-up_test.sql",
+    "return_code": 0,
+    "expected_test_count": 25,
+    "executed_test_count": 25,
+    "results": [
+      {
+        "description": "format smallest non-exceptional ordinal numeral 4",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format greatest single digit non-exceptional ordinal numeral 9",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format non-exceptional ordinal numeral 5",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format non-exceptional ordinal numeral 6",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format non-exceptional ordinal numeral 7",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format non-exceptional ordinal numeral 8",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format exceptional ordinal numeral 1",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format exceptional ordinal numeral 2",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format exceptional ordinal numeral 3",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format smallest two digit non-exceptional ordinal numeral 10",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format non-exceptional ordinal numeral 11",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format non-exceptional ordinal numeral 12",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format non-exceptional ordinal numeral 13",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format exceptional ordinal numeral 21",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format exceptional ordinal numeral 22 ending in nd even though it is a multiple of 11",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format exceptional ordinal numeral 33 ending in rd even though it is a multiple of 11",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format exceptional ordinal numeral 52 ending in nd even though it is a multiple of 13",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format exceptional ordinal numeral 62",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format non-exceptional ordinal numeral 72 ending in nd even though it is a multiple of 12",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format exceptional ordinal numeral 91 ending in st even though it is a multiple of 13",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format exceptional ordinal numeral 100",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format exceptional ordinal numeral 101",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format non-exceptional ordinal numeral 112",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format exceptional ordinal numeral 123",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      },
+      {
+        "description": "format large number 972 ending in nd even though it is a multiple of 12",
+        "expected_status": "pass",
+        "actual_status": "pass"
+      }
+    ],
+    "stdout": "+--------------------------------------------------------------+--------+---------+\n|                         description                          | status | message |\n+--------------------------------------------------------------+--------+---------+\n| format smallest non-exceptional ordinal numeral 4            | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format greatest single digit non-exceptional ordinal numeral | pass   |         |\n|  9                                                           |        |         |\n+--------------------------------------------------------------+--------+---------+\n| format non-exceptional ordinal numeral 5                     | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format non-exceptional ordinal numeral 6                     | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format non-exceptional ordinal numeral 7                     | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format non-exceptional ordinal numeral 8                     | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format exceptional ordinal numeral 1                         | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format exceptional ordinal numeral 2                         | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format exceptional ordinal numeral 3                         | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format smallest two digit non-exceptional ordinal numeral 10 | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format non-exceptional ordinal numeral 11                    | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format non-exceptional ordinal numeral 12                    | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format non-exceptional ordinal numeral 13                    | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format exceptional ordinal numeral 21                        | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format exceptional ordinal numeral 22 ending in nd even thou | pass   |         |\n| gh it is a multiple of 11                                    |        |         |\n+--------------------------------------------------------------+--------+---------+\n| format exceptional ordinal numeral 33 ending in rd even thou | pass   |         |\n| gh it is a multiple of 11                                    |        |         |\n+--------------------------------------------------------------+--------+---------+\n| format exceptional ordinal numeral 52 ending in nd even thou | pass   |         |\n| gh it is a multiple of 13                                    |        |         |\n+--------------------------------------------------------------+--------+---------+\n| format exceptional ordinal numeral 62                        | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format non-exceptional ordinal numeral 72 ending in nd even  | pass   |         |\n| though it is a multiple of 12                                |        |         |\n+--------------------------------------------------------------+--------+---------+\n| format exceptional ordinal numeral 91 ending in st even thou | pass   |         |\n| gh it is a multiple of 13                                    |        |         |\n+--------------------------------------------------------------+--------+---------+\n| format exceptional ordinal numeral 100                       | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format exceptional ordinal numeral 101                       | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format non-exceptional ordinal numeral 112                   | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format exceptional ordinal numeral 123                       | pass   |         |\n+--------------------------------------------------------------+--------+---------+\n| format large number 972 ending in nd even though it is a mul | pass   |         |\n| tiple of 12                                                  |        |         |\n+--------------------------------------------------------------+--------+---------+\n",
+    "stderr": ""
+  },
+  "benchmark": {
+    "metric": "SQLite CLI .stats vmstep, per reference UPDATE",
+    "measurement_unit": "SQLite virtual machine steps",
+    "repetitions_per_size": 15,
+    "setup_and_fixture_creation_measured": false,
+    "workloads": [
+      {
+        "row_count": 1,
+        "return_code": 0,
+        "inputs": [
+          {
+            "name": "Gianna",
+            "number": 4
+          }
+        ],
+        "expected_actual_outputs": [
+          {
+            "name": "Gianna",
+            "number": 4,
+            "expected": "Gianna, you are the 4th customer we serve today. Thank you!",
+            "actual": "Gianna, you are the 4th customer we serve today. Thank you!"
+          }
+        ],
+        "repetitions": 15,
+        "vm_step_samples": [
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42,
+          42
+        ],
+        "median_vm_steps": 42,
+        "stdout": "__BENCHMARK_RESULTS_BEGIN__\n[{\"name\":\"Gianna\",\"number\":4,\"expected\":\"Gianna, you are the 4th customer we serve today. Thank you!\",\"actual\":\"Gianna, you are the 4th customer we serve today. Thank you!\"}]\n__BENCHMARK_RESULTS_END__\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\nVM-steps: 42\n",
+        "stderr": ""
+      },
+      {
+        "row_count": 10,
+        "return_code": 0,
+        "inputs": [
+          {
+            "name": "Gianna",
+            "number": 4
+          },
+          {
+            "name": "Maarten",
+            "number": 9
+          },
+          {
+            "name": "Petronila",
+            "number": 5
+          },
+          {
+            "name": "Attakullakulla",
+            "number": 6
+          },
+          {
+            "name": "Kate",
+            "number": 7
+          },
+          {
+            "name": "Maximiliano",
+            "number": 8
+          },
+          {
+            "name": "Mary",
+            "number": 1
+          },
+          {
+            "name": "Haruto",
+            "number": 2
+          },
+          {
+            "name": "Henriette",
+            "number": 3
+          },
+          {
+            "name": "Alvarez",
+            "number": 10
+          }
+        ],
+        "expected_actual_outputs": [
+          {
+            "name": "Gianna",
+            "number": 4,
+            "expected": "Gianna, you are the 4th customer we serve today. Thank you!",
+            "actual": "Gianna, you are the 4th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Maarten",
+            "number": 9,
+            "expected": "Maarten, you are the 9th customer we serve today. Thank you!",
+            "actual": "Maarten, you are the 9th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Petronila",
+            "number": 5,
+            "expected": "Petronila, you are the 5th customer we serve today. Thank you!",
+            "actual": "Petronila, you are the 5th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Attakullakulla",
+            "number": 6,
+            "expected": "Attakullakulla, you are the 6th customer we serve today. Thank you!",
+            "actual": "Attakullakulla, you are the 6th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Kate",
+            "number": 7,
+            "expected": "Kate, you are the 7th customer we serve today. Thank you!",
+            "actual": "Kate, you are the 7th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Maximiliano",
+            "number": 8,
+            "expected": "Maximiliano, you are the 8th customer we serve today. Thank you!",
+            "actual": "Maximiliano, you are the 8th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Mary",
+            "number": 1,
+            "expected": "Mary, you are the 1st customer we serve today. Thank you!",
+            "actual": "Mary, you are the 1st customer we serve today. Thank you!"
+          },
+          {
+            "name": "Haruto",
+            "number": 2,
+            "expected": "Haruto, you are the 2nd customer we serve today. Thank you!",
+            "actual": "Haruto, you are the 2nd customer we serve today. Thank you!"
+          },
+          {
+            "name": "Henriette",
+            "number": 3,
+            "expected": "Henriette, you are the 3rd customer we serve today. Thank you!",
+            "actual": "Henriette, you are the 3rd customer we serve today. Thank you!"
+          },
+          {
+            "name": "Alvarez",
+            "number": 10,
+            "expected": "Alvarez, you are the 10th customer we serve today. Thank you!",
+            "actual": "Alvarez, you are the 10th customer we serve today. Thank you!"
+          }
+        ],
+        "repetitions": 15,
+        "vm_step_samples": [
+          234,
+          234,
+          234,
+          234,
+          234,
+          234,
+          234,
+          234,
+          234,
+          234,
+          234,
+          234,
+          234,
+          234,
+          234
+        ],
+        "median_vm_steps": 234,
+        "stdout": "__BENCHMARK_RESULTS_BEGIN__\n[{\"name\":\"Gianna\",\"number\":4,\"expected\":\"Gianna, you are the 4th customer we serve today. Thank you!\",\"actual\":\"Gianna, you are the 4th customer we serve today. Thank you!\"},\n{\"name\":\"Maarten\",\"number\":9,\"expected\":\"Maarten, you are the 9th customer we serve today. Thank you!\",\"actual\":\"Maarten, you are the 9th customer we serve today. Thank you!\"},\n{\"name\":\"Petronila\",\"number\":5,\"expected\":\"Petronila, you are the 5th customer we serve today. Thank you!\",\"actual\":\"Petronila, you are the 5th customer we serve today. Thank you!\"},\n{\"name\":\"Attakullakulla\",\"number\":6,\"expected\":\"Attakullakulla, you are the 6th customer we serve today. Thank you!\",\"actual\":\"Attakullakulla, you are the 6th customer we serve today. Thank you!\"},\n{\"name\":\"Kate\",\"number\":7,\"expected\":\"Kate, you are the 7th customer we serve today. Thank you!\",\"actual\":\"Kate, you are the 7th customer we serve today. Thank you!\"},\n{\"name\":\"Maximiliano\",\"number\":8,\"expected\":\"Maximiliano, you are the 8th customer we serve today. Thank you!\",\"actual\":\"Maximiliano, you are the 8th customer we serve today. Thank you!\"},\n{\"name\":\"Mary\",\"number\":1,\"expected\":\"Mary, you are the 1st customer we serve today. Thank you!\",\"actual\":\"Mary, you are the 1st customer we serve today. Thank you!\"},\n{\"name\":\"Haruto\",\"number\":2,\"expected\":\"Haruto, you are the 2nd customer we serve today. Thank you!\",\"actual\":\"Haruto, you are the 2nd customer we serve today. Thank you!\"},\n{\"name\":\"Henriette\",\"number\":3,\"expected\":\"Henriette, you are the 3rd customer we serve today. Thank you!\",\"actual\":\"Henriette, you are the 3rd customer we serve today. Thank you!\"},\n{\"name\":\"Alvarez\",\"number\":10,\"expected\":\"Alvarez, you are the 10th customer we serve today. Thank you!\",\"actual\":\"Alvarez, you are the 10th customer we serve today. Thank you!\"}]\n__BENCHMARK_RESULTS_END__\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\nVM-steps: 234\n",
+        "stderr": ""
+      },
+      {
+        "row_count": 25,
+        "return_code": 0,
+        "inputs": [
+          {
+            "name": "Gianna",
+            "number": 4
+          },
+          {
+            "name": "Maarten",
+            "number": 9
+          },
+          {
+            "name": "Petronila",
+            "number": 5
+          },
+          {
+            "name": "Attakullakulla",
+            "number": 6
+          },
+          {
+            "name": "Kate",
+            "number": 7
+          },
+          {
+            "name": "Maximiliano",
+            "number": 8
+          },
+          {
+            "name": "Mary",
+            "number": 1
+          },
+          {
+            "name": "Haruto",
+            "number": 2
+          },
+          {
+            "name": "Henriette",
+            "number": 3
+          },
+          {
+            "name": "Alvarez",
+            "number": 10
+          },
+          {
+            "name": "Jacqueline",
+            "number": 11
+          },
+          {
+            "name": "Juan",
+            "number": 12
+          },
+          {
+            "name": "Patricia",
+            "number": 13
+          },
+          {
+            "name": "Washi",
+            "number": 21
+          },
+          {
+            "name": "Ingrid",
+            "number": 22
+          },
+          {
+            "name": "Mario",
+            "number": 33
+          },
+          {
+            "name": "Quentin",
+            "number": 52
+          },
+          {
+            "name": "Nayra",
+            "number": 62
+          },
+          {
+            "name": "Ugo",
+            "number": 72
+          },
+          {
+            "name": "Boris",
+            "number": 91
+          },
+          {
+            "name": "John",
+            "number": 100
+          },
+          {
+            "name": "Zeinab",
+            "number": 101
+          },
+          {
+            "name": "Knud",
+            "number": 112
+          },
+          {
+            "name": "Yma",
+            "number": 123
+          },
+          {
+            "name": "Elias",
+            "number": 972
+          }
+        ],
+        "expected_actual_outputs": [
+          {
+            "name": "Gianna",
+            "number": 4,
+            "expected": "Gianna, you are the 4th customer we serve today. Thank you!",
+            "actual": "Gianna, you are the 4th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Maarten",
+            "number": 9,
+            "expected": "Maarten, you are the 9th customer we serve today. Thank you!",
+            "actual": "Maarten, you are the 9th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Petronila",
+            "number": 5,
+            "expected": "Petronila, you are the 5th customer we serve today. Thank you!",
+            "actual": "Petronila, you are the 5th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Attakullakulla",
+            "number": 6,
+            "expected": "Attakullakulla, you are the 6th customer we serve today. Thank you!",
+            "actual": "Attakullakulla, you are the 6th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Kate",
+            "number": 7,
+            "expected": "Kate, you are the 7th customer we serve today. Thank you!",
+            "actual": "Kate, you are the 7th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Maximiliano",
+            "number": 8,
+            "expected": "Maximiliano, you are the 8th customer we serve today. Thank you!",
+            "actual": "Maximiliano, you are the 8th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Mary",
+            "number": 1,
+            "expected": "Mary, you are the 1st customer we serve today. Thank you!",
+            "actual": "Mary, you are the 1st customer we serve today. Thank you!"
+          },
+          {
+            "name": "Haruto",
+            "number": 2,
+            "expected": "Haruto, you are the 2nd customer we serve today. Thank you!",
+            "actual": "Haruto, you are the 2nd customer we serve today. Thank you!"
+          },
+          {
+            "name": "Henriette",
+            "number": 3,
+            "expected": "Henriette, you are the 3rd customer we serve today. Thank you!",
+            "actual": "Henriette, you are the 3rd customer we serve today. Thank you!"
+          },
+          {
+            "name": "Alvarez",
+            "number": 10,
+            "expected": "Alvarez, you are the 10th customer we serve today. Thank you!",
+            "actual": "Alvarez, you are the 10th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Jacqueline",
+            "number": 11,
+            "expected": "Jacqueline, you are the 11th customer we serve today. Thank you!",
+            "actual": "Jacqueline, you are the 11th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Juan",
+            "number": 12,
+            "expected": "Juan, you are the 12th customer we serve today. Thank you!",
+            "actual": "Juan, you are the 12th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Patricia",
+            "number": 13,
+            "expected": "Patricia, you are the 13th customer we serve today. Thank you!",
+            "actual": "Patricia, you are the 13th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Washi",
+            "number": 21,
+            "expected": "Washi, you are the 21st customer we serve today. Thank you!",
+            "actual": "Washi, you are the 21st customer we serve today. Thank you!"
+          },
+          {
+            "name": "Ingrid",
+            "number": 22,
+            "expected": "Ingrid, you are the 22nd customer we serve today. Thank you!",
+            "actual": "Ingrid, you are the 22nd customer we serve today. Thank you!"
+          },
+          {
+            "name": "Mario",
+            "number": 33,
+            "expected": "Mario, you are the 33rd customer we serve today. Thank you!",
+            "actual": "Mario, you are the 33rd customer we serve today. Thank you!"
+          },
+          {
+            "name": "Quentin",
+            "number": 52,
+            "expected": "Quentin, you are the 52nd customer we serve today. Thank you!",
+            "actual": "Quentin, you are the 52nd customer we serve today. Thank you!"
+          },
+          {
+            "name": "Nayra",
+            "number": 62,
+            "expected": "Nayra, you are the 62nd customer we serve today. Thank you!",
+            "actual": "Nayra, you are the 62nd customer we serve today. Thank you!"
+          },
+          {
+            "name": "Ugo",
+            "number": 72,
+            "expected": "Ugo, you are the 72nd customer we serve today. Thank you!",
+            "actual": "Ugo, you are the 72nd customer we serve today. Thank you!"
+          },
+          {
+            "name": "Boris",
+            "number": 91,
+            "expected": "Boris, you are the 91st customer we serve today. Thank you!",
+            "actual": "Boris, you are the 91st customer we serve today. Thank you!"
+          },
+          {
+            "name": "John",
+            "number": 100,
+            "expected": "John, you are the 100th customer we serve today. Thank you!",
+            "actual": "John, you are the 100th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Zeinab",
+            "number": 101,
+            "expected": "Zeinab, you are the 101st customer we serve today. Thank you!",
+            "actual": "Zeinab, you are the 101st customer we serve today. Thank you!"
+          },
+          {
+            "name": "Knud",
+            "number": 112,
+            "expected": "Knud, you are the 112th customer we serve today. Thank you!",
+            "actual": "Knud, you are the 112th customer we serve today. Thank you!"
+          },
+          {
+            "name": "Yma",
+            "number": 123,
+            "expected": "Yma, you are the 123rd customer we serve today. Thank you!",
+            "actual": "Yma, you are the 123rd customer we serve today. Thank you!"
+          },
+          {
+            "name": "Elias",
+            "number": 972,
+            "expected": "Elias, you are the 972nd customer we serve today. Thank you!",
+            "actual": "Elias, you are the 972nd customer we serve today. Thank you!"
+          }
+        ],
+        "repetitions": 15,
+        "vm_step_samples": [
+          568,
+          568,
+          568,
+          568,
+          568,
+          568,
+          568,
+          568,
+          568,
+          568,
+          568,
+          568,
+          568,
+          568,
+          568
+        ],
+        "median_vm_steps": 568,
+        "stdout": "__BENCHMARK_RESULTS_BEGIN__\n[{\"name\":\"Gianna\",\"number\":4,\"expected\":\"Gianna, you are the 4th customer we serve today. Thank you!\",\"actual\":\"Gianna, you are the 4th customer we serve today. Thank you!\"},\n{\"name\":\"Maarten\",\"number\":9,\"expected\":\"Maarten, you are the 9th customer we serve today. Thank you!\",\"actual\":\"Maarten, you are the 9th customer we serve today. Thank you!\"},\n{\"name\":\"Petronila\",\"number\":5,\"expected\":\"Petronila, you are the 5th customer we serve today. Thank you!\",\"actual\":\"Petronila, you are the 5th customer we serve today. Thank you!\"},\n{\"name\":\"Attakullakulla\",\"number\":6,\"expected\":\"Attakullakulla, you are the 6th customer we serve today. Thank you!\",\"actual\":\"Attakullakulla, you are the 6th customer we serve today. Thank you!\"},\n{\"name\":\"Kate\",\"number\":7,\"expected\":\"Kate, you are the 7th customer we serve today. Thank you!\",\"actual\":\"Kate, you are the 7th customer we serve today. Thank you!\"},\n{\"name\":\"Maximiliano\",\"number\":8,\"expected\":\"Maximiliano, you are the 8th customer we serve today. Thank you!\",\"actual\":\"Maximiliano, you are the 8th customer we serve today. Thank you!\"},\n{\"name\":\"Mary\",\"number\":1,\"expected\":\"Mary, you are the 1st customer we serve today. Thank you!\",\"actual\":\"Mary, you are the 1st customer we serve today. Thank you!\"},\n{\"name\":\"Haruto\",\"number\":2,\"expected\":\"Haruto, you are the 2nd customer we serve today. Thank you!\",\"actual\":\"Haruto, you are the 2nd customer we serve today. Thank you!\"},\n{\"name\":\"Henriette\",\"number\":3,\"expected\":\"Henriette, you are the 3rd customer we serve today. Thank you!\",\"actual\":\"Henriette, you are the 3rd customer we serve today. Thank you!\"},\n{\"name\":\"Alvarez\",\"number\":10,\"expected\":\"Alvarez, you are the 10th customer we serve today. Thank you!\",\"actual\":\"Alvarez, you are the 10th customer we serve today. Thank you!\"},\n{\"name\":\"Jacqueline\",\"number\":11,\"expected\":\"Jacqueline, you are the 11th customer we serve today. Thank you!\",\"actual\":\"Jacqueline, you are the 11th customer we serve today. Thank you!\"},\n{\"name\":\"Juan\",\"number\":12,\"expected\":\"Juan, you are the 12th customer we serve today. Thank you!\",\"actual\":\"Juan, you are the 12th customer we serve today. Thank you!\"},\n{\"name\":\"Patricia\",\"number\":13,\"expected\":\"Patricia, you are the 13th customer we serve today. Thank you!\",\"actual\":\"Patricia, you are the 13th customer we serve today. Thank you!\"},\n{\"name\":\"Washi\",\"number\":21,\"expected\":\"Washi, you are the 21st customer we serve today. Thank you!\",\"actual\":\"Washi, you are the 21st customer we serve today. Thank you!\"},\n{\"name\":\"Ingrid\",\"number\":22,\"expected\":\"Ingrid, you are the 22nd customer we serve today. Thank you!\",\"actual\":\"Ingrid, you are the 22nd customer we serve today. Thank you!\"},\n{\"name\":\"Mario\",\"number\":33,\"expected\":\"Mario, you are the 33rd customer we serve today. Thank you!\",\"actual\":\"Mario, you are the 33rd customer we serve today. Thank you!\"},\n{\"name\":\"Quentin\",\"number\":52,\"expected\":\"Quentin, you are the 52nd customer we serve today. Thank you!\",\"actual\":\"Quentin, you are the 52nd customer we serve today. Thank you!\"},\n{\"name\":\"Nayra\",\"number\":62,\"expected\":\"Nayra, you are the 62nd customer we serve today. Thank you!\",\"actual\":\"Nayra, you are the 62nd customer we serve today. Thank you!\"},\n{\"name\":\"Ugo\",\"number\":72,\"expected\":\"Ugo, you are the 72nd customer we serve today. Thank you!\",\"actual\":\"Ugo, you are the 72nd customer we serve today. Thank you!\"},\n{\"name\":\"Boris\",\"number\":91,\"expected\":\"Boris, you are the 91st customer we serve today. Thank you!\",\"actual\":\"Boris, you are the 91st customer we serve today. Thank you!\"},\n{\"name\":\"John\",\"number\":100,\"expected\":\"John, you are the 100th customer we serve today. Thank you!\",\"actual\":\"John, you are the 100th customer we serve today. Thank you!\"},\n{\"name\":\"Zeinab\",\"number\":101,\"expected\":\"Zeinab, you are the 101st customer we serve today. Thank you!\",\"actual\":\"Zeinab, you are the 101st customer we serve today. Thank you!\"},\n{\"name\":\"Knud\",\"number\":112,\"expected\":\"Knud, you are the 112th customer we serve today. Thank you!\",\"actual\":\"Knud, you are the 112th customer we serve today. Thank you!\"},\n{\"name\":\"Yma\",\"number\":123,\"expected\":\"Yma, you are the 123rd customer we serve today. Thank you!\",\"actual\":\"Yma, you are the 123rd customer we serve today. Thank you!\"},\n{\"name\":\"Elias\",\"number\":972,\"expected\":\"Elias, you are the 972nd customer we serve today. Thank you!\",\"actual\":\"Elias, you are the 972nd customer we serve today. Thank you!\"}]\n__BENCHMARK_RESULTS_END__\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\nVM-steps: 568\n",
+        "stderr": ""
+      }
+    ],
+    "limitation": "VM-step counts depend on the SQLite version/build and are not hardware instruction counts or wall-clock timings."
+  }
+}
