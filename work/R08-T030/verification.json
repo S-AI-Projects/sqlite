@@ -1,0 +1,680 @@
+{
+  "task": "R08-T030",
+  "issue": "S-AI-Projects/sqlite#33",
+  "status": "passed",
+  "checker_command": [
+    "python3",
+    "work/R08-T030/check.py"
+  ],
+  "config_path": "exercises/practice/rna-transcription/.meta/config.json",
+  "resolved_paths": {
+    "solution": [
+      "rna-transcription.sql"
+    ],
+    "test": [
+      "rna-transcription_test.sql"
+    ],
+    "example": [
+      ".meta/example.sql"
+    ],
+    "editor": [
+      "data.csv"
+    ]
+  },
+  "tool_versions": {
+    "python": "3.15.1 (main, Oct 21 2026, 05:55:12) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "sqlite_cli": {
+      "command": [
+        "sqlite3",
+        "--version"
+      ],
+      "return_code": 0,
+      "version": "3.51.0 2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl (64-bit)",
+      "stdout": "3.51.0 2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl (64-bit)\n",
+      "stderr": ""
+    }
+  },
+  "environment": {
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "expected_enabled_test_count": 6,
+  "original_file_hashes_before": {
+    "exercises/practice/rna-transcription/.docs/hints.md": "7aa1e86ad745676de176950698ff11b7bfcbab30f50b0b9a541c1170f6578a46",
+    "exercises/practice/rna-transcription/.docs/instructions.md": "536c5cafa069914558ea1c4ae2ad147b2004833d9361b0f89969202432a565b4",
+    "exercises/practice/rna-transcription/.docs/introduction.md": "73342d60e795aed04fcec0422263ee9408c1cfcdf523a11600ac2bc0a08bc6ee",
+    "exercises/practice/rna-transcription/.meta/config.json": "e257d29500e41dc2177328e007ec0ac31b58e7d23b48d5ed9e0468b41ef99ece",
+    "exercises/practice/rna-transcription/.meta/example.sql": "8a7ccde53c39b3ef4d7d2bc0a02b3dfc4d9e73e6ae159f7e57a58b583632eb87",
+    "exercises/practice/rna-transcription/.meta/template.data.j2": "01d9bf96bc22ab8f148cd919a228c43908eef6cc6559c7239df37245da67270c",
+    "exercises/practice/rna-transcription/.meta/tests.toml": "3e6c25bdc9a91506c5ecb4d31c0c3ba513729d761c20eb66c9575b377bb6d857",
+    "exercises/practice/rna-transcription/create_fixture.sql": "bbe280483cf414dbd9a600de452510cb3d3a07959f101b7cbbd0f568e6777f3c",
+    "exercises/practice/rna-transcription/data.csv": "6e6b5679b76a7c2a678c7a64c18dab1ba7370f18c9e66fb008f885a4270ecbe1",
+    "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14",
+    "exercises/practice/rna-transcription/rna-transcription_test.sql": "badfe4ea509dae08f71bb3c821b357e6990d49ec3d718c9e52bea76bf72804fa",
+    "exercises/practice/rna-transcription/test_reporter.sql": "a5efd0f900b13edb7b0c9e896aeef552b74973834c394ef5574ef9cc6c485283",
+    "exercises/practice/rna-transcription/test_setup.sql": "196434c6e7e164055d5991b8273ce9128ca0595571352a45294aa0afd4e0a44a"
+  },
+  "original_file_hashes_after": {
+    "exercises/practice/rna-transcription/.docs/hints.md": "7aa1e86ad745676de176950698ff11b7bfcbab30f50b0b9a541c1170f6578a46",
+    "exercises/practice/rna-transcription/.docs/instructions.md": "536c5cafa069914558ea1c4ae2ad147b2004833d9361b0f89969202432a565b4",
+    "exercises/practice/rna-transcription/.docs/introduction.md": "73342d60e795aed04fcec0422263ee9408c1cfcdf523a11600ac2bc0a08bc6ee",
+    "exercises/practice/rna-transcription/.meta/config.json": "e257d29500e41dc2177328e007ec0ac31b58e7d23b48d5ed9e0468b41ef99ece",
+    "exercises/practice/rna-transcription/.meta/example.sql": "8a7ccde53c39b3ef4d7d2bc0a02b3dfc4d9e73e6ae159f7e57a58b583632eb87",
+    "exercises/practice/rna-transcription/.meta/template.data.j2": "01d9bf96bc22ab8f148cd919a228c43908eef6cc6559c7239df37245da67270c",
+    "exercises/practice/rna-transcription/.meta/tests.toml": "3e6c25bdc9a91506c5ecb4d31c0c3ba513729d761c20eb66c9575b377bb6d857",
+    "exercises/practice/rna-transcription/create_fixture.sql": "bbe280483cf414dbd9a600de452510cb3d3a07959f101b7cbbd0f568e6777f3c",
+    "exercises/practice/rna-transcription/data.csv": "6e6b5679b76a7c2a678c7a64c18dab1ba7370f18c9e66fb008f885a4270ecbe1",
+    "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14",
+    "exercises/practice/rna-transcription/rna-transcription_test.sql": "badfe4ea509dae08f71bb3c821b357e6990d49ec3d718c9e52bea76bf72804fa",
+    "exercises/practice/rna-transcription/test_reporter.sql": "a5efd0f900b13edb7b0c9e896aeef552b74973834c394ef5574ef9cc6c485283",
+    "exercises/practice/rna-transcription/test_setup.sql": "196434c6e7e164055d5991b8273ce9128ca0595571352a45294aa0afd4e0a44a"
+  },
+  "original_files_unchanged": true,
+  "probes": [
+    {
+      "name": "reference",
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "/Users/girishprasadsharma/sqlite/work/R08-T030/check.py",
+        "--scenario",
+        "reference",
+        "--temp-root",
+        "/var/folders/07/zyspm17x5598vl9932wrc6r80000gn/T/r08-t030-reference-xzfd3iob"
+      ],
+      "expected_process_exit_status": 0,
+      "process_exit_status": 0,
+      "stdout": "",
+      "stderr": "",
+      "parent_temp_root": "/var/folders/07/zyspm17x5598vl9932wrc6r80000gn/T/r08-t030-reference-xzfd3iob",
+      "parent_temp_root_removed": true,
+      "exercise_hashes_before": {
+        "exercises/practice/rna-transcription/.docs/hints.md": "7aa1e86ad745676de176950698ff11b7bfcbab30f50b0b9a541c1170f6578a46",
+        "exercises/practice/rna-transcription/.docs/instructions.md": "536c5cafa069914558ea1c4ae2ad147b2004833d9361b0f89969202432a565b4",
+        "exercises/practice/rna-transcription/.docs/introduction.md": "73342d60e795aed04fcec0422263ee9408c1cfcdf523a11600ac2bc0a08bc6ee",
+        "exercises/practice/rna-transcription/.meta/config.json": "e257d29500e41dc2177328e007ec0ac31b58e7d23b48d5ed9e0468b41ef99ece",
+        "exercises/practice/rna-transcription/.meta/example.sql": "8a7ccde53c39b3ef4d7d2bc0a02b3dfc4d9e73e6ae159f7e57a58b583632eb87",
+        "exercises/practice/rna-transcription/.meta/template.data.j2": "01d9bf96bc22ab8f148cd919a228c43908eef6cc6559c7239df37245da67270c",
+        "exercises/practice/rna-transcription/.meta/tests.toml": "3e6c25bdc9a91506c5ecb4d31c0c3ba513729d761c20eb66c9575b377bb6d857",
+        "exercises/practice/rna-transcription/create_fixture.sql": "bbe280483cf414dbd9a600de452510cb3d3a07959f101b7cbbd0f568e6777f3c",
+        "exercises/practice/rna-transcription/data.csv": "6e6b5679b76a7c2a678c7a64c18dab1ba7370f18c9e66fb008f885a4270ecbe1",
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14",
+        "exercises/practice/rna-transcription/rna-transcription_test.sql": "badfe4ea509dae08f71bb3c821b357e6990d49ec3d718c9e52bea76bf72804fa",
+        "exercises/practice/rna-transcription/test_reporter.sql": "a5efd0f900b13edb7b0c9e896aeef552b74973834c394ef5574ef9cc6c485283",
+        "exercises/practice/rna-transcription/test_setup.sql": "196434c6e7e164055d5991b8273ce9128ca0595571352a45294aa0afd4e0a44a"
+      },
+      "exercise_hashes_after": {
+        "exercises/practice/rna-transcription/.docs/hints.md": "7aa1e86ad745676de176950698ff11b7bfcbab30f50b0b9a541c1170f6578a46",
+        "exercises/practice/rna-transcription/.docs/instructions.md": "536c5cafa069914558ea1c4ae2ad147b2004833d9361b0f89969202432a565b4",
+        "exercises/practice/rna-transcription/.docs/introduction.md": "73342d60e795aed04fcec0422263ee9408c1cfcdf523a11600ac2bc0a08bc6ee",
+        "exercises/practice/rna-transcription/.meta/config.json": "e257d29500e41dc2177328e007ec0ac31b58e7d23b48d5ed9e0468b41ef99ece",
+        "exercises/practice/rna-transcription/.meta/example.sql": "8a7ccde53c39b3ef4d7d2bc0a02b3dfc4d9e73e6ae159f7e57a58b583632eb87",
+        "exercises/practice/rna-transcription/.meta/template.data.j2": "01d9bf96bc22ab8f148cd919a228c43908eef6cc6559c7239df37245da67270c",
+        "exercises/practice/rna-transcription/.meta/tests.toml": "3e6c25bdc9a91506c5ecb4d31c0c3ba513729d761c20eb66c9575b377bb6d857",
+        "exercises/practice/rna-transcription/create_fixture.sql": "bbe280483cf414dbd9a600de452510cb3d3a07959f101b7cbbd0f568e6777f3c",
+        "exercises/practice/rna-transcription/data.csv": "6e6b5679b76a7c2a678c7a64c18dab1ba7370f18c9e66fb008f885a4270ecbe1",
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14",
+        "exercises/practice/rna-transcription/rna-transcription_test.sql": "badfe4ea509dae08f71bb3c821b357e6990d49ec3d718c9e52bea76bf72804fa",
+        "exercises/practice/rna-transcription/test_reporter.sql": "a5efd0f900b13edb7b0c9e896aeef552b74973834c394ef5574ef9cc6c485283",
+        "exercises/practice/rna-transcription/test_setup.sql": "196434c6e7e164055d5991b8273ce9128ca0595571352a45294aa0afd4e0a44a"
+      },
+      "learner_hashes_before": {
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14"
+      },
+      "learner_hashes_after": {
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14"
+      },
+      "original_files_unchanged": true,
+      "scenario": {
+        "name": "reference",
+        "expected_checker_exit_status": 0,
+        "checker_exit_status": 0,
+        "checker_failure": null,
+        "resolved_paths": {
+          "solution": [
+            "rna-transcription.sql"
+          ],
+          "test": [
+            "rna-transcription_test.sql"
+          ],
+          "example": [
+            ".meta/example.sql"
+          ],
+          "editor": [
+            "data.csv"
+          ]
+        },
+        "copy_path": "/var/folders/07/zyspm17x5598vl9932wrc6r80000gn/T/r08-t030-reference-xzfd3iob/exercise-copy-reference",
+        "hidden_paths_verified": [
+          ".meta/config.json",
+          ".meta/example.sql",
+          ".docs/instructions.md",
+          ".docs/hints.md"
+        ],
+        "sqlite": {
+          "command": [
+            "sqlite3",
+            "-bail"
+          ],
+          "return_code": 0,
+          "stdin_sql_sha256": "5ca7d6b70e23a2c6e0e3fc751b73289540ea9cb7cec7b742a500d8dca66e72bd",
+          "stdin_sql_bytes": 1423,
+          "stdin_sql_description": "Configured test SQL plus the checker results query"
+        },
+        "output_json_error": null,
+        "actual_results_error": null,
+        "expected_vs_actual": [
+          {
+            "uuid": "b4631f82-c98c-4a2f-90b3-c5c2b6c6f661",
+            "description": "Empty RNA sequence",
+            "input": "",
+            "expected": "",
+            "actual": ""
+          },
+          {
+            "uuid": "a9558a3c-318c-4240-9256-5d5ed47005a6",
+            "description": "RNA complement of cytosine is guanine",
+            "input": "C",
+            "expected": "G",
+            "actual": "G"
+          },
+          {
+            "uuid": "6eedbb5c-12cb-4c8b-9f51-f8320b4dc2e7",
+            "description": "RNA complement of guanine is cytosine",
+            "input": "G",
+            "expected": "C",
+            "actual": "C"
+          },
+          {
+            "uuid": "870bd3ec-8487-471d-8d9a-a25046488d3e",
+            "description": "RNA complement of thymine is adenine",
+            "input": "T",
+            "expected": "A",
+            "actual": "A"
+          },
+          {
+            "uuid": "aade8964-02e1-4073-872f-42d3ffd74c5f",
+            "description": "RNA complement of adenine is uracil",
+            "input": "A",
+            "expected": "U",
+            "actual": "U"
+          },
+          {
+            "uuid": "79ed2757-f018-4f47-a1d7-34a559392dbf",
+            "description": "RNA complement",
+            "input": "ACGTGGTCTTAA",
+            "expected": "UGCACCAGAAUU",
+            "actual": "UGCACCAGAAUU"
+          }
+        ],
+        "executed_test_count": 6,
+        "copy_removed": true,
+        "passed": true,
+        "output_statuses": [
+          {
+            "name": "Empty RNA sequence",
+            "status": "pass"
+          },
+          {
+            "name": "RNA complement of cytosine is guanine",
+            "status": "pass"
+          },
+          {
+            "name": "RNA complement of guanine is cytosine",
+            "status": "pass"
+          },
+          {
+            "name": "RNA complement of thymine is adenine",
+            "status": "pass"
+          },
+          {
+            "name": "RNA complement of adenine is uracil",
+            "status": "pass"
+          },
+          {
+            "name": "RNA complement",
+            "status": "pass"
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "name": "failing-reference",
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "/Users/girishprasadsharma/sqlite/work/R08-T030/check.py",
+        "--scenario",
+        "failing-reference",
+        "--temp-root",
+        "/var/folders/07/zyspm17x5598vl9932wrc6r80000gn/T/r08-t030-failing-reference-wspedhvi"
+      ],
+      "expected_process_exit_status": 1,
+      "process_exit_status": 1,
+      "stdout": "",
+      "stderr": "",
+      "parent_temp_root": "/var/folders/07/zyspm17x5598vl9932wrc6r80000gn/T/r08-t030-failing-reference-wspedhvi",
+      "parent_temp_root_removed": true,
+      "exercise_hashes_before": {
+        "exercises/practice/rna-transcription/.docs/hints.md": "7aa1e86ad745676de176950698ff11b7bfcbab30f50b0b9a541c1170f6578a46",
+        "exercises/practice/rna-transcription/.docs/instructions.md": "536c5cafa069914558ea1c4ae2ad147b2004833d9361b0f89969202432a565b4",
+        "exercises/practice/rna-transcription/.docs/introduction.md": "73342d60e795aed04fcec0422263ee9408c1cfcdf523a11600ac2bc0a08bc6ee",
+        "exercises/practice/rna-transcription/.meta/config.json": "e257d29500e41dc2177328e007ec0ac31b58e7d23b48d5ed9e0468b41ef99ece",
+        "exercises/practice/rna-transcription/.meta/example.sql": "8a7ccde53c39b3ef4d7d2bc0a02b3dfc4d9e73e6ae159f7e57a58b583632eb87",
+        "exercises/practice/rna-transcription/.meta/template.data.j2": "01d9bf96bc22ab8f148cd919a228c43908eef6cc6559c7239df37245da67270c",
+        "exercises/practice/rna-transcription/.meta/tests.toml": "3e6c25bdc9a91506c5ecb4d31c0c3ba513729d761c20eb66c9575b377bb6d857",
+        "exercises/practice/rna-transcription/create_fixture.sql": "bbe280483cf414dbd9a600de452510cb3d3a07959f101b7cbbd0f568e6777f3c",
+        "exercises/practice/rna-transcription/data.csv": "6e6b5679b76a7c2a678c7a64c18dab1ba7370f18c9e66fb008f885a4270ecbe1",
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14",
+        "exercises/practice/rna-transcription/rna-transcription_test.sql": "badfe4ea509dae08f71bb3c821b357e6990d49ec3d718c9e52bea76bf72804fa",
+        "exercises/practice/rna-transcription/test_reporter.sql": "a5efd0f900b13edb7b0c9e896aeef552b74973834c394ef5574ef9cc6c485283",
+        "exercises/practice/rna-transcription/test_setup.sql": "196434c6e7e164055d5991b8273ce9128ca0595571352a45294aa0afd4e0a44a"
+      },
+      "exercise_hashes_after": {
+        "exercises/practice/rna-transcription/.docs/hints.md": "7aa1e86ad745676de176950698ff11b7bfcbab30f50b0b9a541c1170f6578a46",
+        "exercises/practice/rna-transcription/.docs/instructions.md": "536c5cafa069914558ea1c4ae2ad147b2004833d9361b0f89969202432a565b4",
+        "exercises/practice/rna-transcription/.docs/introduction.md": "73342d60e795aed04fcec0422263ee9408c1cfcdf523a11600ac2bc0a08bc6ee",
+        "exercises/practice/rna-transcription/.meta/config.json": "e257d29500e41dc2177328e007ec0ac31b58e7d23b48d5ed9e0468b41ef99ece",
+        "exercises/practice/rna-transcription/.meta/example.sql": "8a7ccde53c39b3ef4d7d2bc0a02b3dfc4d9e73e6ae159f7e57a58b583632eb87",
+        "exercises/practice/rna-transcription/.meta/template.data.j2": "01d9bf96bc22ab8f148cd919a228c43908eef6cc6559c7239df37245da67270c",
+        "exercises/practice/rna-transcription/.meta/tests.toml": "3e6c25bdc9a91506c5ecb4d31c0c3ba513729d761c20eb66c9575b377bb6d857",
+        "exercises/practice/rna-transcription/create_fixture.sql": "bbe280483cf414dbd9a600de452510cb3d3a07959f101b7cbbd0f568e6777f3c",
+        "exercises/practice/rna-transcription/data.csv": "6e6b5679b76a7c2a678c7a64c18dab1ba7370f18c9e66fb008f885a4270ecbe1",
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14",
+        "exercises/practice/rna-transcription/rna-transcription_test.sql": "badfe4ea509dae08f71bb3c821b357e6990d49ec3d718c9e52bea76bf72804fa",
+        "exercises/practice/rna-transcription/test_reporter.sql": "a5efd0f900b13edb7b0c9e896aeef552b74973834c394ef5574ef9cc6c485283",
+        "exercises/practice/rna-transcription/test_setup.sql": "196434c6e7e164055d5991b8273ce9128ca0595571352a45294aa0afd4e0a44a"
+      },
+      "learner_hashes_before": {
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14"
+      },
+      "learner_hashes_after": {
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14"
+      },
+      "original_files_unchanged": true,
+      "scenario": {
+        "name": "failing-reference",
+        "expected_checker_exit_status": 1,
+        "checker_exit_status": 1,
+        "checker_failure": "Non-pass output.json entries: [('RNA complement of cytosine is guanine', 'fail'), ('RNA complement of guanine is cytosine', 'fail'), ('RNA complement of thymine is adenine', 'fail'), ('RNA complement of adenine is uracil', 'fail'), ('RNA complement', 'fail')]",
+        "resolved_paths": {
+          "solution": [
+            "rna-transcription.sql"
+          ],
+          "test": [
+            "rna-transcription_test.sql"
+          ],
+          "example": [
+            ".meta/example.sql"
+          ],
+          "editor": [
+            "data.csv"
+          ]
+        },
+        "copy_path": "/var/folders/07/zyspm17x5598vl9932wrc6r80000gn/T/r08-t030-failing-reference-wspedhvi/exercise-copy-failing-reference",
+        "hidden_paths_verified": [
+          ".meta/config.json",
+          ".meta/example.sql",
+          ".docs/instructions.md",
+          ".docs/hints.md"
+        ],
+        "sqlite": {
+          "command": [
+            "sqlite3",
+            "-bail"
+          ],
+          "return_code": 0,
+          "stdout": "+---------------------------------------+--------+--------------------------------------------------------------+\n|                 name                  | status |                           message                            |\n+---------------------------------------+--------+--------------------------------------------------------------+\n| Empty RNA sequence                    | pass   |                                                              |\n+---------------------------------------+--------+--------------------------------------------------------------+\n| RNA complement of cytosine is guanine | fail   | Result for \"C\" is <C> but should be <G>                      |\n+---------------------------------------+--------+--------------------------------------------------------------+\n| RNA complement of guanine is cytosine | fail   | Result for \"G\" is <G> but should be <C>                      |\n+---------------------------------------+--------+--------------------------------------------------------------+\n| RNA complement of thymine is adenine  | fail   | Result for \"T\" is <T> but should be <A>                      |\n+---------------------------------------+--------+--------------------------------------------------------------+\n| RNA complement of adenine is uracil   | fail   | Result for \"A\" is <A> but should be <U>                      |\n+---------------------------------------+--------+--------------------------------------------------------------+\n| RNA complement                        | fail   | Result for \"ACGTGGTCTTAA\" is <ACGTGGTCTTAA> but should be <U |\n|                                       |        | GCACCAGAAUU>                                                 |\n+---------------------------------------+--------+--------------------------------------------------------------+\n__R08_T030_RESULTS_BEGIN__\n[{\"uuid\":\"b4631f82-c98c-4a2f-90b3-c5c2b6c6f661\",\"name\":\"Empty RNA sequence\",\"dna\":\"\",\"expected\":\"\",\"actual_result\":\"\"},\n{\"uuid\":\"a9558a3c-318c-4240-9256-5d5ed47005a6\",\"name\":\"RNA complement of cytosine is guanine\",\"dna\":\"C\",\"expected\":\"G\",\"actual_result\":\"C\"},\n{\"uuid\":\"6eedbb5c-12cb-4c8b-9f51-f8320b4dc2e7\",\"name\":\"RNA complement of guanine is cytosine\",\"dna\":\"G\",\"expected\":\"C\",\"actual_result\":\"G\"},\n{\"uuid\":\"870bd3ec-8487-471d-8d9a-a25046488d3e\",\"name\":\"RNA complement of thymine is adenine\",\"dna\":\"T\",\"expected\":\"A\",\"actual_result\":\"T\"},\n{\"uuid\":\"aade8964-02e1-4073-872f-42d3ffd74c5f\",\"name\":\"RNA complement of adenine is uracil\",\"dna\":\"A\",\"expected\":\"U\",\"actual_result\":\"A\"},\n{\"uuid\":\"79ed2757-f018-4f47-a1d7-34a559392dbf\",\"name\":\"RNA complement\",\"dna\":\"ACGTGGTCTTAA\",\"expected\":\"UGCACCAGAAUU\",\"actual_result\":\"ACGTGGTCTTAA\"}]\n__R08_T030_RESULTS_END__\n",
+          "stdin_sql_sha256": "5ca7d6b70e23a2c6e0e3fc751b73289540ea9cb7cec7b742a500d8dca66e72bd",
+          "stdin_sql_bytes": 1423,
+          "stdin_sql_description": "Configured test SQL plus the checker results query"
+        },
+        "output_json_error": null,
+        "actual_results_error": null,
+        "expected_vs_actual": [
+          {
+            "uuid": "b4631f82-c98c-4a2f-90b3-c5c2b6c6f661",
+            "description": "Empty RNA sequence",
+            "input": "",
+            "expected": "",
+            "actual": ""
+          },
+          {
+            "uuid": "a9558a3c-318c-4240-9256-5d5ed47005a6",
+            "description": "RNA complement of cytosine is guanine",
+            "input": "C",
+            "expected": "G",
+            "actual": "C"
+          },
+          {
+            "uuid": "6eedbb5c-12cb-4c8b-9f51-f8320b4dc2e7",
+            "description": "RNA complement of guanine is cytosine",
+            "input": "G",
+            "expected": "C",
+            "actual": "G"
+          },
+          {
+            "uuid": "870bd3ec-8487-471d-8d9a-a25046488d3e",
+            "description": "RNA complement of thymine is adenine",
+            "input": "T",
+            "expected": "A",
+            "actual": "T"
+          },
+          {
+            "uuid": "aade8964-02e1-4073-872f-42d3ffd74c5f",
+            "description": "RNA complement of adenine is uracil",
+            "input": "A",
+            "expected": "U",
+            "actual": "A"
+          },
+          {
+            "uuid": "79ed2757-f018-4f47-a1d7-34a559392dbf",
+            "description": "RNA complement",
+            "input": "ACGTGGTCTTAA",
+            "expected": "UGCACCAGAAUU",
+            "actual": "ACGTGGTCTTAA"
+          }
+        ],
+        "executed_test_count": 6,
+        "copy_removed": true,
+        "passed": true,
+        "output_statuses": [
+          {
+            "name": "Empty RNA sequence",
+            "status": "pass"
+          },
+          {
+            "name": "RNA complement of cytosine is guanine",
+            "status": "fail"
+          },
+          {
+            "name": "RNA complement of guanine is cytosine",
+            "status": "fail"
+          },
+          {
+            "name": "RNA complement of thymine is adenine",
+            "status": "fail"
+          },
+          {
+            "name": "RNA complement of adenine is uracil",
+            "status": "fail"
+          },
+          {
+            "name": "RNA complement",
+            "status": "fail"
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "name": "empty-selection",
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "/Users/girishprasadsharma/sqlite/work/R08-T030/check.py",
+        "--scenario",
+        "empty-selection",
+        "--temp-root",
+        "/var/folders/07/zyspm17x5598vl9932wrc6r80000gn/T/r08-t030-empty-selection-bjie2l3u"
+      ],
+      "expected_process_exit_status": 1,
+      "process_exit_status": 1,
+      "stdout": "",
+      "stderr": "",
+      "parent_temp_root": "/var/folders/07/zyspm17x5598vl9932wrc6r80000gn/T/r08-t030-empty-selection-bjie2l3u",
+      "parent_temp_root_removed": true,
+      "exercise_hashes_before": {
+        "exercises/practice/rna-transcription/.docs/hints.md": "7aa1e86ad745676de176950698ff11b7bfcbab30f50b0b9a541c1170f6578a46",
+        "exercises/practice/rna-transcription/.docs/instructions.md": "536c5cafa069914558ea1c4ae2ad147b2004833d9361b0f89969202432a565b4",
+        "exercises/practice/rna-transcription/.docs/introduction.md": "73342d60e795aed04fcec0422263ee9408c1cfcdf523a11600ac2bc0a08bc6ee",
+        "exercises/practice/rna-transcription/.meta/config.json": "e257d29500e41dc2177328e007ec0ac31b58e7d23b48d5ed9e0468b41ef99ece",
+        "exercises/practice/rna-transcription/.meta/example.sql": "8a7ccde53c39b3ef4d7d2bc0a02b3dfc4d9e73e6ae159f7e57a58b583632eb87",
+        "exercises/practice/rna-transcription/.meta/template.data.j2": "01d9bf96bc22ab8f148cd919a228c43908eef6cc6559c7239df37245da67270c",
+        "exercises/practice/rna-transcription/.meta/tests.toml": "3e6c25bdc9a91506c5ecb4d31c0c3ba513729d761c20eb66c9575b377bb6d857",
+        "exercises/practice/rna-transcription/create_fixture.sql": "bbe280483cf414dbd9a600de452510cb3d3a07959f101b7cbbd0f568e6777f3c",
+        "exercises/practice/rna-transcription/data.csv": "6e6b5679b76a7c2a678c7a64c18dab1ba7370f18c9e66fb008f885a4270ecbe1",
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14",
+        "exercises/practice/rna-transcription/rna-transcription_test.sql": "badfe4ea509dae08f71bb3c821b357e6990d49ec3d718c9e52bea76bf72804fa",
+        "exercises/practice/rna-transcription/test_reporter.sql": "a5efd0f900b13edb7b0c9e896aeef552b74973834c394ef5574ef9cc6c485283",
+        "exercises/practice/rna-transcription/test_setup.sql": "196434c6e7e164055d5991b8273ce9128ca0595571352a45294aa0afd4e0a44a"
+      },
+      "exercise_hashes_after": {
+        "exercises/practice/rna-transcription/.docs/hints.md": "7aa1e86ad745676de176950698ff11b7bfcbab30f50b0b9a541c1170f6578a46",
+        "exercises/practice/rna-transcription/.docs/instructions.md": "536c5cafa069914558ea1c4ae2ad147b2004833d9361b0f89969202432a565b4",
+        "exercises/practice/rna-transcription/.docs/introduction.md": "73342d60e795aed04fcec0422263ee9408c1cfcdf523a11600ac2bc0a08bc6ee",
+        "exercises/practice/rna-transcription/.meta/config.json": "e257d29500e41dc2177328e007ec0ac31b58e7d23b48d5ed9e0468b41ef99ece",
+        "exercises/practice/rna-transcription/.meta/example.sql": "8a7ccde53c39b3ef4d7d2bc0a02b3dfc4d9e73e6ae159f7e57a58b583632eb87",
+        "exercises/practice/rna-transcription/.meta/template.data.j2": "01d9bf96bc22ab8f148cd919a228c43908eef6cc6559c7239df37245da67270c",
+        "exercises/practice/rna-transcription/.meta/tests.toml": "3e6c25bdc9a91506c5ecb4d31c0c3ba513729d761c20eb66c9575b377bb6d857",
+        "exercises/practice/rna-transcription/create_fixture.sql": "bbe280483cf414dbd9a600de452510cb3d3a07959f101b7cbbd0f568e6777f3c",
+        "exercises/practice/rna-transcription/data.csv": "6e6b5679b76a7c2a678c7a64c18dab1ba7370f18c9e66fb008f885a4270ecbe1",
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14",
+        "exercises/practice/rna-transcription/rna-transcription_test.sql": "badfe4ea509dae08f71bb3c821b357e6990d49ec3d718c9e52bea76bf72804fa",
+        "exercises/practice/rna-transcription/test_reporter.sql": "a5efd0f900b13edb7b0c9e896aeef552b74973834c394ef5574ef9cc6c485283",
+        "exercises/practice/rna-transcription/test_setup.sql": "196434c6e7e164055d5991b8273ce9128ca0595571352a45294aa0afd4e0a44a"
+      },
+      "learner_hashes_before": {
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14"
+      },
+      "learner_hashes_after": {
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14"
+      },
+      "original_files_unchanged": true,
+      "scenario": {
+        "name": "empty-selection",
+        "expected_checker_exit_status": 1,
+        "checker_exit_status": 1,
+        "checker_failure": "Test run executed zero tests",
+        "resolved_paths": {
+          "solution": [
+            "rna-transcription.sql"
+          ],
+          "test": [
+            "rna-transcription_test.sql"
+          ],
+          "example": [
+            ".meta/example.sql"
+          ],
+          "editor": [
+            "data.csv"
+          ]
+        },
+        "copy_path": "/var/folders/07/zyspm17x5598vl9932wrc6r80000gn/T/r08-t030-empty-selection-bjie2l3u/exercise-copy-empty-selection",
+        "hidden_paths_verified": [
+          ".meta/config.json",
+          ".meta/example.sql",
+          ".docs/instructions.md",
+          ".docs/hints.md"
+        ],
+        "sqlite": {
+          "command": [
+            "sqlite3",
+            "-bail"
+          ],
+          "return_code": 0,
+          "stdout": "__R08_T030_RESULTS_BEGIN__\n__R08_T030_RESULTS_END__\n",
+          "stdin_sql_sha256": "edd34eb7a543c610d6064529955da17998e0cc703fe4a4add6c82d1978725d5b",
+          "stdin_sql_bytes": 1443,
+          "stdin_sql_description": "Configured test SQL plus the checker results query; includes an empty-selection deletion"
+        },
+        "output_json_error": null,
+        "actual_results_error": null,
+        "expected_vs_actual": [],
+        "executed_test_count": 0,
+        "copy_removed": true,
+        "passed": true,
+        "output_statuses": []
+      },
+      "passed": true
+    },
+    {
+      "name": "sqlite-error",
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "/Users/girishprasadsharma/sqlite/work/R08-T030/check.py",
+        "--scenario",
+        "sqlite-error",
+        "--temp-root",
+        "/var/folders/07/zyspm17x5598vl9932wrc6r80000gn/T/r08-t030-sqlite-error-p57_j0ko"
+      ],
+      "expected_process_exit_status": 1,
+      "process_exit_status": 1,
+      "stdout": "",
+      "stderr": "",
+      "parent_temp_root": "/var/folders/07/zyspm17x5598vl9932wrc6r80000gn/T/r08-t030-sqlite-error-p57_j0ko",
+      "parent_temp_root_removed": true,
+      "exercise_hashes_before": {
+        "exercises/practice/rna-transcription/.docs/hints.md": "7aa1e86ad745676de176950698ff11b7bfcbab30f50b0b9a541c1170f6578a46",
+        "exercises/practice/rna-transcription/.docs/instructions.md": "536c5cafa069914558ea1c4ae2ad147b2004833d9361b0f89969202432a565b4",
+        "exercises/practice/rna-transcription/.docs/introduction.md": "73342d60e795aed04fcec0422263ee9408c1cfcdf523a11600ac2bc0a08bc6ee",
+        "exercises/practice/rna-transcription/.meta/config.json": "e257d29500e41dc2177328e007ec0ac31b58e7d23b48d5ed9e0468b41ef99ece",
+        "exercises/practice/rna-transcription/.meta/example.sql": "8a7ccde53c39b3ef4d7d2bc0a02b3dfc4d9e73e6ae159f7e57a58b583632eb87",
+        "exercises/practice/rna-transcription/.meta/template.data.j2": "01d9bf96bc22ab8f148cd919a228c43908eef6cc6559c7239df37245da67270c",
+        "exercises/practice/rna-transcription/.meta/tests.toml": "3e6c25bdc9a91506c5ecb4d31c0c3ba513729d761c20eb66c9575b377bb6d857",
+        "exercises/practice/rna-transcription/create_fixture.sql": "bbe280483cf414dbd9a600de452510cb3d3a07959f101b7cbbd0f568e6777f3c",
+        "exercises/practice/rna-transcription/data.csv": "6e6b5679b76a7c2a678c7a64c18dab1ba7370f18c9e66fb008f885a4270ecbe1",
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14",
+        "exercises/practice/rna-transcription/rna-transcription_test.sql": "badfe4ea509dae08f71bb3c821b357e6990d49ec3d718c9e52bea76bf72804fa",
+        "exercises/practice/rna-transcription/test_reporter.sql": "a5efd0f900b13edb7b0c9e896aeef552b74973834c394ef5574ef9cc6c485283",
+        "exercises/practice/rna-transcription/test_setup.sql": "196434c6e7e164055d5991b8273ce9128ca0595571352a45294aa0afd4e0a44a"
+      },
+      "exercise_hashes_after": {
+        "exercises/practice/rna-transcription/.docs/hints.md": "7aa1e86ad745676de176950698ff11b7bfcbab30f50b0b9a541c1170f6578a46",
+        "exercises/practice/rna-transcription/.docs/instructions.md": "536c5cafa069914558ea1c4ae2ad147b2004833d9361b0f89969202432a565b4",
+        "exercises/practice/rna-transcription/.docs/introduction.md": "73342d60e795aed04fcec0422263ee9408c1cfcdf523a11600ac2bc0a08bc6ee",
+        "exercises/practice/rna-transcription/.meta/config.json": "e257d29500e41dc2177328e007ec0ac31b58e7d23b48d5ed9e0468b41ef99ece",
+        "exercises/practice/rna-transcription/.meta/example.sql": "8a7ccde53c39b3ef4d7d2bc0a02b3dfc4d9e73e6ae159f7e57a58b583632eb87",
+        "exercises/practice/rna-transcription/.meta/template.data.j2": "01d9bf96bc22ab8f148cd919a228c43908eef6cc6559c7239df37245da67270c",
+        "exercises/practice/rna-transcription/.meta/tests.toml": "3e6c25bdc9a91506c5ecb4d31c0c3ba513729d761c20eb66c9575b377bb6d857",
+        "exercises/practice/rna-transcription/create_fixture.sql": "bbe280483cf414dbd9a600de452510cb3d3a07959f101b7cbbd0f568e6777f3c",
+        "exercises/practice/rna-transcription/data.csv": "6e6b5679b76a7c2a678c7a64c18dab1ba7370f18c9e66fb008f885a4270ecbe1",
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14",
+        "exercises/practice/rna-transcription/rna-transcription_test.sql": "badfe4ea509dae08f71bb3c821b357e6990d49ec3d718c9e52bea76bf72804fa",
+        "exercises/practice/rna-transcription/test_reporter.sql": "a5efd0f900b13edb7b0c9e896aeef552b74973834c394ef5574ef9cc6c485283",
+        "exercises/practice/rna-transcription/test_setup.sql": "196434c6e7e164055d5991b8273ce9128ca0595571352a45294aa0afd4e0a44a"
+      },
+      "learner_hashes_before": {
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14"
+      },
+      "learner_hashes_after": {
+        "exercises/practice/rna-transcription/rna-transcription.sql": "817d9bed7727ccfa04c8f4fbb8fe34ea1571b986282a1171313aafcf2d1e0a14"
+      },
+      "original_files_unchanged": true,
+      "scenario": {
+        "name": "sqlite-error",
+        "expected_checker_exit_status": 1,
+        "checker_exit_status": 1,
+        "checker_failure": "SQLite child exited 1; stderr='Parse error near line 78: no such table: r08_t030_missing_table\\n'",
+        "resolved_paths": {
+          "solution": [
+            "rna-transcription.sql"
+          ],
+          "test": [
+            "rna-transcription_test.sql"
+          ],
+          "example": [
+            ".meta/example.sql"
+          ],
+          "editor": [
+            "data.csv"
+          ]
+        },
+        "copy_path": "/var/folders/07/zyspm17x5598vl9932wrc6r80000gn/T/r08-t030-sqlite-error-p57_j0ko/exercise-copy-sqlite-error",
+        "hidden_paths_verified": [
+          ".meta/config.json",
+          ".meta/example.sql",
+          ".docs/instructions.md",
+          ".docs/hints.md"
+        ],
+        "sqlite": {
+          "command": [
+            "sqlite3",
+            "-bail"
+          ],
+          "return_code": 1,
+          "stdout": "+---------------------------------------+--------+---------+\n|                 name                  | status | message |\n+---------------------------------------+--------+---------+\n| Empty RNA sequence                    | pass   |         |\n| RNA complement of cytosine is guanine | pass   |         |\n| RNA complement of guanine is cytosine | pass   |         |\n| RNA complement of thymine is adenine  | pass   |         |\n| RNA complement of adenine is uracil   | pass   |         |\n| RNA complement                        | pass   |         |\n+---------------------------------------+--------+---------+\n__R08_T030_RESULTS_BEGIN__\n[{\"uuid\":\"b4631f82-c98c-4a2f-90b3-c5c2b6c6f661\",\"name\":\"Empty RNA sequence\",\"dna\":\"\",\"expected\":\"\",\"actual_result\":\"\"},\n{\"uuid\":\"a9558a3c-318c-4240-9256-5d5ed47005a6\",\"name\":\"RNA complement of cytosine is guanine\",\"dna\":\"C\",\"expected\":\"G\",\"actual_result\":\"G\"},\n{\"uuid\":\"6eedbb5c-12cb-4c8b-9f51-f8320b4dc2e7\",\"name\":\"RNA complement of guanine is cytosine\",\"dna\":\"G\",\"expected\":\"C\",\"actual_result\":\"C\"},\n{\"uuid\":\"870bd3ec-8487-471d-8d9a-a25046488d3e\",\"name\":\"RNA complement of thymine is adenine\",\"dna\":\"T\",\"expected\":\"A\",\"actual_result\":\"A\"},\n{\"uuid\":\"aade8964-02e1-4073-872f-42d3ffd74c5f\",\"name\":\"RNA complement of adenine is uracil\",\"dna\":\"A\",\"expected\":\"U\",\"actual_result\":\"U\"},\n{\"uuid\":\"79ed2757-f018-4f47-a1d7-34a559392dbf\",\"name\":\"RNA complement\",\"dna\":\"ACGTGGTCTTAA\",\"expected\":\"UGCACCAGAAUU\",\"actual_result\":\"UGCACCAGAAUU\"}]\n__R08_T030_RESULTS_END__\n",
+          "stderr": "Parse error near line 78: no such table: r08_t030_missing_table\n",
+          "stdin_sql_sha256": "71aa13edca800dc3c29ea8d17459406f0eb600ec44fc6f20da807407938f1eb3",
+          "stdin_sql_bytes": 1462,
+          "stdin_sql_description": "Configured test SQL plus the checker results query; includes a deliberate missing-table query"
+        },
+        "output_json_error": null,
+        "actual_results_error": null,
+        "expected_vs_actual": [
+          {
+            "uuid": "b4631f82-c98c-4a2f-90b3-c5c2b6c6f661",
+            "description": "Empty RNA sequence",
+            "input": "",
+            "expected": "",
+            "actual": ""
+          },
+          {
+            "uuid": "a9558a3c-318c-4240-9256-5d5ed47005a6",
+            "description": "RNA complement of cytosine is guanine",
+            "input": "C",
+            "expected": "G",
+            "actual": "G"
+          },
+          {
+            "uuid": "6eedbb5c-12cb-4c8b-9f51-f8320b4dc2e7",
+            "description": "RNA complement of guanine is cytosine",
+            "input": "G",
+            "expected": "C",
+            "actual": "C"
+          },
+          {
+            "uuid": "870bd3ec-8487-471d-8d9a-a25046488d3e",
+            "description": "RNA complement of thymine is adenine",
+            "input": "T",
+            "expected": "A",
+            "actual": "A"
+          },
+          {
+            "uuid": "aade8964-02e1-4073-872f-42d3ffd74c5f",
+            "description": "RNA complement of adenine is uracil",
+            "input": "A",
+            "expected": "U",
+            "actual": "U"
+          },
+          {
+            "uuid": "79ed2757-f018-4f47-a1d7-34a559392dbf",
+            "description": "RNA complement",
+            "input": "ACGTGGTCTTAA",
+            "expected": "UGCACCAGAAUU",
+            "actual": "UGCACCAGAAUU"
+          }
+        ],
+        "executed_test_count": 6,
+        "copy_removed": true,
+        "passed": true,
+        "output_statuses": [
+          {
+            "name": "Empty RNA sequence",
+            "status": "pass"
+          },
+          {
+            "name": "RNA complement of cytosine is guanine",
+            "status": "pass"
+          },
+          {
+            "name": "RNA complement of guanine is cytosine",
+            "status": "pass"
+          },
+          {
+            "name": "RNA complement of thymine is adenine",
+            "status": "pass"
+          },
+          {
+            "name": "RNA complement of adenine is uracil",
+            "status": "pass"
+          },
+          {
+            "name": "RNA complement",
+            "status": "pass"
+          }
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "failures": []
+}
