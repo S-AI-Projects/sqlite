@@ -1,0 +1,1018 @@
+{
+  "task": "R08-T028",
+  "status": "passed",
+  "checker_command": "python3 work/R08-T028/check.py",
+  "config_path": "exercises/practice/wordy/.meta/config.json",
+  "tool_versions": {
+    "python": "3.15.1 (main, Oct 21 2026, 05:55:12) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "sqlite_cli": {
+      "command": "sqlite3 --version",
+      "return_code": 0,
+      "version": "3.51.0 2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl (64-bit)",
+      "stdout": "3.51.0 2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl (64-bit)\n",
+      "stderr": ""
+    }
+  },
+  "environment": {
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "expected_enabled_test_count": 27,
+  "resolved_paths": {
+    "solution": [
+      "wordy.sql"
+    ],
+    "test": [
+      "wordy_test.sql"
+    ],
+    "example": [
+      ".meta/example.sql"
+    ]
+  },
+  "invalid_metadata_fixtures": [
+    {
+      "name": "missing configured reference",
+      "config_change": {
+        "files.example": [
+          ".meta/missing-example.sql"
+        ]
+      },
+      "expected_failure_reason": "missing_file",
+      "actual_failure_reason": "missing_file",
+      "diagnostic": "Config files.example file does not exist: '.meta/missing-example.sql'",
+      "passed": true
+    },
+    {
+      "name": "missing configured test",
+      "config_change": {
+        "files.test": [
+          "missing_test.sql"
+        ]
+      },
+      "expected_failure_reason": "missing_file",
+      "actual_failure_reason": "missing_file",
+      "diagnostic": "Config files.test file does not exist: 'missing_test.sql'",
+      "passed": true
+    },
+    {
+      "name": "configured path outside exercise",
+      "config_change": {
+        "files.example": [
+          "../outside.sql"
+        ]
+      },
+      "expected_failure_reason": "outside_exercise",
+      "actual_failure_reason": "outside_exercise",
+      "diagnostic": "Config files.example path escapes the exercise: '../outside.sql'",
+      "passed": true
+    }
+  ],
+  "test_run": {
+    "command": "sqlite3 -bail < wordy_test.sql (plus read-only actual-results query)",
+    "return_code": 0,
+    "stdout": "+----------------------------------------------+--------+---------+\n|                 description                  | status | message |\n+----------------------------------------------+--------+---------+\n| just a number                                | pass   |         |\n| just a zero                                  | pass   |         |\n| just a negative number                       | pass   |         |\n| addition                                     | pass   |         |\n| addition with a left hand zero               | pass   |         |\n| addition with a right hand zero              | pass   |         |\n| more addition                                | pass   |         |\n| addition with negative numbers               | pass   |         |\n| large addition                               | pass   |         |\n| subtraction                                  | pass   |         |\n| multiplication                               | pass   |         |\n| division                                     | pass   |         |\n| multiple additions                           | pass   |         |\n| addition and subtraction                     | pass   |         |\n| multiple subtraction                         | pass   |         |\n| subtraction then addition                    | pass   |         |\n| multiple multiplication                      | pass   |         |\n| addition and multiplication                  | pass   |         |\n| multiple division                            | pass   |         |\n| unknown operation                            | pass   |         |\n| Non math question                            | pass   |         |\n| reject problem missing an operand            | pass   |         |\n| reject problem with no operands or operators | pass   |         |\n| reject two operations in a row               | pass   |         |\n| reject two numbers in a row                  | pass   |         |\n| reject postfix notation                      | pass   |         |\n| reject prefix notation                       | pass   |         |\n+----------------------------------------------+--------+---------+\n__R08_T028_CASE_RESULTS_BEGIN__\n[{\"uuid\":\"88bf4b28-0de3-4883-93c7-db1b14aa806e\",\"description\":\"just a number\",\"question\":\"What is 5?\",\"expected_result\":5,\"expected_error\":null,\"actual_result\":5,\"actual_error\":null},\n{\"uuid\":\"18983214-1dfc-4ebd-ac77-c110dde699ce\",\"description\":\"just a zero\",\"question\":\"What is 0?\",\"expected_result\":0,\"expected_error\":null,\"actual_result\":0,\"actual_error\":null},\n{\"uuid\":\"607c08ee-2241-4288-916d-dae5455c87e6\",\"description\":\"just a negative number\",\"question\":\"What is -123?\",\"expected_result\":-123,\"expected_error\":null,\"actual_result\":-123,\"actual_error\":null},\n{\"uuid\":\"bb8c655c-cf42-4dfc-90e0-152fcfd8d4e0\",\"description\":\"addition\",\"question\":\"What is 1 plus 1?\",\"expected_result\":2,\"expected_error\":null,\"actual_result\":2,\"actual_error\":null},\n{\"uuid\":\"bb9f2082-171c-46ad-ad4e-c3f72087c1b5\",\"description\":\"addition with a left hand zero\",\"question\":\"What is 0 plus 2?\",\"expected_result\":2,\"expected_error\":null,\"actual_result\":2,\"actual_error\":null},\n{\"uuid\":\"6fa05f17-405a-4742-80ae-5d1a8edb0d5d\",\"description\":\"addition with a right hand zero\",\"question\":\"What is 3 plus 0?\",\"expected_result\":3,\"expected_error\":null,\"actual_result\":3,\"actual_error\":null},\n{\"uuid\":\"79e49e06-c5ae-40aa-a352-7a3a01f70015\",\"description\":\"more addition\",\"question\":\"What is 53 plus 2?\",\"expected_result\":55,\"expected_error\":null,\"actual_result\":55,\"actual_error\":null},\n{\"uuid\":\"b345dbe0-f733-44e1-863c-5ae3568f3803\",\"description\":\"addition with negative numbers\",\"question\":\"What is -1 plus -10?\",\"expected_result\":-11,\"expected_error\":null,\"actual_result\":-11,\"actual_error\":null},\n{\"uuid\":\"cd070f39-c4cc-45c4-97fb-1be5e5846f87\",\"description\":\"large addition\",\"question\":\"What is 123 plus 45678?\",\"expected_result\":45801,\"expected_error\":null,\"actual_result\":45801,\"actual_error\":null},\n{\"uuid\":\"0d86474a-cd93-4649-a4fa-f6109a011191\",\"description\":\"subtraction\",\"question\":\"What is 4 minus -12?\",\"expected_result\":16,\"expected_error\":null,\"actual_result\":16,\"actual_error\":null},\n{\"uuid\":\"30bc8395-5500-4712-a0cf-1d788a529be5\",\"description\":\"multiplication\",\"question\":\"What is -3 multiplied by 25?\",\"expected_result\":-75,\"expected_error\":null,\"actual_result\":-75,\"actual_error\":null},\n{\"uuid\":\"34c36b08-8605-4217-bb57-9a01472c427f\",\"description\":\"division\",\"question\":\"What is 33 divided by -3?\",\"expected_result\":-11,\"expected_error\":null,\"actual_result\":-11,\"actual_error\":null},\n{\"uuid\":\"da6d2ce4-fb94-4d26-8f5f-b078adad0596\",\"description\":\"multiple additions\",\"question\":\"What is 1 plus 1 plus 1?\",\"expected_result\":3,\"expected_error\":null,\"actual_result\":3,\"actual_error\":null},\n{\"uuid\":\"7fd74c50-9911-4597-be09-8de7f2fea2bb\",\"description\":\"addition and subtraction\",\"question\":\"What is 1 plus 5 minus -2?\",\"expected_result\":8,\"expected_error\":null,\"actual_result\":8,\"actual_error\":null},\n{\"uuid\":\"b120ffd5-bad6-4e22-81c8-5512e8faf905\",\"description\":\"multiple subtraction\",\"question\":\"What is 20 minus 4 minus 13?\",\"expected_result\":3,\"expected_error\":null,\"actual_result\":3,\"actual_error\":null},\n{\"uuid\":\"4f4a5749-ef0c-4f60-841f-abcfaf05d2ae\",\"description\":\"subtraction then addition\",\"question\":\"What is 17 minus 6 plus 3?\",\"expected_result\":14,\"expected_error\":null,\"actual_result\":14,\"actual_error\":null},\n{\"uuid\":\"312d908c-f68f-42c9-aa75-961623cc033f\",\"description\":\"multiple multiplication\",\"question\":\"What is 2 multiplied by -2 multiplied by 3?\",\"expected_result\":-12,\"expected_error\":null,\"actual_result\":-12,\"actual_error\":null},\n{\"uuid\":\"38e33587-8940-4cc1-bc28-bfd7e3966276\",\"description\":\"addition and multiplication\",\"question\":\"What is -3 plus 7 multiplied by -2?\",\"expected_result\":-8,\"expected_error\":null,\"actual_result\":-8,\"actual_error\":null},\n{\"uuid\":\"3c854f97-9311-46e8-b574-92b60d17d394\",\"description\":\"multiple division\",\"question\":\"What is -12 divided by 2 divided by -3?\",\"expected_result\":2,\"expected_error\":null,\"actual_result\":2,\"actual_error\":null},\n{\"uuid\":\"3ad3e433-8af7-41ec-aa9b-97b42ab49357\",\"description\":\"unknown operation\",\"question\":\"What is 52 cubed?\",\"expected_result\":null,\"expected_error\":\"unknown operation\",\"actual_result\":null,\"actual_error\":\"unknown operation\"},\n{\"uuid\":\"8a7e85a8-9e7b-4d46-868f-6d759f4648f8\",\"description\":\"Non math question\",\"question\":\"Who is the President of the United States?\",\"expected_result\":null,\"expected_error\":\"unknown operation\",\"actual_result\":null,\"actual_error\":\"unknown operation\"},\n{\"uuid\":\"42d78b5f-dbd7-4cdb-8b30-00f794bb24cf\",\"description\":\"reject problem missing an operand\",\"question\":\"What is 1 plus?\",\"expected_result\":null,\"expected_error\":\"syntax error\",\"actual_result\":null,\"actual_error\":\"syntax error\"},\n{\"uuid\":\"c2c3cbfc-1a72-42f2-b597-246e617e66f5\",\"description\":\"reject problem with no operands or operators\",\"question\":\"What is?\",\"expected_result\":null,\"expected_error\":\"syntax error\",\"actual_result\":null,\"actual_error\":\"syntax error\"},\n{\"uuid\":\"4b3df66d-6ed5-4c95-a0a1-d38891fbdab6\",\"description\":\"reject two operations in a row\",\"question\":\"What is 1 plus plus 2?\",\"expected_result\":null,\"expected_error\":\"syntax error\",\"actual_result\":null,\"actual_error\":\"syntax error\"},\n{\"uuid\":\"6abd7a50-75b4-4665-aa33-2030fd08bab1\",\"description\":\"reject two numbers in a row\",\"question\":\"What is 1 plus 2 1?\",\"expected_result\":null,\"expected_error\":\"syntax error\",\"actual_result\":null,\"actual_error\":\"syntax error\"},\n{\"uuid\":\"10a56c22-e0aa-405f-b1d2-c642d9c4c9de\",\"description\":\"reject postfix notation\",\"question\":\"What is 1 2 plus?\",\"expected_result\":null,\"expected_error\":\"syntax error\",\"actual_result\":null,\"actual_error\":\"syntax error\"},\n{\"uuid\":\"0035bc63-ac43-4bb5-ad6d-e8651b7d954e\",\"description\":\"reject prefix notation\",\"question\":\"What is plus 1 2?\",\"expected_result\":null,\"expected_error\":\"syntax error\",\"actual_result\":null,\"actual_error\":\"syntax error\"}]\n__R08_T028_CASE_RESULTS_END__\n",
+    "stderr": "./data.csv:1: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:2: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:3: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:4: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:5: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:6: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:7: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:8: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:9: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:10: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:11: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:12: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:13: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:14: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:15: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:16: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:17: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:18: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:19: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:20: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:21: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:22: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:23: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:24: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:25: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:26: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:27: expected 3 columns but found 2 - filling the rest with NULL\n",
+    "sqlite_csv_import_warning_count": 27,
+    "output_json": [
+      {
+        "description": "just a number",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "just a zero",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "just a negative number",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "addition",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "addition with a left hand zero",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "addition with a right hand zero",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "more addition",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "addition with negative numbers",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "large addition",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "subtraction",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "multiplication",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "division",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "multiple additions",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "addition and subtraction",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "multiple subtraction",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "subtraction then addition",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "multiple multiplication",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "addition and multiplication",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "multiple division",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "unknown operation",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "Non math question",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "reject problem missing an operand",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "reject problem with no operands or operators",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "reject two operations in a row",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "reject two numbers in a row",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "reject postfix notation",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "reject prefix notation",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      }
+    ],
+    "output_json_error": null,
+    "actual_rows": [
+      {
+        "uuid": "88bf4b28-0de3-4883-93c7-db1b14aa806e",
+        "description": "just a number",
+        "question": "What is 5?",
+        "expected_result": 5,
+        "expected_error": null,
+        "actual_result": 5,
+        "actual_error": null
+      },
+      {
+        "uuid": "18983214-1dfc-4ebd-ac77-c110dde699ce",
+        "description": "just a zero",
+        "question": "What is 0?",
+        "expected_result": 0,
+        "expected_error": null,
+        "actual_result": 0,
+        "actual_error": null
+      },
+      {
+        "uuid": "607c08ee-2241-4288-916d-dae5455c87e6",
+        "description": "just a negative number",
+        "question": "What is -123?",
+        "expected_result": -123,
+        "expected_error": null,
+        "actual_result": -123,
+        "actual_error": null
+      },
+      {
+        "uuid": "bb8c655c-cf42-4dfc-90e0-152fcfd8d4e0",
+        "description": "addition",
+        "question": "What is 1 plus 1?",
+        "expected_result": 2,
+        "expected_error": null,
+        "actual_result": 2,
+        "actual_error": null
+      },
+      {
+        "uuid": "bb9f2082-171c-46ad-ad4e-c3f72087c1b5",
+        "description": "addition with a left hand zero",
+        "question": "What is 0 plus 2?",
+        "expected_result": 2,
+        "expected_error": null,
+        "actual_result": 2,
+        "actual_error": null
+      },
+      {
+        "uuid": "6fa05f17-405a-4742-80ae-5d1a8edb0d5d",
+        "description": "addition with a right hand zero",
+        "question": "What is 3 plus 0?",
+        "expected_result": 3,
+        "expected_error": null,
+        "actual_result": 3,
+        "actual_error": null
+      },
+      {
+        "uuid": "79e49e06-c5ae-40aa-a352-7a3a01f70015",
+        "description": "more addition",
+        "question": "What is 53 plus 2?",
+        "expected_result": 55,
+        "expected_error": null,
+        "actual_result": 55,
+        "actual_error": null
+      },
+      {
+        "uuid": "b345dbe0-f733-44e1-863c-5ae3568f3803",
+        "description": "addition with negative numbers",
+        "question": "What is -1 plus -10?",
+        "expected_result": -11,
+        "expected_error": null,
+        "actual_result": -11,
+        "actual_error": null
+      },
+      {
+        "uuid": "cd070f39-c4cc-45c4-97fb-1be5e5846f87",
+        "description": "large addition",
+        "question": "What is 123 plus 45678?",
+        "expected_result": 45801,
+        "expected_error": null,
+        "actual_result": 45801,
+        "actual_error": null
+      },
+      {
+        "uuid": "0d86474a-cd93-4649-a4fa-f6109a011191",
+        "description": "subtraction",
+        "question": "What is 4 minus -12?",
+        "expected_result": 16,
+        "expected_error": null,
+        "actual_result": 16,
+        "actual_error": null
+      },
+      {
+        "uuid": "30bc8395-5500-4712-a0cf-1d788a529be5",
+        "description": "multiplication",
+        "question": "What is -3 multiplied by 25?",
+        "expected_result": -75,
+        "expected_error": null,
+        "actual_result": -75,
+        "actual_error": null
+      },
+      {
+        "uuid": "34c36b08-8605-4217-bb57-9a01472c427f",
+        "description": "division",
+        "question": "What is 33 divided by -3?",
+        "expected_result": -11,
+        "expected_error": null,
+        "actual_result": -11,
+        "actual_error": null
+      },
+      {
+        "uuid": "da6d2ce4-fb94-4d26-8f5f-b078adad0596",
+        "description": "multiple additions",
+        "question": "What is 1 plus 1 plus 1?",
+        "expected_result": 3,
+        "expected_error": null,
+        "actual_result": 3,
+        "actual_error": null
+      },
+      {
+        "uuid": "7fd74c50-9911-4597-be09-8de7f2fea2bb",
+        "description": "addition and subtraction",
+        "question": "What is 1 plus 5 minus -2?",
+        "expected_result": 8,
+        "expected_error": null,
+        "actual_result": 8,
+        "actual_error": null
+      },
+      {
+        "uuid": "b120ffd5-bad6-4e22-81c8-5512e8faf905",
+        "description": "multiple subtraction",
+        "question": "What is 20 minus 4 minus 13?",
+        "expected_result": 3,
+        "expected_error": null,
+        "actual_result": 3,
+        "actual_error": null
+      },
+      {
+        "uuid": "4f4a5749-ef0c-4f60-841f-abcfaf05d2ae",
+        "description": "subtraction then addition",
+        "question": "What is 17 minus 6 plus 3?",
+        "expected_result": 14,
+        "expected_error": null,
+        "actual_result": 14,
+        "actual_error": null
+      },
+      {
+        "uuid": "312d908c-f68f-42c9-aa75-961623cc033f",
+        "description": "multiple multiplication",
+        "question": "What is 2 multiplied by -2 multiplied by 3?",
+        "expected_result": -12,
+        "expected_error": null,
+        "actual_result": -12,
+        "actual_error": null
+      },
+      {
+        "uuid": "38e33587-8940-4cc1-bc28-bfd7e3966276",
+        "description": "addition and multiplication",
+        "question": "What is -3 plus 7 multiplied by -2?",
+        "expected_result": -8,
+        "expected_error": null,
+        "actual_result": -8,
+        "actual_error": null
+      },
+      {
+        "uuid": "3c854f97-9311-46e8-b574-92b60d17d394",
+        "description": "multiple division",
+        "question": "What is -12 divided by 2 divided by -3?",
+        "expected_result": 2,
+        "expected_error": null,
+        "actual_result": 2,
+        "actual_error": null
+      },
+      {
+        "uuid": "3ad3e433-8af7-41ec-aa9b-97b42ab49357",
+        "description": "unknown operation",
+        "question": "What is 52 cubed?",
+        "expected_result": null,
+        "expected_error": "unknown operation",
+        "actual_result": null,
+        "actual_error": "unknown operation"
+      },
+      {
+        "uuid": "8a7e85a8-9e7b-4d46-868f-6d759f4648f8",
+        "description": "Non math question",
+        "question": "Who is the President of the United States?",
+        "expected_result": null,
+        "expected_error": "unknown operation",
+        "actual_result": null,
+        "actual_error": "unknown operation"
+      },
+      {
+        "uuid": "42d78b5f-dbd7-4cdb-8b30-00f794bb24cf",
+        "description": "reject problem missing an operand",
+        "question": "What is 1 plus?",
+        "expected_result": null,
+        "expected_error": "syntax error",
+        "actual_result": null,
+        "actual_error": "syntax error"
+      },
+      {
+        "uuid": "c2c3cbfc-1a72-42f2-b597-246e617e66f5",
+        "description": "reject problem with no operands or operators",
+        "question": "What is?",
+        "expected_result": null,
+        "expected_error": "syntax error",
+        "actual_result": null,
+        "actual_error": "syntax error"
+      },
+      {
+        "uuid": "4b3df66d-6ed5-4c95-a0a1-d38891fbdab6",
+        "description": "reject two operations in a row",
+        "question": "What is 1 plus plus 2?",
+        "expected_result": null,
+        "expected_error": "syntax error",
+        "actual_result": null,
+        "actual_error": "syntax error"
+      },
+      {
+        "uuid": "6abd7a50-75b4-4665-aa33-2030fd08bab1",
+        "description": "reject two numbers in a row",
+        "question": "What is 1 plus 2 1?",
+        "expected_result": null,
+        "expected_error": "syntax error",
+        "actual_result": null,
+        "actual_error": "syntax error"
+      },
+      {
+        "uuid": "10a56c22-e0aa-405f-b1d2-c642d9c4c9de",
+        "description": "reject postfix notation",
+        "question": "What is 1 2 plus?",
+        "expected_result": null,
+        "expected_error": "syntax error",
+        "actual_result": null,
+        "actual_error": "syntax error"
+      },
+      {
+        "uuid": "0035bc63-ac43-4bb5-ad6d-e8651b7d954e",
+        "description": "reject prefix notation",
+        "question": "What is plus 1 2?",
+        "expected_result": null,
+        "expected_error": "syntax error",
+        "actual_result": null,
+        "actual_error": "syntax error"
+      }
+    ],
+    "actual_rows_error": null,
+    "configured_paths": {
+      "solution": "wordy.sql",
+      "test": "wordy_test.sql",
+      "example": ".meta/example.sql"
+    },
+    "executed_test_count": 27,
+    "passed_test_count": 27,
+    "failed_test_count": 0,
+    "output_json_results": [
+      {
+        "description": "just a number",
+        "status": "pass"
+      },
+      {
+        "description": "just a zero",
+        "status": "pass"
+      },
+      {
+        "description": "just a negative number",
+        "status": "pass"
+      },
+      {
+        "description": "addition",
+        "status": "pass"
+      },
+      {
+        "description": "addition with a left hand zero",
+        "status": "pass"
+      },
+      {
+        "description": "addition with a right hand zero",
+        "status": "pass"
+      },
+      {
+        "description": "more addition",
+        "status": "pass"
+      },
+      {
+        "description": "addition with negative numbers",
+        "status": "pass"
+      },
+      {
+        "description": "large addition",
+        "status": "pass"
+      },
+      {
+        "description": "subtraction",
+        "status": "pass"
+      },
+      {
+        "description": "multiplication",
+        "status": "pass"
+      },
+      {
+        "description": "division",
+        "status": "pass"
+      },
+      {
+        "description": "multiple additions",
+        "status": "pass"
+      },
+      {
+        "description": "addition and subtraction",
+        "status": "pass"
+      },
+      {
+        "description": "multiple subtraction",
+        "status": "pass"
+      },
+      {
+        "description": "subtraction then addition",
+        "status": "pass"
+      },
+      {
+        "description": "multiple multiplication",
+        "status": "pass"
+      },
+      {
+        "description": "addition and multiplication",
+        "status": "pass"
+      },
+      {
+        "description": "multiple division",
+        "status": "pass"
+      },
+      {
+        "description": "unknown operation",
+        "status": "pass"
+      },
+      {
+        "description": "Non math question",
+        "status": "pass"
+      },
+      {
+        "description": "reject problem missing an operand",
+        "status": "pass"
+      },
+      {
+        "description": "reject problem with no operands or operators",
+        "status": "pass"
+      },
+      {
+        "description": "reject two operations in a row",
+        "status": "pass"
+      },
+      {
+        "description": "reject two numbers in a row",
+        "status": "pass"
+      },
+      {
+        "description": "reject postfix notation",
+        "status": "pass"
+      },
+      {
+        "description": "reject prefix notation",
+        "status": "pass"
+      }
+    ],
+    "expected_vs_actual": [
+      {
+        "uuid": "88bf4b28-0de3-4883-93c7-db1b14aa806e",
+        "description": "just a number",
+        "question": "What is 5?",
+        "expected": {
+          "result": 5,
+          "error": null
+        },
+        "actual": {
+          "result": 5,
+          "error": null
+        }
+      },
+      {
+        "uuid": "18983214-1dfc-4ebd-ac77-c110dde699ce",
+        "description": "just a zero",
+        "question": "What is 0?",
+        "expected": {
+          "result": 0,
+          "error": null
+        },
+        "actual": {
+          "result": 0,
+          "error": null
+        }
+      },
+      {
+        "uuid": "607c08ee-2241-4288-916d-dae5455c87e6",
+        "description": "just a negative number",
+        "question": "What is -123?",
+        "expected": {
+          "result": -123,
+          "error": null
+        },
+        "actual": {
+          "result": -123,
+          "error": null
+        }
+      },
+      {
+        "uuid": "bb8c655c-cf42-4dfc-90e0-152fcfd8d4e0",
+        "description": "addition",
+        "question": "What is 1 plus 1?",
+        "expected": {
+          "result": 2,
+          "error": null
+        },
+        "actual": {
+          "result": 2,
+          "error": null
+        }
+      },
+      {
+        "uuid": "bb9f2082-171c-46ad-ad4e-c3f72087c1b5",
+        "description": "addition with a left hand zero",
+        "question": "What is 0 plus 2?",
+        "expected": {
+          "result": 2,
+          "error": null
+        },
+        "actual": {
+          "result": 2,
+          "error": null
+        }
+      },
+      {
+        "uuid": "6fa05f17-405a-4742-80ae-5d1a8edb0d5d",
+        "description": "addition with a right hand zero",
+        "question": "What is 3 plus 0?",
+        "expected": {
+          "result": 3,
+          "error": null
+        },
+        "actual": {
+          "result": 3,
+          "error": null
+        }
+      },
+      {
+        "uuid": "79e49e06-c5ae-40aa-a352-7a3a01f70015",
+        "description": "more addition",
+        "question": "What is 53 plus 2?",
+        "expected": {
+          "result": 55,
+          "error": null
+        },
+        "actual": {
+          "result": 55,
+          "error": null
+        }
+      },
+      {
+        "uuid": "b345dbe0-f733-44e1-863c-5ae3568f3803",
+        "description": "addition with negative numbers",
+        "question": "What is -1 plus -10?",
+        "expected": {
+          "result": -11,
+          "error": null
+        },
+        "actual": {
+          "result": -11,
+          "error": null
+        }
+      },
+      {
+        "uuid": "cd070f39-c4cc-45c4-97fb-1be5e5846f87",
+        "description": "large addition",
+        "question": "What is 123 plus 45678?",
+        "expected": {
+          "result": 45801,
+          "error": null
+        },
+        "actual": {
+          "result": 45801,
+          "error": null
+        }
+      },
+      {
+        "uuid": "0d86474a-cd93-4649-a4fa-f6109a011191",
+        "description": "subtraction",
+        "question": "What is 4 minus -12?",
+        "expected": {
+          "result": 16,
+          "error": null
+        },
+        "actual": {
+          "result": 16,
+          "error": null
+        }
+      },
+      {
+        "uuid": "30bc8395-5500-4712-a0cf-1d788a529be5",
+        "description": "multiplication",
+        "question": "What is -3 multiplied by 25?",
+        "expected": {
+          "result": -75,
+          "error": null
+        },
+        "actual": {
+          "result": -75,
+          "error": null
+        }
+      },
+      {
+        "uuid": "34c36b08-8605-4217-bb57-9a01472c427f",
+        "description": "division",
+        "question": "What is 33 divided by -3?",
+        "expected": {
+          "result": -11,
+          "error": null
+        },
+        "actual": {
+          "result": -11,
+          "error": null
+        }
+      },
+      {
+        "uuid": "da6d2ce4-fb94-4d26-8f5f-b078adad0596",
+        "description": "multiple additions",
+        "question": "What is 1 plus 1 plus 1?",
+        "expected": {
+          "result": 3,
+          "error": null
+        },
+        "actual": {
+          "result": 3,
+          "error": null
+        }
+      },
+      {
+        "uuid": "7fd74c50-9911-4597-be09-8de7f2fea2bb",
+        "description": "addition and subtraction",
+        "question": "What is 1 plus 5 minus -2?",
+        "expected": {
+          "result": 8,
+          "error": null
+        },
+        "actual": {
+          "result": 8,
+          "error": null
+        }
+      },
+      {
+        "uuid": "b120ffd5-bad6-4e22-81c8-5512e8faf905",
+        "description": "multiple subtraction",
+        "question": "What is 20 minus 4 minus 13?",
+        "expected": {
+          "result": 3,
+          "error": null
+        },
+        "actual": {
+          "result": 3,
+          "error": null
+        }
+      },
+      {
+        "uuid": "4f4a5749-ef0c-4f60-841f-abcfaf05d2ae",
+        "description": "subtraction then addition",
+        "question": "What is 17 minus 6 plus 3?",
+        "expected": {
+          "result": 14,
+          "error": null
+        },
+        "actual": {
+          "result": 14,
+          "error": null
+        }
+      },
+      {
+        "uuid": "312d908c-f68f-42c9-aa75-961623cc033f",
+        "description": "multiple multiplication",
+        "question": "What is 2 multiplied by -2 multiplied by 3?",
+        "expected": {
+          "result": -12,
+          "error": null
+        },
+        "actual": {
+          "result": -12,
+          "error": null
+        }
+      },
+      {
+        "uuid": "38e33587-8940-4cc1-bc28-bfd7e3966276",
+        "description": "addition and multiplication",
+        "question": "What is -3 plus 7 multiplied by -2?",
+        "expected": {
+          "result": -8,
+          "error": null
+        },
+        "actual": {
+          "result": -8,
+          "error": null
+        }
+      },
+      {
+        "uuid": "3c854f97-9311-46e8-b574-92b60d17d394",
+        "description": "multiple division",
+        "question": "What is -12 divided by 2 divided by -3?",
+        "expected": {
+          "result": 2,
+          "error": null
+        },
+        "actual": {
+          "result": 2,
+          "error": null
+        }
+      },
+      {
+        "uuid": "3ad3e433-8af7-41ec-aa9b-97b42ab49357",
+        "description": "unknown operation",
+        "question": "What is 52 cubed?",
+        "expected": {
+          "result": null,
+          "error": "unknown operation"
+        },
+        "actual": {
+          "result": null,
+          "error": "unknown operation"
+        }
+      },
+      {
+        "uuid": "8a7e85a8-9e7b-4d46-868f-6d759f4648f8",
+        "description": "Non math question",
+        "question": "Who is the President of the United States?",
+        "expected": {
+          "result": null,
+          "error": "unknown operation"
+        },
+        "actual": {
+          "result": null,
+          "error": "unknown operation"
+        }
+      },
+      {
+        "uuid": "42d78b5f-dbd7-4cdb-8b30-00f794bb24cf",
+        "description": "reject problem missing an operand",
+        "question": "What is 1 plus?",
+        "expected": {
+          "result": null,
+          "error": "syntax error"
+        },
+        "actual": {
+          "result": null,
+          "error": "syntax error"
+        }
+      },
+      {
+        "uuid": "c2c3cbfc-1a72-42f2-b597-246e617e66f5",
+        "description": "reject problem with no operands or operators",
+        "question": "What is?",
+        "expected": {
+          "result": null,
+          "error": "syntax error"
+        },
+        "actual": {
+          "result": null,
+          "error": "syntax error"
+        }
+      },
+      {
+        "uuid": "4b3df66d-6ed5-4c95-a0a1-d38891fbdab6",
+        "description": "reject two operations in a row",
+        "question": "What is 1 plus plus 2?",
+        "expected": {
+          "result": null,
+          "error": "syntax error"
+        },
+        "actual": {
+          "result": null,
+          "error": "syntax error"
+        }
+      },
+      {
+        "uuid": "6abd7a50-75b4-4665-aa33-2030fd08bab1",
+        "description": "reject two numbers in a row",
+        "question": "What is 1 plus 2 1?",
+        "expected": {
+          "result": null,
+          "error": "syntax error"
+        },
+        "actual": {
+          "result": null,
+          "error": "syntax error"
+        }
+      },
+      {
+        "uuid": "10a56c22-e0aa-405f-b1d2-c642d9c4c9de",
+        "description": "reject postfix notation",
+        "question": "What is 1 2 plus?",
+        "expected": {
+          "result": null,
+          "error": "syntax error"
+        },
+        "actual": {
+          "result": null,
+          "error": "syntax error"
+        }
+      },
+      {
+        "uuid": "0035bc63-ac43-4bb5-ad6d-e8651b7d954e",
+        "description": "reject prefix notation",
+        "question": "What is plus 1 2?",
+        "expected": {
+          "result": null,
+          "error": "syntax error"
+        },
+        "actual": {
+          "result": null,
+          "error": "syntax error"
+        }
+      }
+    ],
+    "sqlite_csv_import_warnings": {
+      "count": 27,
+      "classification": "non-fatal",
+      "assessment": "All 27 CSV import warnings were non-fatal: SQLite exited with code 0, and all 27 tests passed with expected results."
+    }
+  }
+}
