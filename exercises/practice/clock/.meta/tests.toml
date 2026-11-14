@@ -11,12 +11,20 @@
 
 [a577bacc-106b-496e-9792-b3083ea8705e]
 description = "Create a new clock with an initial time -> on the hour"
+# Modifiers built with PRINTF('%d HOUR', JSON_EXTRACT(input, '$.hour')) and same for minutes; TIME('00:00', ...) adds them.
+# STRFTIME('%H:%M') formats the result.
+# Verify: sqlite3 :memory: "select strftime('%H:%M', time('00:00', '8 HOUR', '0 MINUTE'));"
 
 [b5d0c360-3b88-489b-8e84-68a1c7a4fa23]
 description = "Create a new clock with an initial time -> past the hour"
+# Same mechanism; the single-digit minute 9 is zero-padded to 09 by STRFTIME('%H:%M'), not by the input.
+# Verify: sqlite3 :memory: "select strftime('%H:%M', time('00:00', '11 HOUR', '9 MINUTE'));"
 
 [473223f4-65f3-46ff-a9f7-7663c7e59440]
 description = "Create a new clock with an initial time -> midnight is zero hours"
+# Hour 24 is outside usual 0-23 range; adding '24 HOUR' to '00:00' lands on the next day at 00:00:00.
+# TIME() returns only the time part, so the result is 00:00.
+# Verify: sqlite3 :memory: "select strftime('%H:%M', time('00:00', '24 HOUR', '0 MINUTE'));"
 
 [ca95d24a-5924-447d-9a96-b91c8334725c]
 description = "Create a new clock with an initial time -> hour rolls over"
