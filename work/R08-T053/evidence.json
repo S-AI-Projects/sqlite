@@ -1,0 +1,433 @@
+{
+  "counts": {
+    "excluded": 0,
+    "included": 18,
+    "total": 18
+  },
+  "diagnostics": {
+    "AR": {
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"AR\"}",
+      "mutant_output": "{\"position\":{\"x\":1,\"y\":0},\"direction\":\"east\"}",
+      "original_output": "{\"position\":{\"x\":0,\"y\":1},\"direction\":\"east\"}"
+    },
+    "RA": {
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"RA\"}",
+      "mutant_output": "{\"position\":{\"x\":0,\"y\":1},\"direction\":\"east\"}",
+      "original_output": "{\"position\":{\"x\":1,\"y\":0},\"direction\":\"east\"}"
+    }
+  },
+  "executed_count": 18,
+  "guard_ref": "origin/main",
+  "mutants": [
+    {
+      "description": "left and right turns swapped",
+      "documented": false,
+      "failing_cases": [
+        {
+          "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\"}",
+          "description": "changes north to east",
+          "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"R\"}",
+          "uuid": "8cbd0086-6392-4680-b9b9-73cf491e67e5"
+        },
+        {
+          "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+          "description": "changes east to south",
+          "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\",\"instructions\":\"R\"}",
+          "uuid": "8abc87fc-eab2-4276-93b7-9c009e866ba1"
+        },
+        {
+          "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\"}",
+          "description": "changes south to west",
+          "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\",\"instructions\":\"R\"}",
+          "uuid": "3cfe1b85-bbf2-4bae-b54d-d73e7e93617a"
+        },
+        {
+          "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\"}",
+          "description": "changes west to north",
+          "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\",\"instructions\":\"R\"}",
+          "uuid": "5ea9fb99-3f2c-47bd-86f7-46b7d8c3c716"
+        },
+        {
+          "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\"}",
+          "description": "changes north to west",
+          "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"L\"}",
+          "uuid": "fa0c40f5-6ba3-443d-a4b3-58cbd6cb8d63"
+        },
+        {
+          "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+          "description": "changes west to south",
+          "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\",\"instructions\":\"L\"}",
+          "uuid": "da33d734-831f-445c-9907-d66d7d2a92e2"
+        },
+        {
+          "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\"}",
+          "description": "changes south to east",
+          "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\",\"instructions\":\"L\"}",
+          "uuid": "bd1ca4b9-4548-45f4-b32e-900fc7c19389"
+        },
+        {
+          "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\"}",
+          "description": "changes east to north",
+          "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\",\"instructions\":\"L\"}",
+          "uuid": "2de27b67-a25c-4b59-9883-bc03b1b55bba"
+        },
+        {
+          "actual": "{\"position\":{\"x\":5,\"y\":4},\"direction\":\"east\"}",
+          "description": "moving east and north from README",
+          "expected": "{\"position\":{\"x\":9,\"y\":4},\"direction\":\"west\"}",
+          "input": "{\"position\":{\"x\":7,\"y\":3},\"direction\":\"north\",\"instructions\":\"RAALAL\"}",
+          "uuid": "e34ac672-4ed4-4be3-a0b8-d9af259cbaa1"
+        },
+        {
+          "actual": "{\"position\":{\"x\":4,\"y\":1},\"direction\":\"east\"}",
+          "description": "moving west and north",
+          "expected": "{\"position\":{\"x\":-4,\"y\":1},\"direction\":\"west\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"LAAARALA\"}",
+          "uuid": "f30e4955-4b47-4aa3-8b39-ae98cfbd515b"
+        },
+        {
+          "actual": "{\"position\":{\"x\":-3,\"y\":-6},\"direction\":\"north\"}",
+          "description": "moving west and south",
+          "expected": "{\"position\":{\"x\":-3,\"y\":-8},\"direction\":\"south\"}",
+          "input": "{\"position\":{\"x\":2,\"y\":-7},\"direction\":\"east\",\"instructions\":\"RRAAAAALA\"}",
+          "uuid": "3e466bf6-20ab-4d79-8b51-264165182fca"
+        },
+        {
+          "actual": "{\"position\":{\"x\":5,\"y\":5},\"direction\":\"north\"}",
+          "description": "moving east and north",
+          "expected": "{\"position\":{\"x\":11,\"y\":5},\"direction\":\"north\"}",
+          "input": "{\"position\":{\"x\":8,\"y\":4},\"direction\":\"south\",\"instructions\":\"LAAARRRALLLL\"}",
+          "uuid": "41f0bb96-c617-4e6b-acff-a4b279d44514"
+        }
+      ],
+      "failing_count": 12,
+      "id": "M1",
+      "pass_count": 6,
+      "unified_diff": "--- .meta/example.sql\n+++ robot-simulator.sql\n@@ -68,7 +68,7 @@\n           (\n             JSON_REMOVE(tmp.output, '$.instructions'),\n             JSON_EXTRACT(tmp.output, '$.instructions'),\n-            '{\"L\": -90, \"R\": 90}',\n+            '{\"L\": 90, \"R\": -90}',\n             (\n               SELECT\n                 JSON_GROUP_OBJECT(\n"
+    },
+    {
+      "description": "west moves along the wrong sign (+x instead of -x)",
+      "documented": false,
+      "failing_cases": [
+        {
+          "actual": "{\"position\":{\"x\":1,\"y\":0},\"direction\":\"west\"}",
+          "description": "facing west decrements X",
+          "expected": "{\"position\":{\"x\":-1,\"y\":0},\"direction\":\"west\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\",\"instructions\":\"A\"}",
+          "uuid": "bb69c4a7-3bbf-4f64-b415-666fa72d7b04"
+        },
+        {
+          "actual": "{\"position\":{\"x\":4,\"y\":1},\"direction\":\"west\"}",
+          "description": "moving west and north",
+          "expected": "{\"position\":{\"x\":-4,\"y\":1},\"direction\":\"west\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"LAAARALA\"}",
+          "uuid": "f30e4955-4b47-4aa3-8b39-ae98cfbd515b"
+        },
+        {
+          "actual": "{\"position\":{\"x\":7,\"y\":-8},\"direction\":\"south\"}",
+          "description": "moving west and south",
+          "expected": "{\"position\":{\"x\":-3,\"y\":-8},\"direction\":\"south\"}",
+          "input": "{\"position\":{\"x\":2,\"y\":-7},\"direction\":\"east\",\"instructions\":\"RRAAAAALA\"}",
+          "uuid": "3e466bf6-20ab-4d79-8b51-264165182fca"
+        }
+      ],
+      "failing_count": 3,
+      "id": "M2",
+      "pass_count": 15,
+      "unified_diff": "--- .meta/example.sql\n+++ robot-simulator.sql\n@@ -19,7 +19,7 @@\n   ('north', 0, 'y', 1),\n   ('east', 90, 'x', 1),\n   ('south', 180, 'y', -1),\n-  ('west', 270, 'x', -1);\n+  ('west', 270, 'x', 1);\n \n DROP TABLE IF EXISTS tmp;\n \n"
+    },
+    {
+      "description": "only the first instruction of a sequence runs",
+      "documented": false,
+      "failing_cases": [
+        {
+          "actual": "{\"position\":{\"x\":7,\"y\":3},\"direction\":\"east\"}",
+          "description": "moving east and north from README",
+          "expected": "{\"position\":{\"x\":9,\"y\":4},\"direction\":\"west\"}",
+          "input": "{\"position\":{\"x\":7,\"y\":3},\"direction\":\"north\",\"instructions\":\"RAALAL\"}",
+          "uuid": "e34ac672-4ed4-4be3-a0b8-d9af259cbaa1"
+        },
+        {
+          "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\"}",
+          "description": "moving west and north",
+          "expected": "{\"position\":{\"x\":-4,\"y\":1},\"direction\":\"west\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"LAAARALA\"}",
+          "uuid": "f30e4955-4b47-4aa3-8b39-ae98cfbd515b"
+        },
+        {
+          "actual": "{\"position\":{\"x\":2,\"y\":-7},\"direction\":\"south\"}",
+          "description": "moving west and south",
+          "expected": "{\"position\":{\"x\":-3,\"y\":-8},\"direction\":\"south\"}",
+          "input": "{\"position\":{\"x\":2,\"y\":-7},\"direction\":\"east\",\"instructions\":\"RRAAAAALA\"}",
+          "uuid": "3e466bf6-20ab-4d79-8b51-264165182fca"
+        },
+        {
+          "actual": "{\"position\":{\"x\":8,\"y\":4},\"direction\":\"east\"}",
+          "description": "moving east and north",
+          "expected": "{\"position\":{\"x\":11,\"y\":5},\"direction\":\"north\"}",
+          "input": "{\"position\":{\"x\":8,\"y\":4},\"direction\":\"south\",\"instructions\":\"LAAARRRALLLL\"}",
+          "uuid": "41f0bb96-c617-4e6b-acff-a4b279d44514"
+        }
+      ],
+      "failing_count": 4,
+      "id": "M4",
+      "pass_count": 14,
+      "unified_diff": "--- .meta/example.sql\n+++ robot-simulator.sql\n@@ -131,7 +131,7 @@\n             )\n             ELSE jobject\n           END,\n-          JSON_REMOVE(instructions, '$[0]'),\n+          '[]',\n           lr,\n           dirmap\n         FROM\n"
+    },
+    {
+      "description": "instructions processed in reverse order",
+      "documented": true,
+      "failing_cases": [
+        {
+          "actual": "{\"position\":{\"x\":6,\"y\":1},\"direction\":\"west\"}",
+          "description": "moving east and north from README",
+          "expected": "{\"position\":{\"x\":9,\"y\":4},\"direction\":\"west\"}",
+          "input": "{\"position\":{\"x\":7,\"y\":3},\"direction\":\"north\",\"instructions\":\"RAALAL\"}",
+          "uuid": "e34ac672-4ed4-4be3-a0b8-d9af259cbaa1"
+        },
+        {
+          "actual": "{\"position\":{\"x\":-1,\"y\":4},\"direction\":\"west\"}",
+          "description": "moving west and north",
+          "expected": "{\"position\":{\"x\":-4,\"y\":1},\"direction\":\"west\"}",
+          "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"LAAARALA\"}",
+          "uuid": "f30e4955-4b47-4aa3-8b39-ae98cfbd515b"
+        },
+        {
+          "actual": "{\"position\":{\"x\":3,\"y\":-2},\"direction\":\"south\"}",
+          "description": "moving west and south",
+          "expected": "{\"position\":{\"x\":-3,\"y\":-8},\"direction\":\"south\"}",
+          "input": "{\"position\":{\"x\":2,\"y\":-7},\"direction\":\"east\",\"instructions\":\"RRAAAAALA\"}",
+          "uuid": "3e466bf6-20ab-4d79-8b51-264165182fca"
+        },
+        {
+          "actual": "{\"position\":{\"x\":11,\"y\":3},\"direction\":\"north\"}",
+          "description": "moving east and north",
+          "expected": "{\"position\":{\"x\":11,\"y\":5},\"direction\":\"north\"}",
+          "input": "{\"position\":{\"x\":8,\"y\":4},\"direction\":\"south\",\"instructions\":\"LAAARRRALLLL\"}",
+          "uuid": "41f0bb96-c617-4e6b-acff-a4b279d44514"
+        }
+      ],
+      "failing_count": 4,
+      "id": "M5",
+      "pass_count": 14,
+      "unified_diff": "--- .meta/example.sql\n+++ robot-simulator.sql\n@@ -39,8 +39,8 @@\n             (JSON_EXTRACT(input, '$.instructions'), NULL)\n           UNION ALL\n           SELECT\n-            SUBSTR(string, 2),\n-            SUBSTR(string, 1, 1)\n+            SUBSTR(string, 1, LENGTH(string) - 1),\n+            SUBSTR(string, -1)\n           FROM\n             rcte\n           WHERE\n"
+    }
+  ],
+  "named_assertion": {
+    "description": "moving east and north from README",
+    "expected": "{\"position\":{\"x\":9,\"y\":4},\"direction\":\"west\"}",
+    "input": "{\"position\":{\"x\":7,\"y\":3},\"direction\":\"north\",\"instructions\":\"RAALAL\"}",
+    "mutant_actual": "{\"position\":{\"x\":6,\"y\":1},\"direction\":\"west\"}",
+    "uuid": "e34ac672-4ed4-4be3-a0b8-d9af259cbaa1"
+  },
+  "observations": [
+    {
+      "description": "unknown instruction letters make the state NULL instead of being ignored",
+      "failing_count": 0,
+      "failing_uuids": [],
+      "id": "M6",
+      "mutant_output": null,
+      "mutant_output_for_unknown": null,
+      "note": "unspecified behaviour; no test case is proposed",
+      "original_output": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+      "original_output_for_unknown": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+      "patch": [
+        [
+          "ELSE jobject",
+          "ELSE NULL"
+        ]
+      ],
+      "patches": [
+        [
+          "ELSE jobject",
+          "ELSE NULL"
+        ]
+      ],
+      "survives": true,
+      "surviving": true,
+      "unknown_letter_input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"X\"}"
+    }
+  ],
+  "pass_count": 18,
+  "stub_fail_count": 18,
+  "stub_pass_count": 0,
+  "tests": [
+    {
+      "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+      "description": "at origin facing north",
+      "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+      "property": "create",
+      "status": "pass",
+      "uuid": "c557c16d-26c1-4e06-827c-f6602cd0785c"
+    },
+    {
+      "actual": "{\"position\":{\"x\":-1,\"y\":-1},\"direction\":\"south\"}",
+      "description": "at negative position facing south",
+      "expected": "{\"position\":{\"x\":-1,\"y\":-1},\"direction\":\"south\"}",
+      "input": "{\"position\":{\"x\":-1,\"y\":-1},\"direction\":\"south\"}",
+      "property": "create",
+      "status": "pass",
+      "uuid": "bf0dffce-f11c-4cdb-8a5e-2c89d8a5a67d"
+    },
+    {
+      "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\"}",
+      "description": "changes north to east",
+      "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"R\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "8cbd0086-6392-4680-b9b9-73cf491e67e5"
+    },
+    {
+      "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\"}",
+      "description": "changes east to south",
+      "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\",\"instructions\":\"R\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "8abc87fc-eab2-4276-93b7-9c009e866ba1"
+    },
+    {
+      "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\"}",
+      "description": "changes south to west",
+      "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\",\"instructions\":\"R\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "3cfe1b85-bbf2-4bae-b54d-d73e7e93617a"
+    },
+    {
+      "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+      "description": "changes west to north",
+      "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\",\"instructions\":\"R\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "5ea9fb99-3f2c-47bd-86f7-46b7d8c3c716"
+    },
+    {
+      "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\"}",
+      "description": "changes north to west",
+      "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"L\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "fa0c40f5-6ba3-443d-a4b3-58cbd6cb8d63"
+    },
+    {
+      "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\"}",
+      "description": "changes west to south",
+      "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\",\"instructions\":\"L\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "da33d734-831f-445c-9907-d66d7d2a92e2"
+    },
+    {
+      "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\"}",
+      "description": "changes south to east",
+      "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\",\"instructions\":\"L\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "bd1ca4b9-4548-45f4-b32e-900fc7c19389"
+    },
+    {
+      "actual": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+      "description": "changes east to north",
+      "expected": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\",\"instructions\":\"L\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "2de27b67-a25c-4b59-9883-bc03b1b55bba"
+    },
+    {
+      "actual": "{\"position\":{\"x\":0,\"y\":1},\"direction\":\"north\"}",
+      "description": "facing north increments Y",
+      "expected": "{\"position\":{\"x\":0,\"y\":1},\"direction\":\"north\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"A\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "f0dc2388-cddc-4f83-9bed-bcf46b8fc7b8"
+    },
+    {
+      "actual": "{\"position\":{\"x\":0,\"y\":-1},\"direction\":\"south\"}",
+      "description": "facing south decrements Y",
+      "expected": "{\"position\":{\"x\":0,\"y\":-1},\"direction\":\"south\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"south\",\"instructions\":\"A\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "2786cf80-5bbf-44b0-9503-a89a9c5789da"
+    },
+    {
+      "actual": "{\"position\":{\"x\":1,\"y\":0},\"direction\":\"east\"}",
+      "description": "facing east increments X",
+      "expected": "{\"position\":{\"x\":1,\"y\":0},\"direction\":\"east\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"east\",\"instructions\":\"A\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "84bf3c8c-241f-434d-883d-69817dbd6a48"
+    },
+    {
+      "actual": "{\"position\":{\"x\":-1,\"y\":0},\"direction\":\"west\"}",
+      "description": "facing west decrements X",
+      "expected": "{\"position\":{\"x\":-1,\"y\":0},\"direction\":\"west\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"west\",\"instructions\":\"A\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "bb69c4a7-3bbf-4f64-b415-666fa72d7b04"
+    },
+    {
+      "actual": "{\"position\":{\"x\":9,\"y\":4},\"direction\":\"west\"}",
+      "description": "moving east and north from README",
+      "expected": "{\"position\":{\"x\":9,\"y\":4},\"direction\":\"west\"}",
+      "input": "{\"position\":{\"x\":7,\"y\":3},\"direction\":\"north\",\"instructions\":\"RAALAL\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "e34ac672-4ed4-4be3-a0b8-d9af259cbaa1"
+    },
+    {
+      "actual": "{\"position\":{\"x\":-4,\"y\":1},\"direction\":\"west\"}",
+      "description": "moving west and north",
+      "expected": "{\"position\":{\"x\":-4,\"y\":1},\"direction\":\"west\"}",
+      "input": "{\"position\":{\"x\":0,\"y\":0},\"direction\":\"north\",\"instructions\":\"LAAARALA\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "f30e4955-4b47-4aa3-8b39-ae98cfbd515b"
+    },
+    {
+      "actual": "{\"position\":{\"x\":-3,\"y\":-8},\"direction\":\"south\"}",
+      "description": "moving west and south",
+      "expected": "{\"position\":{\"x\":-3,\"y\":-8},\"direction\":\"south\"}",
+      "input": "{\"position\":{\"x\":2,\"y\":-7},\"direction\":\"east\",\"instructions\":\"RRAAAAALA\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "3e466bf6-20ab-4d79-8b51-264165182fca"
+    },
+    {
+      "actual": "{\"position\":{\"x\":11,\"y\":5},\"direction\":\"north\"}",
+      "description": "moving east and north",
+      "expected": "{\"position\":{\"x\":11,\"y\":5},\"direction\":\"north\"}",
+      "input": "{\"position\":{\"x\":8,\"y\":4},\"direction\":\"south\",\"instructions\":\"LAAARRRALLLL\"}",
+      "property": "move",
+      "status": "pass",
+      "uuid": "41f0bb96-c617-4e6b-acff-a4b279d44514"
+    }
+  ],
+  "tool_versions": {
+    "git": "git version 2.55.0",
+    "jq": "jq-1.7.1-apple",
+    "os": "Darwin 27.2.0 arm64",
+    "python": "Python 3.15.2",
+    "sqlite3": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  }
+}
