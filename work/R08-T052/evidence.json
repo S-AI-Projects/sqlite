@@ -1,0 +1,221 @@
+{
+  "anchors": [
+    {
+      "actual": "{\"cry\":1,\"don't\":2,\"first\":1,\"getting\":1,\"it\":1,\"laugh\":1,\"then\":1,\"you're\":1}",
+      "canonical_expected": {
+        "cry": 1,
+        "don't": 2,
+        "first": 1,
+        "getting": 1,
+        "it": 1,
+        "laugh": 1,
+        "then": 1,
+        "you're": 1
+      },
+      "canonical_input": {
+        "sentence": "'First: don't laugh. Then: don't cry. You're getting it.'"
+      },
+      "expected": "{\"first\":1,\"don't\":2,\"laugh\":1,\"then\":1,\"cry\":1,\"you're\":1,\"getting\":1,\"it\":1}",
+      "full_description": "with apostrophes",
+      "in_rendered_output": true,
+      "include": true,
+      "reimplemented_by": null,
+      "reimplements": "4185a902-bdb0-4074-864c-f416e42a0f19",
+      "rendered_location": "create_test_table.sql (row 9), data.csv (row 9)",
+      "status": "pass",
+      "uuid": "4ff6c7d7-fcfc-43ef-b8e7-34ff1837a2d3"
+    },
+    {
+      "actual": null,
+      "canonical_expected": {
+        "cry": 1,
+        "don't": 2,
+        "first": 1,
+        "laugh": 1,
+        "then": 1
+      },
+      "canonical_input": {
+        "sentence": "First: don't laugh. Then: don't cry."
+      },
+      "expected": null,
+      "full_description": "with apostrophes",
+      "in_rendered_output": false,
+      "include": false,
+      "reimplemented_by": "4ff6c7d7-fcfc-43ef-b8e7-34ff1837a2d3",
+      "reimplements": null,
+      "rendered_location": null,
+      "status": null,
+      "uuid": "4185a902-bdb0-4074-864c-f416e42a0f19"
+    },
+    {
+      "actual": "{\"and\":1,\"between\":1,\"can't\":1,\"joe\":1,\"large\":2,\"tell\":1}",
+      "canonical_expected": {
+        "and": 1,
+        "between": 1,
+        "can't": 1,
+        "joe": 1,
+        "large": 2,
+        "tell": 1
+      },
+      "canonical_input": {
+        "sentence": "Joe can't tell between 'large' and large."
+      },
+      "expected": "{\"joe\":1,\"can't\":1,\"tell\":1,\"between\":1,\"large\":2,\"and\":1}",
+      "full_description": "with quotations",
+      "in_rendered_output": true,
+      "include": true,
+      "reimplemented_by": null,
+      "reimplements": null,
+      "rendered_location": "create_test_table.sql (row 10), data.csv (row 10)",
+      "status": "pass",
+      "uuid": "be72af2b-8afe-4337-b151-b297202e4a7b"
+    }
+  ],
+  "counts": {
+    "data_csv_rows": 14,
+    "excluded": 1,
+    "included": 14,
+    "reimplemented": 1,
+    "rendered": 14,
+    "total": 15
+  },
+  "executed_count": 14,
+  "files_identical_between_runs": true,
+  "files_identical_to_committed": true,
+  "generator_command": "python3 bin/generate_tests --no-pull word-count",
+  "pass_count": 14,
+  "regen_run1_exit": 0,
+  "regen_run2_exit": 0,
+  "sha256": {
+    "committed_create_test_table_sql": "4f34ab067eeb61f7388c74a6c9ee35daecd7bd9e8575bf4309e1f4d6a8979eec",
+    "committed_data_csv": "879b929694685259a77100d51c36dd2ed8d92c55e633a9b0cdd8b663b180ba3f",
+    "regen_create_test_table_sql": "4f34ab067eeb61f7388c74a6c9ee35daecd7bd9e8575bf4309e1f4d6a8979eec",
+    "regen_data_csv": "879b929694685259a77100d51c36dd2ed8d92c55e633a9b0cdd8b663b180ba3f"
+  },
+  "specs_commit": "84a96854db1bda581317164d3e6ac6aa01723182",
+  "stub_fail_count": 14,
+  "stub_pass_count": 0,
+  "tests": [
+    {
+      "actual": "{\"word\":1}",
+      "description": "count one word",
+      "expected": "{\"word\":1}",
+      "input": "word",
+      "status": "pass",
+      "uuid": "61559d5f-2cad-48fb-af53-d3973a9ee9ef"
+    },
+    {
+      "actual": "{\"each\":1,\"of\":1,\"one\":1}",
+      "description": "count one of each word",
+      "expected": "{\"one\":1,\"of\":1,\"each\":1}",
+      "input": "one of each",
+      "status": "pass",
+      "uuid": "5abd53a3-1aed-43a4-a15a-29f88c09cbbd"
+    },
+    {
+      "actual": "{\"blue\":1,\"fish\":4,\"one\":1,\"red\":1,\"two\":1}",
+      "description": "multiple occurrences of a word",
+      "expected": "{\"one\":1,\"fish\":4,\"two\":1,\"red\":1,\"blue\":1}",
+      "input": "one fish two fish red fish blue fish",
+      "status": "pass",
+      "uuid": "2a3091e5-952e-4099-9fac-8f85d9655c0e"
+    },
+    {
+      "actual": "{\"one\":1,\"three\":1,\"two\":1}",
+      "description": "handles cramped lists",
+      "expected": "{\"one\":1,\"two\":1,\"three\":1}",
+      "input": "one,two,three",
+      "status": "pass",
+      "uuid": "e81877ae-d4da-4af4-931c-d923cd621ca6"
+    },
+    {
+      "actual": "{\"one\":1,\"three\":1,\"two\":1}",
+      "description": "handles expanded lists",
+      "expected": "{\"one\":1,\"two\":1,\"three\":1}",
+      "input": "one,\ntwo,\nthree",
+      "status": "pass",
+      "uuid": "7349f682-9707-47c0-a9af-be56e1e7ff30"
+    },
+    {
+      "actual": "{\"as\":1,\"car\":1,\"carpet\":1,\"java\":1,\"javascript\":1}",
+      "description": "ignore punctuation",
+      "expected": "{\"car\":1,\"carpet\":1,\"as\":1,\"java\":1,\"javascript\":1}",
+      "input": "car: carpet as java: javascript!!&@$%^&",
+      "status": "pass",
+      "uuid": "a514a0f2-8589-4279-8892-887f76a14c82"
+    },
+    {
+      "actual": "{\"1\":1,\"2\":1,\"testing\":2}",
+      "description": "include numbers",
+      "expected": "{\"testing\":2,\"1\":1,\"2\":1}",
+      "input": "testing, 1, 2 testing",
+      "status": "pass",
+      "uuid": "d2e5cee6-d2ec-497b-bdc9-3ebe092ce55e"
+    },
+    {
+      "actual": "{\"go\":3,\"stop\":2}",
+      "description": "normalize case",
+      "expected": "{\"go\":3,\"stop\":2}",
+      "input": "go Go GO Stop stop",
+      "status": "pass",
+      "uuid": "dac6bc6a-21ae-4954-945d-d7f716392dbf"
+    },
+    {
+      "actual": "{\"cry\":1,\"don't\":2,\"first\":1,\"getting\":1,\"it\":1,\"laugh\":1,\"then\":1,\"you're\":1}",
+      "description": "with apostrophes",
+      "expected": "{\"first\":1,\"don't\":2,\"laugh\":1,\"then\":1,\"cry\":1,\"you're\":1,\"getting\":1,\"it\":1}",
+      "input": "'First: don't laugh. Then: don't cry. You're getting it.'",
+      "status": "pass",
+      "uuid": "4ff6c7d7-fcfc-43ef-b8e7-34ff1837a2d3"
+    },
+    {
+      "actual": "{\"and\":1,\"between\":1,\"can't\":1,\"joe\":1,\"large\":2,\"tell\":1}",
+      "description": "with quotations",
+      "expected": "{\"joe\":1,\"can't\":1,\"tell\":1,\"between\":1,\"large\":2,\"and\":1}",
+      "input": "Joe can't tell between 'large' and large.",
+      "status": "pass",
+      "uuid": "be72af2b-8afe-4337-b151-b297202e4a7b"
+    },
+    {
+      "actual": "{\"a\":1,\"and\":1,\"app\":1,\"apple\":1,\"between\":1,\"can't\":1,\"joe\":1,\"tell\":1}",
+      "description": "substrings from the beginning",
+      "expected": "{\"joe\":1,\"can't\":1,\"tell\":1,\"between\":1,\"app\":1,\"apple\":1,\"and\":1,\"a\":1}",
+      "input": "Joe can't tell between app, apple and a.",
+      "status": "pass",
+      "uuid": "8d6815fe-8a51-4a65-96f9-2fb3f6dc6ed6"
+    },
+    {
+      "actual": "{\"multiple\":1,\"whitespaces\":1}",
+      "description": "multiple spaces not detected as a word",
+      "expected": "{\"multiple\":1,\"whitespaces\":1}",
+      "input": " multiple   whitespaces",
+      "status": "pass",
+      "uuid": "c5f4ef26-f3f7-4725-b314-855c04fb4c13"
+    },
+    {
+      "actual": "{\"one\":1,\"three\":1,\"two\":1}",
+      "description": "alternating word separators not detected as a word",
+      "expected": "{\"one\":1,\"two\":1,\"three\":1}",
+      "input": ",\n,one,\n ,two \n 'three'",
+      "status": "pass",
+      "uuid": "50176e8a-fe8e-4f4c-b6b6-aa9cf8f20360"
+    },
+    {
+      "actual": "{\"can\":1,\"can't\":2}",
+      "description": "quotation for word with apostrophe",
+      "expected": "{\"can\":1,\"can't\":2}",
+      "input": "can, can't, 'can't'",
+      "status": "pass",
+      "uuid": "6d00f1db-901c-4bec-9829-d20eb3044557"
+    }
+  ],
+  "timestamp_lines_normalized": 0,
+  "tool_versions": {
+    "git": "git version 2.55.0",
+    "jinja2": "3.1.6",
+    "jq": "jq-1.7.1-apple",
+    "os": "Darwin 27.2.0 arm64",
+    "python": "Python 3.15.2",
+    "sqlite3": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  }
+}
