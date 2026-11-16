@@ -1,5 +1,5 @@
 WITH
-  trimmed AS (
+  trimmed_inputs AS (
     SELECT
       input,
       TRIM(input, CHAR(32, 9, 10, 13)) AS trimmed
@@ -14,7 +14,7 @@ WITH
       trimmed GLOB '*[a-zA-Z]*'
       AND trimmed = UPPER(trimmed) AS is_yelling
     FROM
-      trimmed
+      trimmed_inputs
   )
 UPDATE bob
 SET
