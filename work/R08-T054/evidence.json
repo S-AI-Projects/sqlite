@@ -1,0 +1,475 @@
+{
+  "alternatives": [
+    {
+      "applied": false,
+      "description": "extract the CASE into an `answers` CTE",
+      "executed": 26,
+      "extra_inputs_agree": true,
+      "id": "A1",
+      "lines_added": 16,
+      "lines_removed": 10,
+      "passing": 26,
+      "reason_not_applied": "the issue asks for one readability improvement; this one adds more change than the rename"
+    },
+    {
+      "applied": false,
+      "description": "drop the redundant `bools.` qualifiers in the CASE",
+      "executed": 26,
+      "extra_inputs_agree": true,
+      "id": "A2",
+      "lines_added": 5,
+      "lines_removed": 5,
+      "passing": 26,
+      "reason_not_applied": "removes qualifiers whose safety depends on `bob` never having a column named like a flag; not needed to clarify AS"
+    }
+  ],
+  "as_occurrences": [
+    {
+      "kind": "cte_definition",
+      "later_lines": [
+        17
+      ],
+      "line": 2,
+      "line_text": "trimmed_inputs AS (",
+      "token": "trimmed_inputs"
+    },
+    {
+      "kind": "column_alias",
+      "later_lines": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "line": 5,
+      "line_text": "TRIM(input, CHAR(32, 9, 10, 13)) AS trimmed",
+      "token": "trimmed"
+    },
+    {
+      "kind": "cte_definition",
+      "later_lines": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        30,
+        32
+      ],
+      "line": 9,
+      "line_text": "bools AS (",
+      "token": "bools"
+    },
+    {
+      "kind": "column_alias",
+      "later_lines": [
+        22
+      ],
+      "line": 12,
+      "line_text": "trimmed = '' AS is_silence,",
+      "token": "is_silence"
+    },
+    {
+      "kind": "column_alias",
+      "later_lines": [
+        24,
+        26
+      ],
+      "line": 13,
+      "line_text": "trimmed LIKE '%?' AS is_question,",
+      "token": "is_question"
+    },
+    {
+      "kind": "column_alias",
+      "later_lines": [
+        23,
+        25
+      ],
+      "line": 15,
+      "line_text": "AND trimmed = UPPER(trimmed) AS is_yelling",
+      "token": "is_yelling"
+    }
+  ],
+  "before_ref": {
+    "full": "4f26956df8ac8c261803011db8bc6a066e2b295c",
+    "short": "4f26956"
+  },
+  "cases": [
+    {
+      "actual_after": "Sure.",
+      "actual_before": "Sure.",
+      "expected": "Sure.",
+      "input": "Does this cryogenic chamber make me look fat?",
+      "name": "asking a question",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "8a2e771d-d6f1-4e3f-b6c6-b41495556e37"
+    },
+    {
+      "actual_after": "Whoa, chill out!",
+      "actual_before": "Whoa, chill out!",
+      "expected": "Whoa, chill out!",
+      "input": "WATCH OUT!",
+      "name": "shouting",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "73a966dc-8017-47d6-bb32-cf07d1a5fcd9"
+    },
+    {
+      "actual_after": "Calm down, I know what I'm doing!",
+      "actual_before": "Calm down, I know what I'm doing!",
+      "expected": "Calm down, I know what I'm doing!",
+      "input": "WHAT'S GOING ON?",
+      "name": "forceful question",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "a5193c61-4a92-4f68-93e2-f554eb385ec6"
+    },
+    {
+      "actual_after": "Fine. Be that way!",
+      "actual_before": "Fine. Be that way!",
+      "expected": "Fine. Be that way!",
+      "input": "",
+      "name": "silence",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "bc39f7c6-f543-41be-9a43-fd1c2f753fc0"
+    },
+    {
+      "actual_after": "Whatever.",
+      "actual_before": "Whatever.",
+      "expected": "Whatever.",
+      "input": "Tom-ay-to, tom-aaaah-to.",
+      "name": "stating something",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "e162fead-606f-437a-a166-d051915cea8e"
+    },
+    {
+      "actual_after": "Sure.",
+      "actual_before": "Sure.",
+      "expected": "Sure.",
+      "input": "You are, what, like 15?",
+      "name": "asking a numeric question",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "81080c62-4e4d-4066-b30a-48d8d76920d9"
+    },
+    {
+      "actual_after": "Sure.",
+      "actual_before": "Sure.",
+      "expected": "Sure.",
+      "input": "fffbbcbeab?",
+      "name": "asking gibberish",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "2a02716d-685b-4e2e-a804-2adaf281c01e"
+    },
+    {
+      "actual_after": "Sure.",
+      "actual_before": "Sure.",
+      "expected": "Sure.",
+      "input": "4?",
+      "name": "question with no letters",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "bb0011c5-cd52-4a5b-8bfb-a87b6283b0e2"
+    },
+    {
+      "actual_after": "Sure.",
+      "actual_before": "Sure.",
+      "expected": "Sure.",
+      "input": ":) ?",
+      "name": "non-letters with question",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "9bfc677d-ea3a-45f2-be44-35bc8fa3753e"
+    },
+    {
+      "actual_after": "Sure.",
+      "actual_before": "Sure.",
+      "expected": "Sure.",
+      "input": "Wait! Hang on. Are you going to be OK?",
+      "name": "prattling on",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "8608c508-f7de-4b17-985b-811878b3cf45"
+    },
+    {
+      "actual_after": "Sure.",
+      "actual_before": "Sure.",
+      "expected": "Sure.",
+      "input": "Okay if like my  spacebar  quite a bit?   ",
+      "name": "ending with whitespace",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "05b304d6-f83b-46e7-81e0-4cd3ca647900"
+    },
+    {
+      "actual_after": "Sure.",
+      "actual_before": "Sure.",
+      "expected": "Sure.",
+      "input": "\nDoes this cryogenic chamber make\n me look fat?",
+      "name": "multiple line question",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "2c7278ac-f955-4eb4-bf8f-e33eb4116a15"
+    },
+    {
+      "actual_after": "Whoa, chill out!",
+      "actual_before": "Whoa, chill out!",
+      "expected": "Whoa, chill out!",
+      "input": "FCECDFCAAB",
+      "name": "shouting gibberish",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "d6c98afd-df35-4806-b55e-2c457c3ab748"
+    },
+    {
+      "actual_after": "Whoa, chill out!",
+      "actual_before": "Whoa, chill out!",
+      "expected": "Whoa, chill out!",
+      "input": "DO LIONS EAT PEOPLE? AHHHHH.",
+      "name": "shouting a statement containing a question mark",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "3c954328-86fb-4c71-8961-e18d6a5e2517"
+    },
+    {
+      "actual_after": "Whoa, chill out!",
+      "actual_before": "Whoa, chill out!",
+      "expected": "Whoa, chill out!",
+      "input": "1, 2, 3 GO!",
+      "name": "shouting numbers",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "a20e0c54-2224-4dde-8b10-bd2cdd4f61bc"
+    },
+    {
+      "actual_after": "Whoa, chill out!",
+      "actual_before": "Whoa, chill out!",
+      "expected": "Whoa, chill out!",
+      "input": "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!",
+      "name": "shouting with special characters",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "496143c8-1c31-4c01-8a08-88427af85c66"
+    },
+    {
+      "actual_after": "Whoa, chill out!",
+      "actual_before": "Whoa, chill out!",
+      "expected": "Whoa, chill out!",
+      "input": "I HATE THE DENTIST",
+      "name": "shouting with no exclamation mark",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "e6793c1c-43bd-4b8d-bc11-499aea73925f"
+    },
+    {
+      "actual_after": "Fine. Be that way!",
+      "actual_before": "Fine. Be that way!",
+      "expected": "Fine. Be that way!",
+      "input": "          ",
+      "name": "prolonged silence",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "d6c47565-372b-4b09-b1dd-c40552b8378b"
+    },
+    {
+      "actual_after": "Fine. Be that way!",
+      "actual_before": "Fine. Be that way!",
+      "expected": "Fine. Be that way!",
+      "input": "\t\t\t\t\t\t\t\t\t\t",
+      "name": "alternate silence",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "4428f28d-4100-4d85-a902-e5a78cb0ecd3"
+    },
+    {
+      "actual_after": "Fine. Be that way!",
+      "actual_before": "Fine. Be that way!",
+      "expected": "Fine. Be that way!",
+      "input": "\n\n \t",
+      "name": "other whitespace",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "72bd5ad3-9b2f-4931-a988-dce1f5771de2"
+    },
+    {
+      "actual_after": "Whatever.",
+      "actual_before": "Whatever.",
+      "expected": "Whatever.",
+      "input": "Hi there!",
+      "name": "talking forcefully",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "c02f9179-ab16-4aa7-a8dc-940145c385f7"
+    },
+    {
+      "actual_after": "Whatever.",
+      "actual_before": "Whatever.",
+      "expected": "Whatever.",
+      "input": "It's OK if you don't want to go work for NASA.",
+      "name": "using acronyms in regular speech",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "153c0e25-9bb5-4ec5-966e-598463658bcd"
+    },
+    {
+      "actual_after": "Whatever.",
+      "actual_before": "Whatever.",
+      "expected": "Whatever.",
+      "input": "1, 2, 3",
+      "name": "no letters",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "f7bc4b92-bdff-421e-a238-ae97f230ccac"
+    },
+    {
+      "actual_after": "Whatever.",
+      "actual_before": "Whatever.",
+      "expected": "Whatever.",
+      "input": "Ending with ? means a question.",
+      "name": "statement containing question mark",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "aa8097cc-c548-4951-8856-14a404dd236a"
+    },
+    {
+      "actual_after": "Whatever.",
+      "actual_before": "Whatever.",
+      "expected": "Whatever.",
+      "input": "         hmmmmmmm...",
+      "name": "starting with whitespace",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "5371ef75-d9ea-4103-bcfa-2da973ddec1b"
+    },
+    {
+      "actual_after": "Whatever.",
+      "actual_before": "Whatever.",
+      "expected": "Whatever.",
+      "input": "This is a statement ending with whitespace      ",
+      "name": "non-question ending with whitespace",
+      "status_after": "pass",
+      "status_before": "pass",
+      "uuid": "12983553-8601-46a8-92fa-fcaa3bc4a2a0"
+    }
+  ],
+  "executed_count": 26,
+  "extra_inputs": [
+    {
+      "after": "Fine. Be that way!",
+      "before": "Fine. Be that way!",
+      "input": "\"\""
+    },
+    {
+      "after": "Fine. Be that way!",
+      "before": "Fine. Be that way!",
+      "input": "\"   \""
+    },
+    {
+      "after": "Calm down, I know what I'm doing!",
+      "before": "Calm down, I know what I'm doing!",
+      "input": "\"ARE YOU THERE?\""
+    },
+    {
+      "after": "Whoa, chill out!",
+      "before": "Whoa, chill out!",
+      "input": "\"WHAT THE HECK ARE YOU DOING?!\""
+    },
+    {
+      "after": "Sure.",
+      "before": "Sure.",
+      "input": "\"Is this real?   \""
+    },
+    {
+      "after": "Fine. Be that way!",
+      "before": "Fine. Be that way!",
+      "input": "\"\\t\\t\\n\\r   \\n\""
+    },
+    {
+      "after": "Sure.",
+      "before": "Sure.",
+      "input": "\"can you hear me now?\""
+    },
+    {
+      "after": "Whatever.",
+      "before": "Whatever.",
+      "input": "\"123 #$%^&*() 456!\""
+    },
+    {
+      "after": "Sure.",
+      "before": "Sure.",
+      "input": "\"Does this work?\\r\\n\""
+    },
+    {
+      "after": "Whoa, chill out!",
+      "before": "Whoa, chill out!",
+      "input": "\"1, 2, 3 GO!\""
+    }
+  ],
+  "guard": [
+    "exercises/practice/bob/.meta/example.sql"
+  ],
+  "named_case_trace": [
+    {
+      "branch": "WHEN bools.is_yelling AND bools.is_question THEN 'Calm down, I know what I''m doing!'",
+      "input": "WHAT'S GOING ON?",
+      "is_question": 1,
+      "is_silence": 0,
+      "is_yelling": 1,
+      "name": "forceful question",
+      "reason": "Tests forceful question branch requiring both is_yelling=1 and is_question=1",
+      "reply": "Calm down, I know what I'm doing!",
+      "trimmed": "WHAT'S GOING ON?",
+      "uuid": "a5193c61-4a92-4f68-93e2-f554eb385ec6"
+    },
+    {
+      "branch": "WHEN bools.is_silence THEN 'Fine. Be that way!'",
+      "input": "\t\t\t\t\t\t\t\t\t\t",
+      "is_question": 0,
+      "is_silence": 1,
+      "is_yelling": 0,
+      "name": "alternate silence",
+      "reason": "Tests silence branch requiring is_silence=1 on literal tab whitespace",
+      "reply": "Fine. Be that way!",
+      "trimmed": "",
+      "uuid": "4428f28d-4100-4d85-a902-e5a78cb0ecd3"
+    },
+    {
+      "branch": "WHEN bools.is_question THEN 'Sure.'",
+      "input": "\nDoes this cryogenic chamber make\n me look fat?",
+      "is_question": 1,
+      "is_silence": 0,
+      "is_yelling": 0,
+      "name": "multiple line question",
+      "reason": "Tests question branch requiring is_question=1 on reimplemented multiline newline input",
+      "reply": "Sure.",
+      "trimmed": "Does this cryogenic chamber make\n me look fat?",
+      "uuid": "2c7278ac-f955-4eb4-bf8f-e33eb4116a15"
+    }
+  ],
+  "rename": {
+    "as_count_after": 6,
+    "as_count_before": 6,
+    "from": "trimmed",
+    "occurrences_after": 2,
+    "to": "trimmed_inputs"
+  },
+  "stub_fail_count": 26,
+  "stub_pass_count": 0,
+  "tests_toml": {
+    "excluded": 1,
+    "included": 26,
+    "total": 27
+  },
+  "tool_versions": {
+    "git": "git version 2.55.0",
+    "jq": "jq-1.7.1-apple",
+    "os": "Darwin 27.2.0 arm64",
+    "python": "Python 3.15.2",
+    "sqlite3": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  },
+  "unified_diff": "--- .meta/example.sql\n+++ .meta/example.sql\n@@ -1,5 +1,5 @@\n WITH\n-  trimmed AS (\n+  trimmed_inputs AS (\n     SELECT\n       input,\n       TRIM(input, CHAR(32, 9, 10, 13)) AS trimmed\n@@ -14,7 +14,7 @@\n       trimmed GLOB '*[a-zA-Z]*'\n       AND trimmed = UPPER(trimmed) AS is_yelling\n     FROM\n-      trimmed\n+      trimmed_inputs\n   )\n UPDATE bob\n SET\n"
+}
