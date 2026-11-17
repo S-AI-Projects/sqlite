@@ -1,0 +1,17 @@
+{
+  "included_before": 8,
+  "excluded_before": 0,
+  "included_after": 8,
+  "excluded_after": 0,
+  "executed_cases": 8,
+  "statuses": [
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+  ]
+}

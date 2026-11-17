@@ -11,12 +11,15 @@
 
 [9920ce55-9629-46d5-85d6-4201f4a4234d]
 description = "zero rows"
+comment = "The recursive counter is intentionally empty for input 0; the reference then normalizes the result to an empty string."
 
 [70d643ce-a46d-4e93-af58-12d88dd01f21]
 description = "single row"
+comment = "The counter emits k=1 and the inner recursive sequence has its seed value 1, so group_concat returns one row containing 1."
 
 [a6e5a2a2-fc9a-4b47-9f4f-ed9ad9fbe4bd]
 description = "two rows"
+comment = "The outer counter emits k=1 and k=2; the inner recurrence computes the second row as 1 1 using integer arithmetic."
 
 [97206a99-79ba-4b04-b1c5-3c0fa1e16925]
 description = "three rows"
