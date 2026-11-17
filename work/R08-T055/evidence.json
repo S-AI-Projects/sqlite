@@ -1,0 +1,571 @@
+{
+  "additivity": {
+    "conditions": [
+      {
+        "L": "short (2-6 chars)",
+        "condition": "n=1000 (short)",
+        "is_additive": true,
+        "n": 1000,
+        "p0_s": 0.003125,
+        "p1_s": 0.000668,
+        "p2_s": 0.002914,
+        "saving_extract_pct": 0.7862399999999999,
+        "saving_extract_s": 0.002457,
+        "saving_payload_pct": 0.06752000000000008,
+        "saving_payload_s": 0.00021100000000000025,
+        "sentence": "the two savings add up to 85% of the unmodified statement time",
+        "share": 0.8537600000000001
+      },
+      {
+        "L": "short (2-6 chars)",
+        "condition": "n=10000 (short)",
+        "is_additive": true,
+        "n": 10000,
+        "p0_s": 0.277141,
+        "p1_s": 0.097151,
+        "p2_s": 0.185762,
+        "saving_extract_pct": 0.649452805611584,
+        "saving_extract_s": 0.17999000000000004,
+        "saving_payload_pct": 0.32972025070271094,
+        "saving_payload_s": 0.09137900000000002,
+        "sentence": "the two savings add up to 98% of the unmodified statement time",
+        "share": 0.9791730563142951
+      },
+      {
+        "L": "50",
+        "condition": "n=1000 (L=50)",
+        "is_additive": true,
+        "n": 1000,
+        "p0_s": 0.011794,
+        "p1_s": 0.00656,
+        "p2_s": 0.005469,
+        "saving_extract_pct": 0.4437849754112261,
+        "saving_extract_s": 0.005234000000000001,
+        "saving_payload_pct": 0.5362896387993895,
+        "saving_payload_s": 0.006325000000000001,
+        "sentence": "the two savings add up to 98% of the unmodified statement time",
+        "share": 0.9800746142106156
+      }
+    ],
+    "threshold_high": 1.15,
+    "threshold_low": 0.85
+  },
+  "correctness": [
+    {
+      "item_type": "short",
+      "match": true,
+      "n": 0
+    },
+    {
+      "item_type": "short",
+      "match": true,
+      "n": 1
+    },
+    {
+      "item_type": "short",
+      "match": true,
+      "n": 2
+    },
+    {
+      "item_type": "short",
+      "match": true,
+      "n": 3
+    },
+    {
+      "item_type": "short",
+      "match": true,
+      "n": 7
+    },
+    {
+      "item_type": "short",
+      "match": true,
+      "n": 10
+    },
+    {
+      "item_type": "short",
+      "match": true,
+      "n": 100
+    },
+    {
+      "item_type": "short",
+      "match": true,
+      "n": 1000
+    },
+    {
+      "item_type": "short",
+      "match": true,
+      "n": 10000
+    },
+    {
+      "item_type": "len50",
+      "match": true,
+      "n": 10
+    },
+    {
+      "item_type": "len50",
+      "match": true,
+      "n": 100
+    },
+    {
+      "item_type": "len50",
+      "match": true,
+      "n": 1000
+    }
+  ],
+  "counts": {
+    "excluded": 0,
+    "executed": 6,
+    "included": 6,
+    "reimplemented": 0,
+    "total": 6
+  },
+  "definitions": {
+    "L": "average item length in characters",
+    "domain": "unbounded (specification does not bound list length or item length and does not require distinct items)",
+    "n": "number of items in the list"
+  },
+  "environment": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "python": "3.15.2",
+    "sqlite3": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  },
+  "growth_exponents": {
+    "len50_100_to_1000": 1.8028773384338015,
+    "len50_to_short_at_1000": null,
+    "short_1000_to_10000": 1.909202783787746,
+    "short_100_to_1000": 1.4687691803548963
+  },
+  "guard": {
+    "ref": "origin/main",
+    "status": "clean"
+  },
+  "noise": {
+    "driver_1_median_s": 0.003141332999803126,
+    "driver_1_runs_s": [
+      0.00340400000277441,
+      0.003034958994248882,
+      0.00333445800060872,
+      0.003141332999803126,
+      0.002941957995062694
+    ],
+    "noise_floor_formula": "max(driver_1_runs) - min(driver_1_runs)",
+    "noise_floor_s": 0.000462042007711716
+  },
+  "preparation": {
+    "explanation": "The reference comprises two UPDATE statements. The tables report Statement 2 (the recursive UPDATE); Statement 1 (the empty-list check) executes in a constant 13 VM steps.",
+    "sentence": "The SQL text is identical for every size, so statement preparation cost does not depend on n, and the statement-2 time at n=1 (0.000035 s) is an upper bound for preparation plus execution at the smallest size.",
+    "statement_1_vm_steps_constant": 13,
+    "statement_2_at_n1_s": 3.5e-05,
+    "table_statement": 2
+  },
+  "probe_outputs": [
+    {
+      "L": "short (2-6 chars)",
+      "n": 1000,
+      "output_matches_expected": true,
+      "probe": "P0"
+    },
+    {
+      "L": "short (2-6 chars)",
+      "n": 10000,
+      "output_matches_expected": true,
+      "probe": "P0"
+    },
+    {
+      "L": "50",
+      "n": 1000,
+      "output_matches_expected": true,
+      "probe": "P0"
+    },
+    {
+      "L": "short (2-6 chars)",
+      "n": 1000,
+      "output_matches_expected": false,
+      "probe": "P1"
+    },
+    {
+      "L": "short (2-6 chars)",
+      "n": 10000,
+      "output_matches_expected": false,
+      "probe": "P1"
+    },
+    {
+      "L": "50",
+      "n": 1000,
+      "output_matches_expected": false,
+      "probe": "P1"
+    },
+    {
+      "L": "short (2-6 chars)",
+      "n": 1000,
+      "output_matches_expected": true,
+      "probe": "P2"
+    },
+    {
+      "L": "short (2-6 chars)",
+      "n": 10000,
+      "output_matches_expected": true,
+      "probe": "P2"
+    },
+    {
+      "L": "50",
+      "n": 1000,
+      "output_matches_expected": true,
+      "probe": "P2"
+    }
+  ],
+  "probes": {
+    "p1_sql": "UPDATE proverb\nSET\n  result = ''\nWHERE\n  JSON(strings) = '[]';\n\nUPDATE proverb\nSET\n  result = (\n    WITH RECURSIVE\n      to_pieces (strings, i, len, piece) AS (\n        VALUES\n          (strings, 0, JSON_ARRAY_LENGTH(strings) - 1, NULL)\n        UNION ALL\n        SELECT\n          strings,\n          i + 1,\n          len,\n          PRINTF(\n            'For want of a %s the %s was lost.',\n            'x',\n            'y'\n          )\n        FROM\n          to_pieces\n        WHERE\n          i < len\n      )\n    SELECT\n      group_concat(piece, CHAR(10))\n    FROM\n      (\n        SELECT\n          piece\n        FROM\n          to_pieces\n        WHERE\n          piece NOTNULL\n        UNION ALL\n        SELECT\n          PRINTF(\n            'And all for the want of a %s.',\n            JSON_EXTRACT(strings, '$[0]')\n          )\n      )\n  )\nWHERE\n  result ISNULL;\n",
+    "p2_sql": "UPDATE proverb\nSET\n  result = ''\nWHERE\n  JSON(strings) = '[]';\n\nUPDATE proverb\nSET\n  result = (\n    WITH RECURSIVE\n      to_pieces (i, len, piece) AS (\n        VALUES\n          (0, JSON_ARRAY_LENGTH(proverb.strings) - 1, NULL)\n        UNION ALL\n        SELECT\n          i + 1,\n          len,\n          PRINTF(\n            'For want of a %s the %s was lost.',\n            JSON_EXTRACT(proverb.strings, PRINTF('$[%d]', i)),\n            JSON_EXTRACT(proverb.strings, PRINTF('$[%d]', i + 1))\n          )\n        FROM\n          to_pieces\n        WHERE\n          i < len\n      )\n    SELECT\n      group_concat(piece, CHAR(10))\n    FROM\n      (\n        SELECT\n          piece\n        FROM\n          to_pieces\n        WHERE\n          piece NOTNULL\n        UNION ALL\n        SELECT\n          PRINTF(\n            'And all for the want of a %s.',\n            JSON_EXTRACT(proverb.strings, '$[0]')\n          )\n      )\n  )\nWHERE\n  result ISNULL;\n",
+    "table": [
+      {
+        "L": "short (2-6 chars)",
+        "n": 1000,
+        "output_matches_expected": true,
+        "probe": "P0",
+        "statement_median_s": 0.003125,
+        "vm_steps": 42039
+      },
+      {
+        "L": "short (2-6 chars)",
+        "n": 10000,
+        "output_matches_expected": true,
+        "probe": "P0",
+        "statement_median_s": 0.277141,
+        "vm_steps": 420039
+      },
+      {
+        "L": "50",
+        "n": 1000,
+        "output_matches_expected": true,
+        "probe": "P0",
+        "statement_median_s": 0.011794,
+        "vm_steps": 42039
+      },
+      {
+        "L": "short (2-6 chars)",
+        "n": 1000,
+        "output_matches_expected": false,
+        "probe": "P1",
+        "statement_median_s": 0.000668,
+        "vm_steps": 34048
+      },
+      {
+        "L": "short (2-6 chars)",
+        "n": 10000,
+        "output_matches_expected": false,
+        "probe": "P1",
+        "statement_median_s": 0.097151,
+        "vm_steps": 340048
+      },
+      {
+        "L": "50",
+        "n": 1000,
+        "output_matches_expected": false,
+        "probe": "P1",
+        "statement_median_s": 0.00656,
+        "vm_steps": 34048
+      },
+      {
+        "L": "short (2-6 chars)",
+        "n": 1000,
+        "output_matches_expected": true,
+        "probe": "P2",
+        "statement_median_s": 0.002914,
+        "vm_steps": 40039
+      },
+      {
+        "L": "short (2-6 chars)",
+        "n": 10000,
+        "output_matches_expected": true,
+        "probe": "P2",
+        "statement_median_s": 0.185762,
+        "vm_steps": 400039
+      },
+      {
+        "L": "50",
+        "n": 1000,
+        "output_matches_expected": true,
+        "probe": "P2",
+        "statement_median_s": 0.005469,
+        "vm_steps": 40039
+      }
+    ]
+  },
+  "ratios": {
+    "net_wall_1000_to_10000_short": 80.10624774888204,
+    "net_wall_100_to_1000_len50": null,
+    "net_wall_100_to_1000_short": null,
+    "net_wall_len50_to_short_at_1000": 3.603385607942817,
+    "statement_timer_1000_to_10000_short": 81.13398058252427,
+    "statement_timer_100_to_1000_len50": 63.515151515151516,
+    "statement_timer_100_to_1000_short": 29.428571428571427,
+    "statement_timer_len50_to_short_at_1000": 3.3915857605177995
+  },
+  "self_test": {
+    "scenarios_total": 11
+  },
+  "startup": {
+    "bare_sqlite_median_s": 0.0028956669993931428,
+    "driver_1_median_s": 0.003141332999803126
+  },
+  "stub": {
+    "failed": 6,
+    "passed": 0,
+    "total": 6
+  },
+  "timing": [
+    {
+      "below_noise": true,
+      "item_len": "short (2-6 chars)",
+      "n": 1,
+      "net_wall_s": 5.195901030674577e-05,
+      "statement_1_median_s": 7e-06,
+      "statement_1_vm_steps": 13,
+      "statement_2_max_s": 3.6e-05,
+      "statement_2_median_s": 3.5e-05,
+      "statement_2_min_s": 3.3e-05,
+      "statement_2_runs_s": [
+        3.6e-05,
+        3.4e-05,
+        3.5e-05,
+        3.5e-05,
+        3.3e-05
+      ],
+      "statement_2_vm_steps": 81,
+      "vm_steps": 81,
+      "wall_max_s": 0.0033567499922355637,
+      "wall_median_s": 0.0031932920101098716,
+      "wall_min_s": 0.0028244169952813536,
+      "wall_runs_s": [
+        0.0033567499922355637,
+        0.003125375005765818,
+        0.0031932920101098716,
+        0.0032596660021226853,
+        0.0028244169952813536
+      ]
+    },
+    {
+      "below_noise": true,
+      "item_len": "short (2-6 chars)",
+      "n": 10,
+      "net_wall_s": -0.0003094989951932803,
+      "statement_1_median_s": 7e-06,
+      "statement_1_vm_steps": 13,
+      "statement_2_max_s": 5e-05,
+      "statement_2_median_s": 4.1e-05,
+      "statement_2_min_s": 3.9e-05,
+      "statement_2_runs_s": [
+        3.9e-05,
+        4.7e-05,
+        3.9e-05,
+        5e-05,
+        4.1e-05
+      ],
+      "statement_2_vm_steps": 459,
+      "vm_steps": 459,
+      "wall_max_s": 0.002996832990902476,
+      "wall_median_s": 0.0028318340046098456,
+      "wall_min_s": 0.002787749996059574,
+      "wall_runs_s": [
+        0.002812624996295199,
+        0.002996832990902476,
+        0.0028372090018820018,
+        0.0028318340046098456,
+        0.002787749996059574
+      ]
+    },
+    {
+      "below_noise": true,
+      "item_len": "short (2-6 chars)",
+      "n": 100,
+      "net_wall_s": 4.695799725595862e-05,
+      "statement_1_median_s": 9e-06,
+      "statement_1_vm_steps": 13,
+      "statement_2_max_s": 0.000109,
+      "statement_2_median_s": 0.000105,
+      "statement_2_min_s": 9.8e-05,
+      "statement_2_runs_s": [
+        0.000107,
+        9.9e-05,
+        9.8e-05,
+        0.000105,
+        0.000109
+      ],
+      "statement_2_vm_steps": 4239,
+      "vm_steps": 4239,
+      "wall_max_s": 0.0035033329913858324,
+      "wall_median_s": 0.0031882909970590845,
+      "wall_min_s": 0.002794207990518771,
+      "wall_runs_s": [
+        0.002794207990518771,
+        0.0035033329913858324,
+        0.0031793330126674846,
+        0.0031882909970590845,
+        0.0033089589996961877
+      ]
+    },
+    {
+      "below_noise": false,
+      "item_len": "short (2-6 chars)",
+      "n": 1000,
+      "net_wall_s": 0.0031691259937360883,
+      "statement_1_median_s": 1.8e-05,
+      "statement_1_vm_steps": 13,
+      "statement_2_max_s": 0.00314,
+      "statement_2_median_s": 0.00309,
+      "statement_2_min_s": 0.002977,
+      "statement_2_runs_s": [
+        0.00309,
+        0.003117,
+        0.00314,
+        0.003038,
+        0.002977
+      ],
+      "statement_2_vm_steps": 42039,
+      "vm_steps": 42039,
+      "wall_max_s": 0.006768000006559305,
+      "wall_median_s": 0.006310458993539214,
+      "wall_min_s": 0.006214749999344349,
+      "wall_runs_s": [
+        0.006258499997784384,
+        0.006485000005341135,
+        0.006768000006559305,
+        0.006214749999344349,
+        0.006310458993539214
+      ]
+    },
+    {
+      "below_noise": false,
+      "item_len": "short (2-6 chars)",
+      "n": 10000,
+      "net_wall_s": 0.2538667920016451,
+      "statement_1_median_s": 0.000107,
+      "statement_1_vm_steps": 13,
+      "statement_2_max_s": 0.252383,
+      "statement_2_median_s": 0.250704,
+      "statement_2_min_s": 0.244325,
+      "statement_2_runs_s": [
+        0.247239,
+        0.250704,
+        0.250987,
+        0.244325,
+        0.252383
+      ],
+      "statement_2_vm_steps": 420039,
+      "vm_steps": 420039,
+      "wall_max_s": 0.25936662500316743,
+      "wall_median_s": 0.2570081250014482,
+      "wall_min_s": 0.25064333400223404,
+      "wall_runs_s": [
+        0.25315516600676347,
+        0.25936662500316743,
+        0.2570081250014482,
+        0.25064333400223404,
+        0.25825270799396094
+      ]
+    },
+    {
+      "below_noise": true,
+      "item_len": "50",
+      "n": 10,
+      "net_wall_s": -0.00021358300000429153,
+      "statement_1_median_s": 7e-06,
+      "statement_1_vm_steps": 13,
+      "statement_2_max_s": 4.1e-05,
+      "statement_2_median_s": 4e-05,
+      "statement_2_min_s": 3.7e-05,
+      "statement_2_runs_s": [
+        4e-05,
+        4.1e-05,
+        3.9e-05,
+        4.1e-05,
+        3.7e-05
+      ],
+      "statement_2_vm_steps": 459,
+      "vm_steps": 459,
+      "wall_max_s": 0.0029593750077765435,
+      "wall_median_s": 0.0029277499997988343,
+      "wall_min_s": 0.002697457995964214,
+      "wall_runs_s": [
+        0.002946791995782405,
+        0.0029593750077765435,
+        0.0028314160008449107,
+        0.002697457995964214,
+        0.0029277499997988343
+      ]
+    },
+    {
+      "below_noise": true,
+      "item_len": "50",
+      "n": 100,
+      "net_wall_s": -1.966700074262917e-05,
+      "statement_1_median_s": 1.1e-05,
+      "statement_1_vm_steps": 13,
+      "statement_2_max_s": 0.000166,
+      "statement_2_median_s": 0.000165,
+      "statement_2_min_s": 0.000163,
+      "statement_2_runs_s": [
+        0.000166,
+        0.000165,
+        0.000163,
+        0.000166,
+        0.000164
+      ],
+      "statement_2_vm_steps": 4239,
+      "vm_steps": 4239,
+      "wall_max_s": 0.003347874997416511,
+      "wall_median_s": 0.0031216659990604967,
+      "wall_min_s": 0.003096208005445078,
+      "wall_runs_s": [
+        0.003096208005445078,
+        0.0031216659990604967,
+        0.00310041599732358,
+        0.003347874997416511,
+        0.003268540996941738
+      ]
+    },
+    {
+      "below_noise": false,
+      "item_len": "50",
+      "n": 1000,
+      "net_wall_s": 0.011419582995586097,
+      "statement_1_median_s": 3.3e-05,
+      "statement_1_vm_steps": 13,
+      "statement_2_max_s": 0.010605,
+      "statement_2_median_s": 0.01048,
+      "statement_2_min_s": 0.010281,
+      "statement_2_runs_s": [
+        0.010281,
+        0.010307,
+        0.01048,
+        0.010605,
+        0.010521
+      ],
+      "statement_2_vm_steps": 42039,
+      "vm_steps": 42039,
+      "wall_max_s": 0.015195208005025052,
+      "wall_median_s": 0.014560915995389223,
+      "wall_min_s": 0.014348084005177952,
+      "wall_runs_s": [
+        0.014367416995810345,
+        0.014348084005177952,
+        0.014560915995389223,
+        0.014936999999918044,
+        0.015195208005025052
+      ]
+    }
+  ],
+  "tool_versions": {
+    "git": "git version 2.55.0",
+    "jq": "jq-1.7.1-apple",
+    "os": "Darwin 27.2.0 arm64",
+    "python": "Python 3.15.2",
+    "sqlite3": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  },
+  "vm_linearity": {
+    "relative_diff": 0.0,
+    "slope1": 42.0,
+    "slope2": 42.0
+  }
+}
