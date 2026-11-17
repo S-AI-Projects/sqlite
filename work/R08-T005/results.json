@@ -1,0 +1,44 @@
+{
+  "executed_cases": 6,
+  "measurements": [
+    {
+      "length": 1,
+      "recursive_states": 2,
+      "median_ms": 5.555,
+      "repetitions": 5,
+      "times_ms": [
+        6.525,
+        5.555,
+        5.232,
+        5.149,
+        5.767
+      ]
+    },
+    {
+      "length": 5,
+      "recursive_states": 6,
+      "median_ms": 5.013,
+      "repetitions": 5,
+      "times_ms": [
+        5.78,
+        5.013,
+        5.044,
+        4.971,
+        4.777
+      ]
+    },
+    {
+      "length": 32,
+      "recursive_states": 33,
+      "median_ms": 5.324,
+      "repetitions": 5,
+      "times_ms": [
+        5.072,
+        4.901,
+        5.328,
+        5.324,
+        5.672
+      ]
+    }
+  ]
+}
