@@ -7,6 +7,7 @@ import json
 import os
 import shutil
 import subprocess
+import sys
 import tempfile
 import tomllib
 from pathlib import Path
@@ -126,7 +127,7 @@ def generation_replay() -> str:
                     copy_root = destination / "repo"
                     shutil.copytree(ROOT, copy_root)
                     proc = subprocess.run(
-                        ["python3", "bin/generate_tests", "--no-pull", "sieve"],
+                        [sys.executable, "bin/generate_tests", "--no-pull", "sieve"],
                         cwd=copy_root,
                         text=True,
                         capture_output=True,

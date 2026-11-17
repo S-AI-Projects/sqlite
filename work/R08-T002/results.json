@@ -1,5 +1,5 @@
 {
-  "generation_mode": "problem-specifications cache unavailable; used maintained-file replay",
+  "generation_mode": "bin/generate_tests replay",
   "executed_cases": 5,
   "uuids": [
     "88529125-c4ce-43cc-bb36-1eb4ddd7b44f",
