@@ -1,0 +1,7 @@
+{
+  "executed_cases": 10,
+  "micro_example": {
+    "kept": "aba",
+    "collapsed": "a,b"
+  }
+}
