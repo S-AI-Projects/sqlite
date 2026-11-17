@@ -1,5 +1,8 @@
 UPDATE "reverse-string"
 SET
+  -- Each recursive row removes one trailing character. For input length n,
+  -- the CTE visits n+1 states and copies shrinking prefixes, so SQL work is
+  -- quadratic in n; sqlite3 process startup is outside this algorithm cost.
   result = (
     WITH RECURSIVE
       reverse_char (string, char) AS (
