@@ -1,0 +1,326 @@
+{
+  "success": {
+    "cases_executed": 18,
+    "cases": [
+      {
+        "uuid": "79666dce-e0f1-46de-95a1-563802913c35",
+        "description": "cleans the number",
+        "input": "(223) 456-7890",
+        "expected": {
+          "result": "2234567890",
+          "error": null
+        },
+        "actual": {
+          "result": "2234567890",
+          "error": null
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "c360451f-549f-43e4-8aba-fdf6cb0bf83f",
+        "description": "cleans numbers with dots",
+        "input": "223.456.7890",
+        "expected": {
+          "result": "2234567890",
+          "error": null
+        },
+        "actual": {
+          "result": "2234567890",
+          "error": null
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "08f94c34-9a37-46a2-a123-2a8e9727395d",
+        "description": "cleans numbers with multiple spaces",
+        "input": "223 456   7890   ",
+        "expected": {
+          "result": "2234567890",
+          "error": null
+        },
+        "actual": {
+          "result": "2234567890",
+          "error": null
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "2de74156-f646-42b5-8638-0ef1d8b58bc2",
+        "description": "invalid when 9 digits",
+        "input": "123456789",
+        "expected": {
+          "result": null,
+          "error": "must not be fewer than 10 digits"
+        },
+        "actual": {
+          "result": null,
+          "error": "must not be fewer than 10 digits"
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "57061c72-07b5-431f-9766-d97da7c4399d",
+        "description": "invalid when 11 digits does not start with a 1",
+        "input": "22234567890",
+        "expected": {
+          "result": null,
+          "error": "11 digits must start with 1"
+        },
+        "actual": {
+          "result": null,
+          "error": "11 digits must start with 1"
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "9962cbf3-97bb-4118-ba9b-38ff49c64430",
+        "description": "valid when 11 digits and starting with 1",
+        "input": "12234567890",
+        "expected": {
+          "result": "2234567890",
+          "error": null
+        },
+        "actual": {
+          "result": "2234567890",
+          "error": null
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "fa724fbf-054c-4d91-95da-f65ab5b6dbca",
+        "description": "valid when 11 digits and starting with 1 even with punctuation",
+        "input": "+1 (223) 456-7890",
+        "expected": {
+          "result": "2234567890",
+          "error": null
+        },
+        "actual": {
+          "result": "2234567890",
+          "error": null
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "4a1509b7-8953-4eec-981b-c483358ff531",
+        "description": "invalid when more than 11 digits",
+        "input": "321234567890",
+        "expected": {
+          "result": null,
+          "error": "must not be greater than 11 digits"
+        },
+        "actual": {
+          "result": null,
+          "error": "must not be greater than 11 digits"
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "eb8a1fc0-64e5-46d3-b0c6-33184208e28a",
+        "description": "invalid with letters",
+        "input": "523-abc-7890",
+        "expected": {
+          "result": null,
+          "error": "letters not permitted"
+        },
+        "actual": {
+          "result": null,
+          "error": "letters not permitted"
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "065f6363-8394-4759-b080-e6c8c351dd1f",
+        "description": "invalid with punctuations",
+        "input": "523-@:!-7890",
+        "expected": {
+          "result": null,
+          "error": "punctuations not permitted"
+        },
+        "actual": {
+          "result": null,
+          "error": "punctuations not permitted"
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "d77d07f8-873c-4b17-8978-5f66139bf7d7",
+        "description": "invalid if area code starts with 0",
+        "input": "(023) 456-7890",
+        "expected": {
+          "result": null,
+          "error": "area code cannot start with zero"
+        },
+        "actual": {
+          "result": null,
+          "error": "area code cannot start with zero"
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "c7485cfb-1e7b-4081-8e96-8cdb3b77f15e",
+        "description": "invalid if area code starts with 1",
+        "input": "(123) 456-7890",
+        "expected": {
+          "result": null,
+          "error": "area code cannot start with one"
+        },
+        "actual": {
+          "result": null,
+          "error": "area code cannot start with one"
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "4d622293-6976-413d-b8bf-dd8a94d4e2ac",
+        "description": "invalid if exchange code starts with 0",
+        "input": "(223) 056-7890",
+        "expected": {
+          "result": null,
+          "error": "exchange code cannot start with zero"
+        },
+        "actual": {
+          "result": null,
+          "error": "exchange code cannot start with zero"
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "4cef57b4-7d8e-43aa-8328-1e1b89001262",
+        "description": "invalid if exchange code starts with 1",
+        "input": "(223) 156-7890",
+        "expected": {
+          "result": null,
+          "error": "exchange code cannot start with one"
+        },
+        "actual": {
+          "result": null,
+          "error": "exchange code cannot start with one"
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "9925b09c-1a0d-4960-a197-5d163cbe308c",
+        "description": "invalid if area code starts with 0 on valid 11-digit number",
+        "input": "1 (023) 456-7890",
+        "expected": {
+          "result": null,
+          "error": "area code cannot start with zero"
+        },
+        "actual": {
+          "result": null,
+          "error": "area code cannot start with zero"
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "3f809d37-40f3-44b5-ad90-535838b1a816",
+        "description": "invalid if area code starts with 1 on valid 11-digit number",
+        "input": "1 (123) 456-7890",
+        "expected": {
+          "result": null,
+          "error": "area code cannot start with one"
+        },
+        "actual": {
+          "result": null,
+          "error": "area code cannot start with one"
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "e08e5532-d621-40d4-b0cc-96c159276b65",
+        "description": "invalid if exchange code starts with 0 on valid 11-digit number",
+        "input": "1 (223) 056-7890",
+        "expected": {
+          "result": null,
+          "error": "exchange code cannot start with zero"
+        },
+        "actual": {
+          "result": null,
+          "error": "exchange code cannot start with zero"
+        },
+        "status": "pass"
+      },
+      {
+        "uuid": "57b32f3d-696a-455c-8bf1-137b6d171cdf",
+        "description": "invalid if exchange code starts with 1 on valid 11-digit number",
+        "input": "1 (223) 156-7890",
+        "expected": {
+          "result": null,
+          "error": "exchange code cannot start with one"
+        },
+        "actual": {
+          "result": null,
+          "error": "exchange code cannot start with one"
+        },
+        "status": "pass"
+      }
+    ]
+  },
+  "negative_checks": {
+    "wrong_solution": {
+      "expected": "non-zero with assertion failure",
+      "actual": "r08-t059: 18 of 18 test cases failed"
+    },
+    "empty_selection": {
+      "expected": "non-zero with zero-test failure",
+      "actual": "r08-t059: zero test cases were reported"
+    },
+    "interrupted_child": {
+      "expected": "non-zero after timeout",
+      "actual": "r08-t059: sqlite3 was interrupted after 0.05 seconds"
+    }
+  },
+  "per_run_integrity": {
+    "success": {
+      "learner_hashes_before": {
+        "phone-number.sql": "311e8e6ade58d50aae3c22bd6a41881e64a630a8dce791d107bf4cb8fb006cf6"
+      },
+      "learner_hashes_after": {
+        "phone-number.sql": "311e8e6ade58d50aae3c22bd6a41881e64a630a8dce791d107bf4cb8fb006cf6"
+      },
+      "temporary_copies_before": [],
+      "temporary_copies_after": []
+    },
+    "wrong_solution": {
+      "learner_hashes_before": {
+        "phone-number.sql": "311e8e6ade58d50aae3c22bd6a41881e64a630a8dce791d107bf4cb8fb006cf6"
+      },
+      "learner_hashes_after": {
+        "phone-number.sql": "311e8e6ade58d50aae3c22bd6a41881e64a630a8dce791d107bf4cb8fb006cf6"
+      },
+      "temporary_copies_before": [],
+      "temporary_copies_after": []
+    },
+    "empty_selection": {
+      "learner_hashes_before": {
+        "phone-number.sql": "311e8e6ade58d50aae3c22bd6a41881e64a630a8dce791d107bf4cb8fb006cf6"
+      },
+      "learner_hashes_after": {
+        "phone-number.sql": "311e8e6ade58d50aae3c22bd6a41881e64a630a8dce791d107bf4cb8fb006cf6"
+      },
+      "temporary_copies_before": [],
+      "temporary_copies_after": []
+    },
+    "interrupted_child": {
+      "learner_hashes_before": {
+        "phone-number.sql": "311e8e6ade58d50aae3c22bd6a41881e64a630a8dce791d107bf4cb8fb006cf6"
+      },
+      "learner_hashes_after": {
+        "phone-number.sql": "311e8e6ade58d50aae3c22bd6a41881e64a630a8dce791d107bf4cb8fb006cf6"
+      },
+      "temporary_copies_before": [],
+      "temporary_copies_after": []
+    }
+  },
+  "learner_solution_sha256": {
+    "phone-number.sql": "311e8e6ade58d50aae3c22bd6a41881e64a630a8dce791d107bf4cb8fb006cf6"
+  },
+  "temporary_copies_cleaned": true,
+  "tool_versions": {
+    "python": "3.15.2 (v3.15.2:5e58eaad7c5, Oct 25 2026, 14:19:34) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "sqlite3": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)",
+    "jq": "jq-1.7.1-apple",
+    "git": "git version 2.55.0",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O"
+  }
+}
