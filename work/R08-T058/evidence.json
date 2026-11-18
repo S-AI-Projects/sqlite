@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "roles": {
+      "solution": [
+        "grade-school.sql"
+      ],
+      "test": [
+        "grade-school_test.sql"
+      ],
+      "example": [
+        ".meta/example.sql"
+      ]
+    },
+    "create_test_table_read": true
+  },
+  "invalid_metadata_fixtures": [
+    {
+      "fixture": "missing reference",
+      "expected": "does not resolve",
+      "actual": "files.example[0] does not resolve to an existing file inside the exercise: missing-example.sql",
+      "rejected": true
+    },
+    {
+      "fixture": "missing test",
+      "expected": "does not resolve",
+      "actual": "files.test[0] does not resolve to an existing file inside the exercise: missing-test.sql",
+      "rejected": true
+    },
+    {
+      "fixture": "outside exercise",
+      "expected": "relative path within the exercise",
+      "actual": "files.example[0] must be a relative path within the exercise: ../outside.sql",
+      "rejected": true
+    }
+  ],
+  "cases_executed": 20,
+  "cases": [
+    {
+      "uuid": "a3f0fb58-f240-4723-8ddc-e644666b85cc",
+      "description": "Roster is empty when no student is added",
+      "input": "{\"students\":[]}",
+      "expected": "[]",
+      "actual": "[]",
+      "status": "pass"
+    },
+    {
+      "uuid": "9337267f-7793-4b90-9b4a-8e3978408824",
+      "description": "Add a student",
+      "input": "{\"students\":[[\"Aimee\",2]]}",
+      "expected": "[true]",
+      "actual": "[true]",
+      "status": "pass"
+    },
+    {
+      "uuid": "6d0a30e4-1b4e-472e-8e20-c41702125667",
+      "description": "Student is added to the roster",
+      "input": "{\"students\":[[\"Aimee\",2]]}",
+      "expected": "[\"Aimee\"]",
+      "actual": "[\"Aimee\"]",
+      "status": "pass"
+    },
+    {
+      "uuid": "73c3ca75-0c16-40d7-82f5-ed8fe17a8e4a",
+      "description": "Adding multiple students in the same grade in the roster",
+      "input": "{\"students\":[[\"Blair\",2],[\"James\",2],[\"Paul\",2]]}",
+      "expected": "[true,true,true]",
+      "actual": "[true,true,true]",
+      "status": "pass"
+    },
+    {
+      "uuid": "233be705-dd58-4968-889d-fb3c7954c9cc",
+      "description": "Multiple students in the same grade are added to the roster",
+      "input": "{\"students\":[[\"Blair\",2],[\"James\",2],[\"Paul\",2]]}",
+      "expected": "[\"Blair\",\"James\",\"Paul\"]",
+      "actual": "[\"Blair\",\"James\",\"Paul\"]",
+      "status": "pass"
+    },
+    {
+      "uuid": "87c871c1-6bde-4413-9c44-73d59a259d83",
+      "description": "Cannot add student to same grade in the roster more than once",
+      "input": "{\"students\":[[\"Blair\",2],[\"James\",2],[\"James\",2],[\"Paul\",2]]}",
+      "expected": "[true,true,false,true]",
+      "actual": "[true,true,false,true]",
+      "status": "pass"
+    },
+    {
+      "uuid": "d7982c4f-1602-49f6-a651-620f2614243a",
+      "description": "Student not added to same grade in the roster more than once",
+      "input": "{\"students\":[[\"Blair\",2],[\"James\",2],[\"James\",2],[\"Paul\",2]]}",
+      "expected": "[\"Blair\",\"James\",\"Paul\"]",
+      "actual": "[\"Blair\",\"James\",\"Paul\"]",
+      "status": "pass"
+    },
+    {
+      "uuid": "e70d5d8f-43a9-41fd-94a4-1ea0fa338056",
+      "description": "Adding students in multiple grades",
+      "input": "{\"students\":[[\"Chelsea\",3],[\"Logan\",7]]}",
+      "expected": "[true,true]",
+      "actual": "[true,true]",
+      "status": "pass"
+    },
+    {
+      "uuid": "75a51579-d1d7-407c-a2f8-2166e984e8ab",
+      "description": "Students in multiple grades are added to the roster",
+      "input": "{\"students\":[[\"Chelsea\",3],[\"Logan\",7]]}",
+      "expected": "[\"Chelsea\",\"Logan\"]",
+      "actual": "[\"Chelsea\",\"Logan\"]",
+      "status": "pass"
+    },
+    {
+      "uuid": "7df542f1-57ce-433c-b249-ff77028ec479",
+      "description": "Cannot add same student to multiple grades in the roster",
+      "input": "{\"students\":[[\"Blair\",2],[\"James\",2],[\"James\",3],[\"Paul\",3]]}",
+      "expected": "[true,true,false,true]",
+      "actual": "[true,true,false,true]",
+      "status": "pass"
+    },
+    {
+      "uuid": "c7ec1c5e-9ab7-4d3b-be5c-29f2f7a237c5",
+      "description": "Student not added to multiple grades in the roster",
+      "input": "{\"students\":[[\"Blair\",2],[\"James\",2],[\"James\",3],[\"Paul\",3]]}",
+      "expected": "[\"Blair\",\"James\",\"Paul\"]",
+      "actual": "[\"Blair\",\"James\",\"Paul\"]",
+      "status": "pass"
+    },
+    {
+      "uuid": "d9af4f19-1ba1-48e7-94d0-dabda4e5aba6",
+      "description": "Students are sorted by grades in the roster",
+      "input": "{\"students\":[[\"Jim\",3],[\"Peter\",2],[\"Anna\",1]]}",
+      "expected": "[\"Anna\",\"Peter\",\"Jim\"]",
+      "actual": "[\"Anna\",\"Peter\",\"Jim\"]",
+      "status": "pass"
+    },
+    {
+      "uuid": "d9fb5bea-f5aa-4524-9d61-c158d8906807",
+      "description": "Students are sorted by name in the roster",
+      "input": "{\"students\":[[\"Peter\",2],[\"Zoe\",2],[\"Alex\",2]]}",
+      "expected": "[\"Alex\",\"Peter\",\"Zoe\"]",
+      "actual": "[\"Alex\",\"Peter\",\"Zoe\"]",
+      "status": "pass"
+    },
+    {
+      "uuid": "180a8ff9-5b94-43fc-9db1-d46b4a8c93b6",
+      "description": "Students are sorted by grades and then by name in the roster",
+      "input": "{\"students\":[[\"Peter\",2],[\"Anna\",1],[\"Barb\",1],[\"Zoe\",2],[\"Alex\",2],[\"Jim\",3],[\"Charlie\",1]]}",
+      "expected": "[\"Anna\",\"Barb\",\"Charlie\",\"Alex\",\"Peter\",\"Zoe\",\"Jim\"]",
+      "actual": "[\"Anna\",\"Barb\",\"Charlie\",\"Alex\",\"Peter\",\"Zoe\",\"Jim\"]",
+      "status": "pass"
+    },
+    {
+      "uuid": "5e67aa3c-a3c6-4407-a183-d8fe59cd1630",
+      "description": "Grade is empty if no students in the roster",
+      "input": "{\"students\":[],\"desiredGrade\":1}",
+      "expected": "[]",
+      "actual": "[]",
+      "status": "pass"
+    },
+    {
+      "uuid": "1e0cf06b-26e0-4526-af2d-a2e2df6a51d6",
+      "description": "Grade is empty if no students in that grade",
+      "input": "{\"students\":[[\"Peter\",2],[\"Zoe\",2],[\"Alex\",2],[\"Jim\",3]],\"desiredGrade\":1}",
+      "expected": "[]",
+      "actual": "[]",
+      "status": "pass"
+    },
+    {
+      "uuid": "2bfc697c-adf2-4b65-8d0f-c46e085f796e",
+      "description": "Student not added to same grade more than once",
+      "input": "{\"students\":[[\"Blair\",2],[\"James\",2],[\"James\",2],[\"Paul\",2]],\"desiredGrade\":2}",
+      "expected": "[\"Blair\",\"James\",\"Paul\"]",
+      "actual": "[\"Blair\",\"James\",\"Paul\"]",
+      "status": "pass"
+    },
+    {
+      "uuid": "66c8e141-68ab-4a04-a15a-c28bc07fe6b9",
+      "description": "Student not added to multiple grades",
+      "input": "{\"students\":[[\"Blair\",2],[\"James\",2],[\"James\",3],[\"Paul\",3]],\"desiredGrade\":2}",
+      "expected": "[\"Blair\",\"James\"]",
+      "actual": "[\"Blair\",\"James\"]",
+      "status": "pass"
+    },
+    {
+      "uuid": "c9c1fc2f-42e0-4d2c-b361-99271f03eda7",
+      "description": "Student not added to other grade for multiple grades",
+      "input": "{\"students\":[[\"Blair\",2],[\"James\",2],[\"James\",3],[\"Paul\",3]],\"desiredGrade\":3}",
+      "expected": "[\"Paul\"]",
+      "actual": "[\"Paul\"]",
+      "status": "pass"
+    },
+    {
+      "uuid": "1bfbcef1-e4a3-49e8-8d22-f6f9f386187e",
+      "description": "Students are sorted by name in a grade",
+      "input": "{\"students\":[[\"Franklin\",5],[\"Bradley\",5],[\"Jeff\",1]],\"desiredGrade\":5}",
+      "expected": "[\"Bradley\",\"Franklin\"]",
+      "actual": "[\"Bradley\",\"Franklin\"]",
+      "status": "pass"
+    }
+  ],
+  "learner_solution_sha256": "42832bf8ac9e228d825828a9719ce1c95bf965eacbd9e82ac1b18ab41a4a9d15",
+  "tool_versions": {
+    "python": "3.15.2 (v3.15.2:5e58eaad7c5, Oct 25 2026, 14:19:34) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "sqlite3": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)",
+    "jq": "jq-1.7.1-apple",
+    "git": "git version 2.55.0",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O"
+  }
+}
