@@ -1,0 +1,831 @@
+{
+  "committed_cases": [
+    {
+      "agree": true,
+      "alternative": false,
+      "description": "empty sentence",
+      "expected": false,
+      "is_named": false,
+      "reference": false,
+      "uuid": "64f61791-508e-4f5c-83ab-05de042b0149",
+      "uuid_short": "64f61791"
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "description": "perfect lower case",
+      "expected": true,
+      "is_named": false,
+      "reference": true,
+      "uuid": "74858f80-4a4d-478b-8a5e-c6477e4e4e84",
+      "uuid_short": "74858f80"
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "description": "only lower case",
+      "expected": true,
+      "is_named": false,
+      "reference": true,
+      "uuid": "61288860-35ca-4abe-ba08-f5df76ecbdcd",
+      "uuid_short": "61288860"
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "description": "missing the letter 'x'",
+      "expected": false,
+      "is_named": false,
+      "reference": false,
+      "uuid": "6564267d-8ac5-4d29-baf2-e7d2e304a743",
+      "uuid_short": "6564267d"
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "description": "missing the letter 'h'",
+      "expected": false,
+      "is_named": true,
+      "reference": false,
+      "uuid": "c79af1be-d715-4cdb-a5f2-b2fa3e7e0de0",
+      "uuid_short": "c79af1be"
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "description": "with underscores",
+      "expected": true,
+      "is_named": false,
+      "reference": true,
+      "uuid": "d835ec38-bc8f-48e4-9e36-eb232427b1df",
+      "uuid_short": "d835ec38"
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "description": "with numbers",
+      "expected": true,
+      "is_named": false,
+      "reference": true,
+      "uuid": "8cc1e080-a178-4494-b4b3-06982c9be2a8",
+      "uuid_short": "8cc1e080"
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "description": "missing letters replaced by numbers",
+      "expected": false,
+      "is_named": false,
+      "reference": false,
+      "uuid": "bed96b1c-ff95-45b8-9731-fdbdcb6ede9a",
+      "uuid_short": "bed96b1c"
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "description": "mixed case and punctuation",
+      "expected": true,
+      "is_named": true,
+      "reference": true,
+      "uuid": "938bd5d8-ade5-40e2-a2d9-55a338a01030",
+      "uuid_short": "938bd5d8"
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "description": "a-m and A-M are 26 different characters but not a pangram",
+      "expected": false,
+      "is_named": true,
+      "reference": false,
+      "uuid": "7138e389-83e4-4c6e-8413-1e40a0076951",
+      "uuid_short": "7138e389"
+    }
+  ],
+  "comparisons": [
+    {
+      "length": 26,
+      "overlap_invalid": false,
+      "overlap_valid": false,
+      "ratio_invalid": 1.5454545454545454,
+      "ratio_valid": 1.565217391304348,
+      "sentence": "At length 26, the alternative statement-time median is 1.57x the reference median for valid inputs (intervals do not overlap) and 1.55x for invalid inputs (intervals do not overlap)."
+    },
+    {
+      "length": 1000,
+      "overlap_invalid": true,
+      "overlap_valid": false,
+      "ratio_invalid": 1.3548387096774193,
+      "ratio_valid": 1.28125,
+      "sentence": "At length 1000, the alternative statement-time median is 1.28x the reference median for valid inputs (intervals do not overlap) and 1.35x for invalid inputs (intervals overlap)."
+    },
+    {
+      "length": 100000,
+      "overlap_invalid": false,
+      "overlap_valid": false,
+      "ratio_invalid": 0.9499374217772215,
+      "ratio_valid": 0.9322916666666666,
+      "sentence": "At length 100000, the alternative statement-time median is 0.93x the reference median for valid inputs (intervals do not overlap) and 0.95x for invalid inputs (intervals do not overlap)."
+    }
+  ],
+  "counts": {
+    "excluded": 1,
+    "included": 10,
+    "reimplemented": 1,
+    "total": 11
+  },
+  "environment": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "python_version": "3.15.2 (v3.15.2:5e58eaad7c5, Oct 25 2026, 14:19:34) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "sqlite3_version": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  },
+  "executed_counts": {
+    "alternative": 10,
+    "reference": 10
+  },
+  "extra_inputs": [
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 1,
+      "input_display": "len=0: ``",
+      "input_escaped": "",
+      "length": 0,
+      "missing_letters": "abcdefghij... (26 missing)",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "expected": true,
+      "index": 2,
+      "input_display": "len=26: `abcdefghijklmnopqrstuvwxyz`",
+      "input_escaped": "abcdefghijklmnopqrstuvwxyz",
+      "length": 26,
+      "missing_letters": "none",
+      "reference": true
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "expected": true,
+      "index": 3,
+      "input_display": "len=26: `ABCDEFGHIJKLMNOPQRSTUVWXYZ`",
+      "input_escaped": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "length": 26,
+      "missing_letters": "none",
+      "reference": true
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 4,
+      "input_display": "len=25: `abcdefghijklmnopqrstuvwxy`",
+      "input_escaped": "abcdefghijklmnopqrstuvwxy",
+      "length": 25,
+      "missing_letters": "z",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 5,
+      "input_display": "len=25: `bcdefghijklmnopqrstuvwxyz`",
+      "input_escaped": "bcdefghijklmnopqrstuvwxyz",
+      "length": 25,
+      "missing_letters": "a",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "expected": true,
+      "index": 6,
+      "input_display": "len=43: `The quick brown fox jumps over t...`",
+      "input_escaped": "The quick brown fox jumps over the lazy dog",
+      "length": 43,
+      "missing_letters": "none",
+      "reference": true
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 7,
+      "input_display": "len=42: `The quick brown fox jumps over t...`",
+      "input_escaped": "The quick brown fox jumps over the lazy do",
+      "length": 42,
+      "missing_letters": "g",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 8,
+      "input_display": "len=42: `Pack my box with 5 dozen liquor ...`",
+      "input_escaped": "Pack my box with 5 dozen liquor jugs!? 123",
+      "length": 42,
+      "missing_letters": "fv",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "expected": true,
+      "index": 9,
+      "input_display": "len=37: `a1b2c3d4e5f6g7h8i9j0 klmnopqrstu...`",
+      "input_escaped": "a1b2c3d4e5f6g7h8i9j0 klmnopqrstuvwxyz",
+      "length": 37,
+      "missing_letters": "none",
+      "reference": true
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 10,
+      "input_display": "len=27: `abcdefghijklm ABCDEFGHIJKLM`",
+      "input_escaped": "abcdefghijklm ABCDEFGHIJKLM",
+      "length": 27,
+      "missing_letters": "nopqrstuvw... (13 missing)",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "expected": true,
+      "index": 11,
+      "input_display": "len=51: `a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_...`",
+      "input_escaped": "a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z",
+      "length": 51,
+      "missing_letters": "none",
+      "reference": true
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "expected": true,
+      "index": 12,
+      "input_display": "len=34: `abc\\tdef\\nghi jkl mno pqr stu vw...`",
+      "input_escaped": "abc\\tdef\\nghi jkl mno pqr stu vwx yz",
+      "length": 34,
+      "missing_letters": "none",
+      "reference": true
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "expected": true,
+      "index": 13,
+      "input_display": "len=47: `The quick brown fox jumps over t...`",
+      "input_escaped": "The quick brown fox jumps over the lazy dog \\u00e4\\u00f6\\u00fc",
+      "length": 47,
+      "missing_letters": "none",
+      "reference": true
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 14,
+      "input_display": "len=46: `The quick brown fox jumps over t...`",
+      "input_escaped": "The quick brown fox jumps over the lazy do \\u00e4\\u00f6\\u00fc",
+      "length": 46,
+      "missing_letters": "g",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 15,
+      "input_display": "len=55: `\\u0421\\u044a\\u0435\\u0448\\u044c ...`",
+      "input_escaped": "\\u0421\\u044a\\u0435\\u0448\\u044c \\u0436\\u0435 \\u0435\\u0449\\u0451 \\u044d\\u0442\\u0438\\u0445 \\u043c\\u044f\\u0433\\u043a\\u0438\\u0445 \\u0444\\u0440\\u0430\\u043d\\u0446\\u0443\\u0437\\u0441\\u043a\\u0438\\u0445 \\u0431\\u0443\\u043b\\u043e\\u043a \\u0434\\u0430 \\u0432\\u044b\\u043f\\u0435\\u0439 \\u0447\\u0430\\u044e",
+      "length": 55,
+      "missing_letters": "abcdefghij... (26 missing)",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "expected": true,
+      "index": 16,
+      "input_display": "len=32: `abcdefghijklmnopqrstuvwxyz ...`",
+      "input_escaped": "abcdefghijklmnopqrstuvwxyz \\u0421\\u044a\\u0435\\u0448\\u044c",
+      "length": 32,
+      "missing_letters": "none",
+      "reference": true
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 17,
+      "input_display": "len=43: `Th\\u00e9 quick brown fox jumps o...`",
+      "input_escaped": "Th\\u00e9 quick brown fox jumps ov\\u00e9r th\\u00e9 lazy dog",
+      "length": 43,
+      "missing_letters": "e",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 18,
+      "input_display": "len=43: `The quic\\u212a brown fox jumps o...`",
+      "input_escaped": "The quic\\u212a brown fox jumps over the lazy dog",
+      "length": 43,
+      "missing_letters": "k",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 19,
+      "input_display": "len=32: `aaaaaaaaaa bbbbbbbbbb cccccccccc`",
+      "input_escaped": "aaaaaaaaaa bbbbbbbbbb cccccccccc",
+      "length": 32,
+      "missing_letters": "defghijklm... (23 missing)",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 20,
+      "input_display": "len=5: `     `",
+      "input_escaped": "     ",
+      "length": 5,
+      "missing_letters": "abcdefghij... (26 missing)",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "expected": false,
+      "index": 21,
+      "input_display": "len=1: `a`",
+      "input_escaped": "a",
+      "length": 1,
+      "missing_letters": "bcdefghijk... (25 missing)",
+      "reference": false
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "expected": true,
+      "index": 22,
+      "input_display": "len=33: `   abcdefghijklmnopqrstuvwxyz   \\n`",
+      "input_escaped": "   abcdefghijklmnopqrstuvwxyz   \\n",
+      "length": 33,
+      "missing_letters": "none",
+      "reference": true
+    }
+  ],
+  "guard_ref": "origin/main",
+  "named_cases": [
+    {
+      "agree": true,
+      "alternative": false,
+      "description": "missing the letter 'h'",
+      "expected": false,
+      "reason": "missing the letter 'h' (expected False)",
+      "reference": false,
+      "uuid": "c79af1be-d715-4cdb-a5f2-b2fa3e7e0de0"
+    },
+    {
+      "agree": true,
+      "alternative": true,
+      "description": "mixed case and punctuation",
+      "expected": true,
+      "reason": "mixed case and punctuation (expected True)",
+      "reference": true,
+      "uuid": "938bd5d8-ade5-40e2-a2d9-55a338a01030"
+    },
+    {
+      "agree": true,
+      "alternative": false,
+      "description": "a-m and A-M are 26 different characters but not a pangram",
+      "expected": false,
+      "reason": "a-m and A-M are 26 different characters but not a pangram (expected False, reimplements the excluded case)",
+      "reference": false,
+      "uuid": "7138e389-83e4-4c6e-8413-1e40a0076951"
+    }
+  ],
+  "non_ascii_outputs": {
+    "hex_lower_char_8490": "E284AA",
+    "lower_char_196": "\\u00c4",
+    "lower_char_8490": "\\u212a",
+    "rendered_line": "upper(U+00e4) -> U+00e4, lower(U+00c4) -> U+00c4, lower(U+212a) -> U+212a (hex E284AA)",
+    "upper_char_228": "\\u00e4"
+  },
+  "python_facts": {
+    "'\\u212a'.lower() == 'k'": true,
+    "len('\\u212a'.encode('utf-8'))": 3
+  },
+  "round_trip": {
+    "count": 22,
+    "passed": true
+  },
+  "startup": {
+    "bare_sqlite_median_s": 0.002555540995672345,
+    "bare_sqlite_runs_s": [
+      0.0026165000163018703,
+      0.002564499998698011,
+      0.0025425830099266022,
+      0.002548958989791572,
+      0.002555540995672345
+    ],
+    "driver_1_median_s": 0.0027491670043673366,
+    "driver_1_runs_s": [
+      0.0028184170078020543,
+      0.0026687080098781735,
+      0.0027491670043673366,
+      0.0027124589832965285,
+      0.004374917014501989
+    ],
+    "noise_floor_s": 0.0017062090046238154
+  },
+  "structure": {
+    "alternative": {
+      "and_count": 0,
+      "functions": [
+        "CHAR",
+        "COUNT",
+        "INSTR",
+        "LOWER"
+      ],
+      "has_count": true,
+      "has_recursive": true,
+      "keywords": [
+        "ALL",
+        "AS",
+        "FROM",
+        "RECURSIVE",
+        "SELECT",
+        "SET",
+        "UNION",
+        "UPDATE",
+        "WHERE",
+        "WITH"
+      ],
+      "literals": 1
+    },
+    "diff_functions_alt_minus_ref": [
+      "CHAR",
+      "COUNT"
+    ],
+    "diff_functions_ref_minus_alt": [],
+    "diff_keywords_alt_minus_ref": [
+      "ALL",
+      "AS",
+      "FROM",
+      "RECURSIVE",
+      "SELECT",
+      "UNION",
+      "WHERE",
+      "WITH"
+    ],
+    "diff_keywords_ref_minus_alt": [
+      "AND"
+    ],
+    "reference": {
+      "and_count": 25,
+      "functions": [
+        "INSTR",
+        "LOWER"
+      ],
+      "has_count": false,
+      "has_recursive": false,
+      "keywords": [
+        "AND",
+        "SET",
+        "UPDATE"
+      ],
+      "literals": 26
+    },
+    "static_opcodes": {
+      "alternative": {
+        "lower_functions": 1,
+        "open_ephemeral": 1,
+        "total": 66
+      },
+      "note": "These are static bytecode counts, not runtime counts",
+      "reference": {
+        "lower_functions": 26,
+        "open_ephemeral": 0,
+        "total": 144
+      }
+    }
+  },
+  "stub_counts": {
+    "failed": 10,
+    "passed": 0
+  },
+  "timing": [
+    {
+      "approach": "Reference",
+      "expected": true,
+      "length": 26,
+      "timer_max_s": 2.6e-05,
+      "timer_median_s": 2.3e-05,
+      "timer_min_s": 2.2e-05,
+      "timer_runs_s": [
+        2.2e-05,
+        2.5e-05,
+        2.3e-05,
+        2.2e-05,
+        2.6e-05
+      ],
+      "vm_steps": 144,
+      "wall_median_s": 0.0027525000041350722,
+      "wall_runs_s": [
+        0.0027525000041350722,
+        0.002808000019285828,
+        0.0028927079983986914,
+        0.002681874990230426,
+        0.00264883300405927
+      ]
+    },
+    {
+      "approach": "Reference",
+      "expected": false,
+      "length": 26,
+      "timer_max_s": 2.6e-05,
+      "timer_median_s": 2.2e-05,
+      "timer_min_s": 2.1e-05,
+      "timer_runs_s": [
+        2.5e-05,
+        2.6e-05,
+        2.2e-05,
+        2.1e-05,
+        2.2e-05
+      ],
+      "vm_steps": 144,
+      "wall_median_s": 0.002704417012864724,
+      "wall_runs_s": [
+        0.002704417012864724,
+        0.002683124999748543,
+        0.0027206670201849192,
+        0.002555334009230137,
+        0.002722957986406982
+      ]
+    },
+    {
+      "approach": "Reference",
+      "expected": true,
+      "length": 1000,
+      "timer_max_s": 3.7e-05,
+      "timer_median_s": 3.2e-05,
+      "timer_min_s": 2.9e-05,
+      "timer_runs_s": [
+        3.2e-05,
+        2.9e-05,
+        3.7e-05,
+        3.2e-05,
+        3.1e-05
+      ],
+      "vm_steps": 144,
+      "wall_median_s": 0.0027602089976426214,
+      "wall_runs_s": [
+        0.002760290983133018,
+        0.0026659159921109676,
+        0.0027602089976426214,
+        0.002655916992807761,
+        0.002976832998683676
+      ]
+    },
+    {
+      "approach": "Reference",
+      "expected": false,
+      "length": 1000,
+      "timer_max_s": 4.2e-05,
+      "timer_median_s": 3.1e-05,
+      "timer_min_s": 3e-05,
+      "timer_runs_s": [
+        3.1e-05,
+        3.4e-05,
+        4.2e-05,
+        3e-05,
+        3e-05
+      ],
+      "vm_steps": 144,
+      "wall_median_s": 0.002745083998888731,
+      "wall_runs_s": [
+        0.002745083998888731,
+        0.0026962919801007956,
+        0.002937584009487182,
+        0.002679957979125902,
+        0.002787292003631592
+      ]
+    },
+    {
+      "approach": "Reference",
+      "expected": true,
+      "length": 100000,
+      "timer_max_s": 0.000779,
+      "timer_median_s": 0.000768,
+      "timer_min_s": 0.000755,
+      "timer_runs_s": [
+        0.000779,
+        0.000755,
+        0.000778,
+        0.000755,
+        0.000768
+      ],
+      "vm_steps": 144,
+      "wall_median_s": 0.004921290994388983,
+      "wall_runs_s": [
+        0.0054612079984508455,
+        0.004865416995016858,
+        0.004921290994388983,
+        0.004748750012367964,
+        0.005284582992317155
+      ]
+    },
+    {
+      "approach": "Reference",
+      "expected": false,
+      "length": 100000,
+      "timer_max_s": 0.000815,
+      "timer_median_s": 0.000799,
+      "timer_min_s": 0.000796,
+      "timer_runs_s": [
+        0.000815,
+        0.000812,
+        0.000798,
+        0.000796,
+        0.000799
+      ],
+      "vm_steps": 144,
+      "wall_median_s": 0.004964749998180196,
+      "wall_runs_s": [
+        0.0053819580061826855,
+        0.004964749998180196,
+        0.005033250025007874,
+        0.004950667003868148,
+        0.004904375004116446
+      ]
+    },
+    {
+      "approach": "Alternative",
+      "expected": true,
+      "length": 26,
+      "timer_max_s": 4e-05,
+      "timer_median_s": 3.6e-05,
+      "timer_min_s": 3.4e-05,
+      "timer_runs_s": [
+        3.8e-05,
+        3.6e-05,
+        4e-05,
+        3.4e-05,
+        3.4e-05
+      ],
+      "vm_steps": 709,
+      "wall_median_s": 0.0027624999929685146,
+      "wall_runs_s": [
+        0.002890000003390014,
+        0.0032624170125927776,
+        0.0027624999929685146,
+        0.0026612090005073696,
+        0.002686083986191079
+      ]
+    },
+    {
+      "approach": "Alternative",
+      "expected": false,
+      "length": 26,
+      "timer_max_s": 3.4e-05,
+      "timer_median_s": 3.4e-05,
+      "timer_min_s": 3.2e-05,
+      "timer_runs_s": [
+        3.4e-05,
+        3.4e-05,
+        3.4e-05,
+        3.3e-05,
+        3.2e-05
+      ],
+      "vm_steps": 709,
+      "wall_median_s": 0.002744708996033296,
+      "wall_runs_s": [
+        0.002766374993370846,
+        0.002732082997681573,
+        0.002744708996033296,
+        0.0027457499818410724,
+        0.002724457997828722
+      ]
+    },
+    {
+      "approach": "Alternative",
+      "expected": true,
+      "length": 1000,
+      "timer_max_s": 4.2e-05,
+      "timer_median_s": 4.1e-05,
+      "timer_min_s": 4e-05,
+      "timer_runs_s": [
+        4e-05,
+        4.1e-05,
+        4.2e-05,
+        4e-05,
+        4.1e-05
+      ],
+      "vm_steps": 709,
+      "wall_median_s": 0.002739541989285499,
+      "wall_runs_s": [
+        0.002713583002332598,
+        0.002762957999948412,
+        0.002995834016473964,
+        0.0027185419749002904,
+        0.002739541989285499
+      ]
+    },
+    {
+      "approach": "Alternative",
+      "expected": false,
+      "length": 1000,
+      "timer_max_s": 4.3e-05,
+      "timer_median_s": 4.2e-05,
+      "timer_min_s": 4e-05,
+      "timer_runs_s": [
+        4.1e-05,
+        4e-05,
+        4.3e-05,
+        4.3e-05,
+        4.2e-05
+      ],
+      "vm_steps": 709,
+      "wall_median_s": 0.0027223340002819896,
+      "wall_runs_s": [
+        0.0027267919795121998,
+        0.0027223340002819896,
+        0.002604874985991046,
+        0.0027548329962883145,
+        0.0026917909854091704
+      ]
+    },
+    {
+      "approach": "Alternative",
+      "expected": true,
+      "length": 100000,
+      "timer_max_s": 0.000746,
+      "timer_median_s": 0.000716,
+      "timer_min_s": 0.000715,
+      "timer_runs_s": [
+        0.000746,
+        0.000715,
+        0.000715,
+        0.000739,
+        0.000716
+      ],
+      "vm_steps": 709,
+      "wall_median_s": 0.004894999990938231,
+      "wall_runs_s": [
+        0.004894999990938231,
+        0.004892333003226668,
+        0.004715166985988617,
+        0.005303375015500933,
+        0.005234541982645169
+      ]
+    },
+    {
+      "approach": "Alternative",
+      "expected": false,
+      "length": 100000,
+      "timer_max_s": 0.000769,
+      "timer_median_s": 0.000759,
+      "timer_min_s": 0.000758,
+      "timer_runs_s": [
+        0.000759,
+        0.000769,
+        0.000758,
+        0.000762,
+        0.000758
+      ],
+      "vm_steps": 709,
+      "wall_median_s": 0.004941542021697387,
+      "wall_runs_s": [
+        0.004941542021697387,
+        0.0049982499913312495,
+        0.005004166014259681,
+        0.00485637501697056,
+        0.004908375005470589
+      ]
+    }
+  ],
+  "tool_versions": {
+    "git": "git version 2.55.0",
+    "jq": "jq-1.7.1-apple",
+    "os": "Darwin 27.2.0 arm64",
+    "python": "Python 3.15.2",
+    "sqlite3": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  },
+  "vm_steps": {
+    "alternative": 709,
+    "constant": true,
+    "reference": 144
+  }
+}
