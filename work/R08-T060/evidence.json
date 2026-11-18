@@ -1,0 +1,41 @@
+{
+  "cases_executed": 3,
+  "cases": [
+    {
+      "uuid": "49eb31c5-10a8-4180-9f7f-fea632ab87ef",
+      "description": "Color codes -> Black",
+      "input": "black",
+      "expected": 0,
+      "actual": 0,
+      "status": "pass"
+    },
+    {
+      "uuid": "0a4df94b-92da-4579-a907-65040ce0b3fc",
+      "description": "Color codes -> White",
+      "input": "white",
+      "expected": 9,
+      "actual": 9,
+      "status": "pass"
+    },
+    {
+      "uuid": "5f81608d-f36f-4190-8084-f45116b6f380",
+      "description": "Color codes -> Orange",
+      "input": "orange",
+      "expected": 3,
+      "actual": 3,
+      "status": "pass"
+    }
+  ],
+  "excluded_case": {
+    "description": "Colors",
+    "include": false
+  },
+  "learner_solution_sha256": "d123fd85e84be19c11c929fd25b9c851ca359c7d5d3326f85f218a255e805cc7",
+  "tool_versions": {
+    "python": "3.15.2 (v3.15.2:5e58eaad7c5, Oct 25 2026, 14:19:34) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "sqlite3": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)",
+    "jq": "jq-1.7.1-apple",
+    "git": "git version 2.55.0",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O"
+  }
+}
