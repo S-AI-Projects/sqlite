@@ -9,13 +9,13 @@
 # As user-added comments (using the # character) will be removed when this file
 # is regenerated, comments can be added via a `comment` key.
 
-[404b7262-c050-4df0-a2a2-0cb06cd6a821]
+[404b7262-c050-4df0-a2a2-0cb06cd6a821] # empty string: input text is empty; SQLite CTE recursion terminates at length 0, producing an empty result set.
 description = "empty string"
 
-[a89ce8a3-c940-4703-a688-3ea39412fbcb]
+[a89ce8a3-c940-4703-a688-3ea39412fbcb] # two characters in a row: 1 row with 2 columns transposes into 2 rows of 1 column each; SQLite character extraction uses SUBSTR().
 description = "two characters in a row"
 
-[855bb6ae-4180-457c-abd0-ce489803ce98]
+[855bb6ae-4180-457c-abd0-ce489803ce98] # two characters in a column: 2 rows with 1 column each transpose into 1 row of 2 columns; string aggregation in SQLite uses GROUP_CONCAT() or string concatenation ||.
 description = "two characters in a column"
 
 [5ceda1c0-f940-441c-a244-0ced197769c8]
