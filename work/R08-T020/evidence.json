@@ -1,0 +1,177 @@
+{
+  "task_id": "R08-T020",
+  "timestamp": "2026-11-22T13:59:01.565408+00:00",
+  "environment": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "python_version": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "sqlite3_version": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  },
+  "git": {
+    "branch": "AtharvaShirke/e26b07f0671/R08-T020",
+    "commit": "93ba3238216495fb0192c3f4bc3c647e18c0d845"
+  },
+  "stub_verification": {
+    "file": "exercises/practice/sublist/sublist.sql",
+    "sha256_before": "a9818da01c06d73cd172f161d2ea54c16d015732148582cd4f642135342b4a66",
+    "sha256_after": "a9818da01c06d73cd172f161d2ea54c16d015732148582cd4f642135342b4a66",
+    "untouched": true
+  },
+  "reference_implementation": {
+    "command": "sqlite3 -bail < sublist_test.sql",
+    "exit_code": 0,
+    "stdout": "+-------------------------------------------------------+--------+---------+\n|                      description                      | status | message |\n+-------------------------------------------------------+--------+---------+\n| empty lists                                           | pass   |         |\n| empty list within non empty list                      | pass   |         |\n| non empty list contains empty list                    | pass   |         |\n| list equals itself                                    | pass   |         |\n| different lists                                       | pass   |         |\n| false start                                           | pass   |         |\n| consecutive                                           | pass   |         |\n| sublist at start                                      | pass   |         |\n| sublist in middle                                     | pass   |         |\n| sublist at end                                        | pass   |         |\n| at start of superlist                                 | pass   |         |\n| in middle of superlist                                | pass   |         |\n| at end of superlist                                   | pass   |         |\n| first list missing element from second list           | pass   |         |\n| second list missing element from first list           | pass   |         |\n| first list missing additional digits from second list | pass   |         |\n| order matters to a list                               | pass   |         |\n| same digits but different numbers                     | pass   |         |\n+-------------------------------------------------------+--------+---------+\n",
+    "stderr": "",
+    "total_canonical_cases": 18,
+    "passed_count": 18,
+    "failed_count": 0,
+    "pass_percentage": "100.0%",
+    "cases": [
+      {
+        "description": "empty lists",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "empty list within non empty list",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "non empty list contains empty list",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "list equals itself",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "different lists",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "false start",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "consecutive",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "sublist at start",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "sublist in middle",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "sublist at end",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "at start of superlist",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "in middle of superlist",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "at end of superlist",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "first list missing element from second list",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "second list missing element from first list",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "first list missing additional digits from second list",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "order matters to a list",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "same digits but different numbers",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      }
+    ]
+  },
+  "all_checks_passed": true
+}
