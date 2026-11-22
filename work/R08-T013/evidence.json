@@ -1,0 +1,45 @@
+{
+  "task_id": "R08-T013",
+  "timestamp": "2026-11-22T12:53:15.449740+00:00",
+  "environment": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "python_version": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "sqlite3_version": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  },
+  "git": {
+    "branch": "AtharvaShirke/e26b07f0671/R08-T013",
+    "commit": "a50c052449aa390c2fc725e28a4f9eb497f194b5"
+  },
+  "stub_verification": {
+    "file": "exercises/practice/yacht/yacht.sql",
+    "sha256_before": "744fcc1ecc5ca0c42d96ec61a326d3a45518a7dccd278bf2e61cf84e867e8a3a",
+    "sha256_after": "744fcc1ecc5ca0c42d96ec61a326d3a45518a7dccd278bf2e61cf84e867e8a3a",
+    "untouched": true
+  },
+  "pass_1_reference": {
+    "description": "Reference solution execution (.meta/example.sql)",
+    "total_tests": 29,
+    "passed_tests": 29,
+    "failed_tests": 0,
+    "status": "PASS"
+  },
+  "pass_2_mutant": {
+    "description": "Mutant solution (Full House allows 5-of-a-kind / Yacht)",
+    "total_tests": 29,
+    "passed_tests": 28,
+    "failed_tests": 1,
+    "designated_rejection": {
+      "uuid": "32a3f4ee-9142-4edf-ba70-6c0f96eb4b0c",
+      "test_name": "Yacht is not a full house",
+      "dice_results": "2, 2, 2, 2, 2",
+      "category": "full house",
+      "expected_score": 0,
+      "mutant_score": 10,
+      "error_message": "Result for 2, 2, 2, 2, 2 as full house is <10> but should be <0>",
+      "rejected": true
+    },
+    "status": "PASS"
+  },
+  "status": "PASS"
+}
