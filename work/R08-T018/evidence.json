@@ -1,0 +1,228 @@
+{
+  "task_id": "R08-T018",
+  "timestamp": "2026-11-22T13:50:57.072794+00:00",
+  "environment": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "python_version": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "sqlite3_version": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  },
+  "git": {
+    "branch": "AtharvaShirke/e26b07f0671/R08-T018",
+    "commit": "7c39ce62e89538a658866b92ec14e36a219acdf3"
+  },
+  "stub_verification": {
+    "file": "exercises/practice/matrix/matrix.sql",
+    "sha256_before": "6791ff90da1f76a9f10556f239aad8d640563a952a8cb3b6fadb16ebe98f256b",
+    "sha256_after": "6791ff90da1f76a9f10556f239aad8d640563a952a8cb3b6fadb16ebe98f256b",
+    "untouched": true
+  },
+  "course_check_validation": {
+    "status": "pass",
+    "exercise": "matrix",
+    "exercise_directory": "/Users/atharvaharishchandrashirkeformac/Desktop/sqlite/exercises/practice/matrix",
+    "configuration": {
+      "config_path": "/Users/atharvaharishchandrashirkeformac/Desktop/sqlite/exercises/practice/matrix/.meta/config.json",
+      "blurb": "Given a string representing a matrix of numbers, return the rows and columns of that matrix.",
+      "authors": [
+        "jimmytty"
+      ],
+      "verified_referenced_files": {
+        "solution:matrix.sql": {
+          "role": "solution",
+          "relative_path": "matrix.sql",
+          "absolute_path": "/Users/atharvaharishchandrashirkeformac/Desktop/sqlite/exercises/practice/matrix/matrix.sql",
+          "size_bytes": 479
+        },
+        "test:matrix_test.sql": {
+          "role": "test",
+          "relative_path": "matrix_test.sql",
+          "absolute_path": "/Users/atharvaharishchandrashirkeformac/Desktop/sqlite/exercises/practice/matrix/matrix_test.sql",
+          "size_bytes": 1582
+        },
+        "example:.meta/example.sql": {
+          "role": "example",
+          "relative_path": ".meta/example.sql",
+          "absolute_path": "/Users/atharvaharishchandrashirkeformac/Desktop/sqlite/exercises/practice/matrix/.meta/example.sql",
+          "size_bytes": 578
+        }
+      },
+      "verified_standard_assets": {
+        "create_fixture.sql": {
+          "exists": true,
+          "size_bytes": 308
+        },
+        "create_test_table.sql": {
+          "exists": true,
+          "size_bytes": 1966
+        },
+        "data.csv": {
+          "exists": true,
+          "size_bytes": 240
+        },
+        ".meta/tests.toml": {
+          "exists": true,
+          "size_bytes": 1293
+        },
+        ".docs/instructions.md": {
+          "exists": true,
+          "size_bytes": 632
+        }
+      }
+    },
+    "test_execution": {
+      "command": "sqlite3 -bail < matrix_test.sql",
+      "exit_code": 0,
+      "stdout": "+---------------------------------------------------------------------+--------+---------+\n|                             description                             | status | message |\n+---------------------------------------------------------------------+--------+---------+\n| extract row from one number matrix                                  | pass   |         |\n| can extract row                                                     | pass   |         |\n| extract row where numbers have different widths                     | pass   |         |\n| can extract row from non-square matrix with no corresponding column | pass   |         |\n| extract column from one number matrix                               | pass   |         |\n| can extract column                                                  | pass   |         |\n| can extract column from non-square matrix with no corresponding row | pass   |         |\n| extract column where numbers have different widths                  | pass   |         |\n+---------------------------------------------------------------------+--------+---------+\n",
+      "stderr": "",
+      "total_canonical_cases": 8,
+      "passed_count": 8,
+      "failed_count": 0,
+      "pass_percentage": "100.0%",
+      "cases": [
+        {
+          "description": "extract row from one number matrix",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "can extract row",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "extract row where numbers have different widths",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "can extract row from non-square matrix with no corresponding column",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "extract column from one number matrix",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "can extract column",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "can extract column from non-square matrix with no corresponding row",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        },
+        {
+          "description": "extract column where numbers have different widths",
+          "status": "pass",
+          "message": null,
+          "output": null,
+          "test_code": null,
+          "task_id": null
+        }
+      ]
+    }
+  },
+  "reference_implementation": {
+    "source_file": "exercises/practice/matrix/.meta/example.sql",
+    "command": "sqlite3 -bail < matrix_test.sql",
+    "exit_code": 0,
+    "stdout": "+---------------------------------------------------------------------+--------+---------+\n|                             description                             | status | message |\n+---------------------------------------------------------------------+--------+---------+\n| extract row from one number matrix                                  | pass   |         |\n| can extract row                                                     | pass   |         |\n| extract row where numbers have different widths                     | pass   |         |\n| can extract row from non-square matrix with no corresponding column | pass   |         |\n| extract column from one number matrix                               | pass   |         |\n| can extract column                                                  | pass   |         |\n| can extract column from non-square matrix with no corresponding row | pass   |         |\n| extract column where numbers have different widths                  | pass   |         |\n+---------------------------------------------------------------------+--------+---------+\n",
+    "stderr": "",
+    "total_canonical_cases": 8,
+    "passed_count": 8,
+    "failed_count": 0,
+    "pass_percentage": "100.0%",
+    "cases": [
+      {
+        "description": "extract row from one number matrix",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "can extract row",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "extract row where numbers have different widths",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "can extract row from non-square matrix with no corresponding column",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "extract column from one number matrix",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "can extract column",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "can extract column from non-square matrix with no corresponding row",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "extract column where numbers have different widths",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      }
+    ]
+  },
+  "all_checks_passed": true
+}
