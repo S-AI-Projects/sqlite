@@ -1,0 +1,187 @@
+{
+  "task_id": "R08-T014",
+  "timestamp": "2026-11-22T13:03:48.083972+00:00",
+  "environment": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "python_version": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "sqlite3_version": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  },
+  "git": {
+    "branch": "AtharvaShirke/e26b07f0671/R08-T014",
+    "commit": "fa37bd42884f4f01a74476434f8cd7d9ed22cfc2"
+  },
+  "stub_verification": {
+    "file": "exercises/practice/say/say.sql",
+    "sha256_before": "5cfd340e653ac15971750caa94f4d658e8cfcb17908ffff3a6e13ab36ad7307b",
+    "sha256_after": "5cfd340e653ac15971750caa94f4d658e8cfcb17908ffff3a6e13ab36ad7307b",
+    "untouched": true
+  },
+  "execution": {
+    "command": "sqlite3 -bail < say_test.sql",
+    "exit_code": 0,
+    "stdout": "+---------------------------------------------------+--------+---------+\n|                    description                    | status | message |\n+---------------------------------------------------+--------+---------+\n| zero                                              | pass   |         |\n| one                                               | pass   |         |\n| fourteen                                          | pass   |         |\n| twenty                                            | pass   |         |\n| twenty-two                                        | pass   |         |\n| thirty                                            | pass   |         |\n| ninety-nine                                       | pass   |         |\n| one hundred                                       | pass   |         |\n| one hundred twenty-three                          | pass   |         |\n| two hundred                                       | pass   |         |\n| nine hundred ninety-nine                          | pass   |         |\n| one thousand                                      | pass   |         |\n| one thousand two hundred thirty-four              | pass   |         |\n| one million                                       | pass   |         |\n| one million two thousand three hundred forty-five | pass   |         |\n| one billion                                       | pass   |         |\n| a big number                                      | pass   |         |\n| numbers below zero are out of range               | pass   |         |\n| numbers above 999,999,999,999 are out of range    | pass   |         |\n+---------------------------------------------------+--------+---------+\n",
+    "stderr": "./data.csv:1: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:2: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:3: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:4: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:5: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:6: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:7: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:8: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:9: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:10: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:11: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:12: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:13: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:14: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:15: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:16: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:17: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:18: expected 3 columns but found 2 - filling the rest with NULL\n./data.csv:19: expected 3 columns but found 2 - filling the rest with NULL\n"
+  },
+  "test_results": {
+    "total_canonical_cases": 19,
+    "passed_count": 19,
+    "failed_count": 0,
+    "pass_percentage": "100%",
+    "cases": [
+      {
+        "description": "zero",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "one",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "fourteen",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "twenty",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "twenty-two",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "thirty",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "ninety-nine",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "one hundred",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "one hundred twenty-three",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "two hundred",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "nine hundred ninety-nine",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "one thousand",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "one thousand two hundred thirty-four",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "one million",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "one million two thousand three hundred forty-five",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "one billion",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "a big number",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "numbers below zero are out of range",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "numbers above 999,999,999,999 are out of range",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      }
+    ]
+  },
+  "status": "PASS"
+}
