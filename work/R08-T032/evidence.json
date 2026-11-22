@@ -1,0 +1,221 @@
+{
+  "status": "success",
+  "exercise": "grains",
+  "sqlite_version": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)",
+  "python_version": "3.9.6 (default, May 22 2026, 11:13:45)  [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "generator_info": {
+    "track_generator": "bin/generate_tests",
+    "sync_tool": "bin/configlet sync --tests --exercise grains",
+    "ci_verifier": "bin/verify-exercises",
+    "test_runner": "sqlite3 -bail < grains_test.sql"
+  },
+  "canonical_cases_sources": {
+    "requirement_1_description": {
+      "requirement": "Recreate every description key/value pair",
+      "source": "canonical-data.json in problem-specifications (recreated by configlet sync)",
+      "status": "All 11 cases in tests.toml have description key/value pairs recreated from canonical data.",
+      "in_test_sql": "Appears as the 'name' column in INSERT INTO tests statements in grains_test.sql."
+    },
+    "requirement_2_reimplements": {
+      "requirement": "Recreate every reimplements key/value pair, where they exist in problem-specifications",
+      "source": "canonical-data.json in problem-specifications (recreated by configlet sync)",
+      "status": "Accurately documented: No test cases in Grains specify a 'reimplements' key in problem-specifications; 0 reimplements keys exist.",
+      "in_test_sql": "Not applicable because no cases are reimplemented."
+    },
+    "requirement_3_preserve_other": {
+      "requirement": "Preserve any other key/value pair",
+      "source": "Custom track-level test metadata in .meta/tests.toml",
+      "status": "Preserved: 3 error handling cases have 'include = false' and comment = 'error testing omitted on purpose' preserved by configlet sync.",
+      "in_test_sql": "Excluded from grains_test.sql because include = false."
+    }
+  },
+  "included_cases_count": 8,
+  "excluded_cases_count": 3,
+  "total_canonical_cases": 11,
+  "executed_test_count": 8,
+  "all_tests_passed": true,
+  "inputs_verified": [
+    {
+      "task": "single-square",
+      "square": 1
+    },
+    {
+      "task": "single-square",
+      "square": 2
+    },
+    {
+      "task": "single-square",
+      "square": 3
+    },
+    {
+      "task": "single-square",
+      "square": 4
+    },
+    {
+      "task": "single-square",
+      "square": 16
+    },
+    {
+      "task": "single-square",
+      "square": 32
+    },
+    {
+      "task": "single-square",
+      "square": 64
+    },
+    {
+      "task": "total",
+      "square": 0
+    }
+  ],
+  "test_results": [
+    {
+      "name": "grains on square 1",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "grains on square 2",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "grains on square 3",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "grains on square 4",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "grains on square 16",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "grains on square 32",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "grains on square 64",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    },
+    {
+      "name": "returns the total number of grains on the board",
+      "status": "pass",
+      "message": null,
+      "output": null,
+      "test_code": null,
+      "task_id": null
+    }
+  ],
+  "detailed_cases": [
+    {
+      "uuid": "9fbde8de-36b2-49de-baf2-cd42d6f28405",
+      "name": "grains on square 1",
+      "task": "single-square",
+      "square": 1,
+      "expected": 1,
+      "actual": 1,
+      "passed": 1
+    },
+    {
+      "uuid": "ee1f30c2-01d8-4298-b25d-c677331b5e6d",
+      "name": "grains on square 2",
+      "task": "single-square",
+      "square": 2,
+      "expected": 2,
+      "actual": 2,
+      "passed": 1
+    },
+    {
+      "uuid": "10f45584-2fc3-4875-8ec6-666065d1163b",
+      "name": "grains on square 3",
+      "task": "single-square",
+      "square": 3,
+      "expected": 4,
+      "actual": 4,
+      "passed": 1
+    },
+    {
+      "uuid": "a7cbe01b-36f4-4601-b053-c5f6ae055170",
+      "name": "grains on square 4",
+      "task": "single-square",
+      "square": 4,
+      "expected": 8,
+      "actual": 8,
+      "passed": 1
+    },
+    {
+      "uuid": "c50acc89-8535-44e4-918f-b848ad2817d4",
+      "name": "grains on square 16",
+      "task": "single-square",
+      "square": 16,
+      "expected": 32768,
+      "actual": 32768,
+      "passed": 1
+    },
+    {
+      "uuid": "acd81b46-c2ad-4951-b848-80d15ed5a04f",
+      "name": "grains on square 32",
+      "task": "single-square",
+      "square": 32,
+      "expected": 2147483648,
+      "actual": 2147483648,
+      "passed": 1
+    },
+    {
+      "uuid": "c73b470a-5efb-4d53-9ac6-c5f6487f227b",
+      "name": "grains on square 64",
+      "task": "single-square",
+      "square": 64,
+      "expected": 9.223372036854776e+18,
+      "actual": 9.223372036854776e+18,
+      "passed": 1
+    },
+    {
+      "uuid": "6eb07385-3659-4b45-a6be-9dc474222750",
+      "name": "returns the total number of grains on the board",
+      "task": "total",
+      "square": 0,
+      "expected": 1.8446744073709552e+19,
+      "actual": 1.8446744073709552e+19,
+      "passed": 1
+    }
+  ],
+  "reproducibility": {
+    "independent_runs": 2,
+    "identical": true,
+    "timestamp_normalized": false,
+    "timestamp_explanation": "No generated timestamp header present in grains_test.sql; files compared verbatim",
+    "cases_count_run1": 8,
+    "cases_count_run2": 8,
+    "no_cases_silently_dropped": true
+  },
+  "console_output": "+-------------------------------------------------+--------+---------+\n|                      name                       | status | message |\n+-------------------------------------------------+--------+---------+\n| grains on square 1                              | pass   |         |\n| grains on square 2                              | pass   |         |\n| grains on square 3                              | pass   |         |\n| grains on square 4                              | pass   |         |\n| grains on square 16                             | pass   |         |\n| grains on square 32                             | pass   |         |\n| grains on square 64                             | pass   |         |\n| returns the total number of grains on the board | pass   |         |\n+-------------------------------------------------+--------+---------+"
+}

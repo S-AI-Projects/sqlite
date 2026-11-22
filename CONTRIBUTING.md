@@ -17,6 +17,49 @@ sql-formatter --fix -l sqlite "$@"
 sed -i 's/^--T\././' "$@"
 ```
 
+## Test Maintenance and Canonical Test Synchronization
+
+Exercises in this repository are maintained and synchronized against Exercism's canonical problem specifications (`problem-specifications`).
+
+### 1. Synchronizing Canonical Test Cases (`configlet sync`)
+
+To synchronize an exercise's `.meta/tests.toml` against upstream canonical data:
+
+```bash
+./bin/fetch-configlet
+./bin/configlet sync --tests --exercise <slug>
+```
+
+When regenerating `.meta/tests.toml`, `configlet sync`:
+- **Recreates every `description` key/value pair** from canonical data in `problem-specifications/exercises/<slug>/canonical-data.json`.
+- **Recreates every `reimplements` key/value pair**, where they exist in `problem-specifications` (identifies superseded canonical tests). If no tests are reimplemented for an exercise (such as `grains`), no `reimplements` keys are created.
+- **Preserves any other key/value pair** present in `.meta/tests.toml` (e.g., track-specific exclusions like `include = false` and explanatory `comment = "..."` annotations).
+
+### 2. Test Generation (`bin/generate_tests`)
+
+To generate exercise test fixtures from templates:
+
+```bash
+./bin/generate_tests <slug>
+# Or without pulling updates to the local problem-specifications cache:
+./bin/generate_tests --no-pull <slug>
+```
+
+### 3. Generated vs. Manually Maintained Files
+
+The repository distinguishes between generated assets and manually maintained files:
+
+- **Generated files**:
+  - `.meta/tests.toml`: Synchronized via `bin/configlet sync --tests --exercise <slug>`.
+  - `data.csv`: Generated from `.meta/template.data.j2` by `bin/generate_tests <slug>`.
+  - `create_test_table.sql`: Generated from `.meta/template.create_test_table.j2` by `bin/generate_tests <slug>` (for exercises utilizing separate test table templates).
+- **Manually maintained files**:
+  - `<slug>_test.sql` (e.g., `exercises/practice/grains/grains_test.sql`): In exercises where test table creation, test inputs, and runner hooks are consolidated, `<slug>_test.sql` is maintained manually without a per-exercise Jinja template.
+  - `test_setup.sql`, `test_reporter.sql`, `create_fixture.sql`: Shared test harness components maintained manually.
+  - `<slug>.sql`: Student starter stub, maintained manually.
+  - `.meta/example.sql`: Track reference solution, maintained manually.
+  - `.meta/config.json`: Exercise metadata configuration.
+
 ## Creating a new exercise
 
 (These instructions may become the seed of a exercise-generate script.)
