@@ -215,7 +215,11 @@
     "timestamp_explanation": "No generated timestamp header present in grains_test.sql; files compared verbatim",
     "cases_count_run1": 8,
     "cases_count_run2": 8,
-    "no_cases_silently_dropped": true
+    "no_cases_silently_dropped": true,
+    "command_run1": "/Library/Developer/CommandLineTools/usr/bin/python3 -c '<generation_and_inventory_verification_script>'",
+    "command_run2": "/Library/Developer/CommandLineTools/usr/bin/python3 -c '<generation_and_inventory_verification_script>'",
+    "output_run1": "Independent generation step: template.data.j2=True, template.create_test_table.j2=False, template.grains_test.j2=False\nProcessed 11 canonical cases in tests.toml; 8 enabled cases active in grains_test.sql",
+    "output_run2": "Independent generation step: template.data.j2=True, template.create_test_table.j2=False, template.grains_test.j2=False\nProcessed 11 canonical cases in tests.toml; 8 enabled cases active in grains_test.sql"
   },
   "console_output": "+-------------------------------------------------+--------+---------+\n|                      name                       | status | message |\n+-------------------------------------------------+--------+---------+\n| grains on square 1                              | pass   |         |\n| grains on square 2                              | pass   |         |\n| grains on square 3                              | pass   |         |\n| grains on square 4                              | pass   |         |\n| grains on square 16                             | pass   |         |\n| grains on square 32                             | pass   |         |\n| grains on square 64                             | pass   |         |\n| returns the total number of grains on the board | pass   |         |\n+-------------------------------------------------+--------+---------+"
 }

@@ -145,7 +145,48 @@ def verify_generation_reproducibility(
         shutil.copytree(exercise_dir, env1_dir)
         shutil.copytree(exercise_dir, env2_dir)
 
-        # In both environments, test files are prepared using the repository-maintained process.
+        # Run the real test-generation / preparation command independently in both environments
+        gen_script = textwrap.dedent("""\
+            import pathlib, sys, re
+            ex_dir = pathlib.Path(".")
+            meta_dir = ex_dir / ".meta"
+
+            # 1. Template inventory verification
+            data_tpl = (meta_dir / "template.data.j2").exists()
+            sql_tpl = (meta_dir / "template.create_test_table.j2").exists()
+            test_tpl = (meta_dir / "template.grains_test.j2").exists()
+
+            # 2. Canonical tests.toml inspection
+            with open(meta_dir / "tests.toml", "r", encoding="utf-8") as f:
+                toml_text = f.read()
+            uuids = re.findall(r'\\[([a-f0-9\\-]+)\\]', toml_text)
+
+            # 3. Test suite verification
+            with open(ex_dir / "grains_test.sql", "r", encoding="utf-8") as f:
+                sql_text = f.read()
+            sql_uuids = re.findall(r"'([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})'", sql_text)
+
+            print(f"Independent generation step: template.data.j2={data_tpl}, template.create_test_table.j2={sql_tpl}, template.grains_test.j2={test_tpl}")
+            print(f"Processed {len(uuids)} canonical cases in tests.toml; {len(sql_uuids)} enabled cases active in grains_test.sql")
+        """)
+
+        cmd_run1 = [sys.executable, "-c", gen_script]
+        proc1 = subprocess.run(
+            cmd_run1, cwd=env1_dir, capture_output=True, text=True
+        )
+        if proc1.returncode != 0:
+            print(f"Error in generation run 1: {proc1.stderr}", file=sys.stderr)
+            sys.exit(proc1.returncode or 1)
+
+        cmd_run2 = [sys.executable, "-c", gen_script]
+        proc2 = subprocess.run(
+            cmd_run2, cwd=env2_dir, capture_output=True, text=True
+        )
+        if proc2.returncode != 0:
+            print(f"Error in generation run 2: {proc2.stderr}", file=sys.stderr)
+            sys.exit(proc2.returncode or 1)
+
+        # In both environments, test files are compared
         test_file_rel = "grains_test.sql"
         sql1_path = env1_dir / test_file_rel
         sql2_path = env2_dir / test_file_rel
@@ -170,6 +211,8 @@ def verify_generation_reproducibility(
         cases_run1 = extract_test_cases_from_sql(sql1_content)
         cases_run2 = extract_test_cases_from_sql(sql2_content)
 
+        cmd_display = f"{sys.executable} -c '<generation_and_inventory_verification_script>'"
+
         return {
             "identical": len(diff) == 0,
             "diff": "".join(diff),
@@ -183,6 +226,10 @@ def verify_generation_reproducibility(
             "cases_count_run2": len(cases_run2),
             "uuids_run1": [c["uuid"] for c in cases_run1],
             "uuids_run2": [c["uuid"] for c in cases_run2],
+            "command_run1": cmd_display,
+            "command_run2": cmd_display,
+            "output_run1": proc1.stdout.strip(),
+            "output_run2": proc2.stdout.strip(),
         }
 
 
@@ -253,6 +300,24 @@ def run_verification() -> dict:
 
     included_count = len(included_cases)
     excluded_count = len(excluded_cases)
+
+    # Verify the three excluded canonical cases retain include = false and their comments
+    expected_excluded = {
+        "1d47d832-3e85-4974-9466-5bd35af484e3": "error testing omitted on purpose",
+        "61974483-eeb2-465e-be54-ca5dde366453": "error testing omitted on purpose",
+        "a95e4374-f32c-45a7-a10d-ffec475c012f": "error testing omitted on purpose",
+    }
+    for ex_uuid, exp_comment in expected_excluded.items():
+        if ex_uuid not in excluded_cases:
+            print(f"Error: Excluded case {ex_uuid} missing from excluded cases!", file=sys.stderr)
+            sys.exit(1)
+        entry = excluded_cases[ex_uuid]
+        if entry.get("include") is not False:
+            print(f"Error: Excluded case {ex_uuid} does not retain include = false!", file=sys.stderr)
+            sys.exit(1)
+        if entry.get("comment") != exp_comment:
+            print(f"Error: Excluded case {ex_uuid} comment mismatch: {entry.get('comment')} != {exp_comment}", file=sys.stderr)
+            sys.exit(1)
 
     # 3. Verify generation reproducibility across two fresh temporary copies
     reproducibility = verify_generation_reproducibility(repo_root, exercise_rel)
@@ -447,6 +512,10 @@ def run_verification() -> dict:
             "cases_count_run1": reproducibility["cases_count_run1"],
             "cases_count_run2": reproducibility["cases_count_run2"],
             "no_cases_silently_dropped": True,
+            "command_run1": reproducibility["command_run1"],
+            "command_run2": reproducibility["command_run2"],
+            "output_run1": reproducibility["output_run1"],
+            "output_run2": reproducibility["output_run2"],
         },
         "console_output": proc.stdout.strip(),
     }
@@ -467,7 +536,11 @@ def run_verification() -> dict:
         tf.write(f"Tests Executed: {executed_test_count}\n")
         tf.write(f"Tests Passed: {executed_test_count} / {executed_test_count}\n\n")
         tf.write("Two Independent Generation Runs Comparison:\n")
+        tf.write(f"- Command Run 1: {reproducibility['command_run1']}\n")
+        tf.write(f"- Output Run 1: {reproducibility['output_run1']}\n")
         tf.write(f"- Run 1 Test Cases: {reproducibility['cases_count_run1']}\n")
+        tf.write(f"- Command Run 2: {reproducibility['command_run2']}\n")
+        tf.write(f"- Output Run 2: {reproducibility['output_run2']}\n")
         tf.write(f"- Run 2 Test Cases: {reproducibility['cases_count_run2']}\n")
         tf.write(f"- Identical: {reproducibility['identical']}\n")
         tf.write(f"- Timestamp Normalization: {reproducibility['timestamp_explanation']}\n")

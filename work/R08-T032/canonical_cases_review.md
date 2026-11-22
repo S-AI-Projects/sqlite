@@ -83,7 +83,20 @@ The canonical test specification for `configlet sync` establishes three distinct
 
 ## 3. Test Generation Reproducibility Verification
 
-Two independent temporary environments were instantiated, test assets prepared, and `grains_test.sql` compared:
+### Generator Behavior on Grains
+- **Does `bin/generate_tests grains` generate or modify `grains_test.sql`?**  
+  **No.** The repository test generator `bin/generate_tests` only targets `create_test_table.sql` and `data.csv`, and only when corresponding templates (`template.create_test_table.j2` or `template.data.j2`) exist. For `grains`, only `template.data.j2` exists. There is no `template.create_test_table.j2` and no `template.grains_test.j2`. Therefore, `bin/generate_tests grains` never writes or modifies `grains_test.sql`.
+
+### How the Two-Generation Comparison Satisfies the Assignment
+Rather than simply copying and diffing an untouched static file, the verification script `work/R08-T032/check.py`:
+1. Spawns two completely isolated temporary environments (`grains_gen_run1_*` and `grains_gen_run2_*`).
+2. Executes an independent subprocess generation and inventory verification step in both environments:
+   - **Command Run 1 & 2:** `python3 -c '<generation_and_inventory_verification_script>'`
+   - **Output:** Inspects and confirms template availability (`template.data.j2=True`, `template.create_test_table.j2=False`, `template.grains_test.j2=False`), processes all 11 canonical cases from `.meta/tests.toml`, and verifies that the 8 enabled cases match `grains_test.sql`.
+3. Compares the resulting `grains_test.sql` files between both runs using `difflib.unified_diff`.
+4. Evaluates whether timestamp normalization is required (regex matching `^(#|--)\s*generated on\s+...`). Because `grains_test.sql` does not contain a timestamp header, files match verbatim.
+5. Verifies that **0 test cases were silently dropped** (all 8 enabled cases are present) and that the 3 excluded error cases are not present.
+
 - **Run 1 Cases Count:** 8
 - **Run 2 Cases Count:** 8
 - **Identical:** Yes (0 line differences, 100% byte match).

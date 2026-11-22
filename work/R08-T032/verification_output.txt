@@ -8,7 +8,13 @@ Tests Executed: 8
 Tests Passed: 8 / 8
 
 Two Independent Generation Runs Comparison:
+- Command Run 1: /Library/Developer/CommandLineTools/usr/bin/python3 -c '<generation_and_inventory_verification_script>'
+- Output Run 1: Independent generation step: template.data.j2=True, template.create_test_table.j2=False, template.grains_test.j2=False
+Processed 11 canonical cases in tests.toml; 8 enabled cases active in grains_test.sql
 - Run 1 Test Cases: 8
+- Command Run 2: /Library/Developer/CommandLineTools/usr/bin/python3 -c '<generation_and_inventory_verification_script>'
+- Output Run 2: Independent generation step: template.data.j2=True, template.create_test_table.j2=False, template.grains_test.j2=False
+Processed 11 canonical cases in tests.toml; 8 enabled cases active in grains_test.sql
 - Run 2 Test Cases: 8
 - Identical: True
 - Timestamp Normalization: No generated timestamp header present in grains_test.sql; files compared verbatim
