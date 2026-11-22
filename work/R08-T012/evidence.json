@@ -1,0 +1,128 @@
+{
+  "task_id": "R08-T012",
+  "timestamp": "2026-11-22T12:39:51.740037+00:00",
+  "environment": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "python_version": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "sqlite3_version": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  },
+  "git": {
+    "branch": "AtharvaShirke/e26b07f0671/R08-T012",
+    "commit": "b59a829262710705ffa66203df4845b10cdb99fb"
+  },
+  "runner_check": {
+    "script": "tools/course_checks/r08-t012.py",
+    "exit_code": 0,
+    "status": "PASS",
+    "consistency_active_cases": 11
+  },
+  "stub_verification": {
+    "file": "exercises/practice/secret-handshake/secret-handshake.sql",
+    "sha256_before": "52e1939049021c35ebb28ce1e1e82d56071b1c2ad04a4c45a168bbc7700552a8",
+    "sha256_after": "52e1939049021c35ebb28ce1e1e82d56071b1c2ad04a4c45a168bbc7700552a8",
+    "untouched": true
+  },
+  "execution": {
+    "command": "sqlite3 -bail < secret-handshake_test.sql",
+    "exit_code": 0,
+    "stdout": "+---------------------------------------------+--------+---------+\n|                 description                 | status | message |\n+---------------------------------------------+--------+---------+\n| wink for 1                                  | pass   |         |\n| double blink for 10                         | pass   |         |\n| close your eyes for 100                     | pass   |         |\n| jump for 1000                               | pass   |         |\n| combine two actions                         | pass   |         |\n| reverse two actions                         | pass   |         |\n| reversing one action gives the same action  | pass   |         |\n| reversing no actions still gives no actions | pass   |         |\n| all possible actions                        | pass   |         |\n| reverse all possible actions                | pass   |         |\n| do nothing for zero                         | pass   |         |\n+---------------------------------------------+--------+---------+\n",
+    "stderr": ""
+  },
+  "test_results": {
+    "total_canonical_cases": 11,
+    "passed_count": 11,
+    "failed_count": 0,
+    "cases": [
+      {
+        "description": "wink for 1",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "double blink for 10",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "close your eyes for 100",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "jump for 1000",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "combine two actions",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "reverse two actions",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "reversing one action gives the same action",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "reversing no actions still gives no actions",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "all possible actions",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "reverse all possible actions",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "do nothing for zero",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      }
+    ]
+  },
+  "status": "PASS"
+}
