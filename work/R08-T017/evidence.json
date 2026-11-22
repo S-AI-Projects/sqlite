@@ -1,0 +1,138 @@
+{
+  "task_id": "R08-T017",
+  "timestamp": "2026-11-22T13:45:18.194790+00:00",
+  "environment": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "python_version": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "sqlite3_version": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  },
+  "git": {
+    "branch": "AtharvaShirke/e26b07f0671/R08-T017",
+    "commit": "229165d2582b60b45c0400af11acd87cdfd552fc"
+  },
+  "stub_verification": {
+    "file": "exercises/practice/queen-attack/queen-attack.sql",
+    "sha256_before": "9e479da77f765c64da7c7cf82b9b335e11e74c0a4deb1d9e5e26958038e3dfe4",
+    "sha256_after": "9e479da77f765c64da7c7cf82b9b335e11e74c0a4deb1d9e5e26958038e3dfe4",
+    "untouched": true
+  },
+  "reference_implementation": {
+    "source_file": "exercises/practice/queen-attack/.meta/example.sql",
+    "command": "sqlite3 -bail < queen-attack_test.sql",
+    "exit_code": 0,
+    "stdout": "+---------------------------------------------------------------------------------------------------------+--------+---------+\n|                                               description                                               | status | message |\n+---------------------------------------------------------------------------------------------------------+--------+---------+\n| queen with a valid position                                                                             | pass   |         |\n| queen must have positive row                                                                            | pass   |         |\n| queen must have row on board                                                                            | pass   |         |\n| queen must have positive column                                                                         | pass   |         |\n| queen must have column on board                                                                         | pass   |         |\n| cannot attack                                                                                           | pass   |         |\n| can attack on same row                                                                                  | pass   |         |\n| can attack on same column                                                                               | pass   |         |\n| can attack on first diagonal                                                                            | pass   |         |\n| can attack on second diagonal                                                                           | pass   |         |\n| can attack on third diagonal                                                                            | pass   |         |\n| can attack on fourth diagonal                                                                           | pass   |         |\n| cannot attack if falling diagonals are only the same when reflected across the longest falling diagonal | pass   |         |\n+---------------------------------------------------------------------------------------------------------+--------+---------+\n",
+    "stderr": "",
+    "total_canonical_cases": 13,
+    "passed_count": 13,
+    "failed_count": 0,
+    "pass_percentage": "100.0%",
+    "cases": [
+      {
+        "description": "queen with a valid position",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "queen must have positive row",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "queen must have row on board",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "queen must have positive column",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "queen must have column on board",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "cannot attack",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "can attack on same row",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "can attack on same column",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "can attack on first diagonal",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "can attack on second diagonal",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "can attack on third diagonal",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "can attack on fourth diagonal",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "description": "cannot attack if falling diagonals are only the same when reflected across the longest falling diagonal",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      }
+    ]
+  },
+  "all_checks_passed": true
+}
