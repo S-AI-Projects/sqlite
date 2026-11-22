@@ -1,0 +1,197 @@
+{
+  "task_id": "R08-T015",
+  "timestamp": "2026-11-22T13:17:28.105061+00:00",
+  "environment": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "python_version": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "sqlite3_version": "3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)"
+  },
+  "git": {
+    "branch": "AtharvaShirke/e26b07f0671/R08-T015",
+    "commit": "fe654f33ab976de7447a65426152515ce60bd669"
+  },
+  "stub_verification": {
+    "file": "exercises/practice/difference-of-squares/difference-of-squares.sql",
+    "sha256_before": "40e1b49cd3ea4cafd88a6b936a51fe0b91b1b943e3a215c446f7f0931a26c70b",
+    "sha256_after": "40e1b49cd3ea4cafd88a6b936a51fe0b91b1b943e3a215c446f7f0931a26c70b",
+    "untouched": true
+  },
+  "execution": {
+    "command": "sqlite3 -bail < difference-of-squares_test.sql",
+    "exit_code": 0,
+    "stdout": "+---------------------------+--------+---------+\n|           name            | status | message |\n+---------------------------+--------+---------+\n| square of sum 1           | pass   |         |\n| square of sum 5           | pass   |         |\n| square of sum 100         | pass   |         |\n| sum of squares 1          | pass   |         |\n| sum of squares 5          | pass   |         |\n| sum of squares 100        | pass   |         |\n| difference of squares 1   | pass   |         |\n| difference of squares 5   | pass   |         |\n| difference of squares 100 | pass   |         |\n+---------------------------+--------+---------+\n",
+    "stderr": ""
+  },
+  "test_results": {
+    "total_canonical_cases": 9,
+    "passed_count": 9,
+    "failed_count": 0,
+    "pass_percentage": "100%",
+    "cases": [
+      {
+        "name": "square of sum 1",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "square of sum 5",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "square of sum 100",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "sum of squares 1",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "sum of squares 5",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "sum of squares 100",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "difference of squares 1",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "difference of squares 5",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      },
+      {
+        "name": "difference of squares 100",
+        "status": "pass",
+        "message": null,
+        "output": null,
+        "test_code": null,
+        "task_id": null
+      }
+    ]
+  },
+  "statement_cost_measurements": {
+    "complexity": "O(1) time, O(1) space",
+    "sizes": {
+      "n=1": {
+        "squareOfSum": {
+          "n": 1,
+          "property": "squareOfSum",
+          "result": 1,
+          "vdbe_opcode_count": 17,
+          "complexity_class": "O(1)",
+          "avg_execution_time_us": 0.6711
+        },
+        "sumOfSquares": {
+          "n": 1,
+          "property": "sumOfSquares",
+          "result": 1,
+          "vdbe_opcode_count": 17,
+          "complexity_class": "O(1)",
+          "avg_execution_time_us": 0.683
+        },
+        "differenceOfSquares": {
+          "n": 1,
+          "property": "differenceOfSquares",
+          "result": 0,
+          "vdbe_opcode_count": 21,
+          "complexity_class": "O(1)",
+          "avg_execution_time_us": 0.6985
+        }
+      },
+      "n=5": {
+        "squareOfSum": {
+          "n": 5,
+          "property": "squareOfSum",
+          "result": 225,
+          "vdbe_opcode_count": 17,
+          "complexity_class": "O(1)",
+          "avg_execution_time_us": 0.6622
+        },
+        "sumOfSquares": {
+          "n": 5,
+          "property": "sumOfSquares",
+          "result": 55,
+          "vdbe_opcode_count": 17,
+          "complexity_class": "O(1)",
+          "avg_execution_time_us": 0.6779
+        },
+        "differenceOfSquares": {
+          "n": 5,
+          "property": "differenceOfSquares",
+          "result": 170,
+          "vdbe_opcode_count": 21,
+          "complexity_class": "O(1)",
+          "avg_execution_time_us": 0.6872
+        }
+      },
+      "n=100": {
+        "squareOfSum": {
+          "n": 100,
+          "property": "squareOfSum",
+          "result": 25502500,
+          "vdbe_opcode_count": 17,
+          "complexity_class": "O(1)",
+          "avg_execution_time_us": 0.6804
+        },
+        "sumOfSquares": {
+          "n": 100,
+          "property": "sumOfSquares",
+          "result": 338350,
+          "vdbe_opcode_count": 17,
+          "complexity_class": "O(1)",
+          "avg_execution_time_us": 0.6764
+        },
+        "differenceOfSquares": {
+          "n": 100,
+          "property": "differenceOfSquares",
+          "result": 25164150,
+          "vdbe_opcode_count": 21,
+          "complexity_class": "O(1)",
+          "avg_execution_time_us": 0.695
+        }
+      }
+    },
+    "overflow_thresholds": {
+      "sqlite_integer_type": "64-bit signed integer (INT64)",
+      "int64_max": "9,223,372,036,854,775,807",
+      "squareOfSum_max_n": 55108,
+      "sumOfSquares_max_n": 1664510,
+      "differenceOfSquares_max_n": 41876
+    }
+  },
+  "status": "PASS"
+}
