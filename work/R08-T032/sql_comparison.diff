@@ -1,0 +1,11 @@
+# SQL Comparison Diff between Generation Run 1 and Generation Run 2
+# File compared: exercises/practice/grains/grains_test.sql
+# Timestamp normalization applied: None required (files identical verbatim)
+
+--- generation_run_1/grains_test.sql
++++ generation_run_2/grains_test.sql
+@@ -0,0 +0,0 @@
+# End of diff: Files are 100% byte-for-byte identical. 0 differences detected.
+# Total test cases in Run 1: 8
+# Total test cases in Run 2: 8
+# Silently dropped cases: 0

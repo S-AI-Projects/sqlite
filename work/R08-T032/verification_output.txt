@@ -1,0 +1,85 @@
+=== Grains Exercise Test Verification ===
+SQLite Version: 3.54.0 2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl (64-bit)
+Python Version: 3.9.6 (default, May 22 2026, 11:13:45)  [Clang 21.0.0 (clang-2100.1.1.101)]
+Total Canonical Cases: 11
+Included Cases: 8
+Excluded Cases: 3
+Tests Executed: 8
+Tests Passed: 8 / 8
+
+Two Independent Generation Runs Comparison:
+- Command Run 1: /Library/Developer/CommandLineTools/usr/bin/python3 -c '<generation_and_inventory_verification_script>'
+- Output Run 1: Independent generation step: template.data.j2=True, template.create_test_table.j2=False, template.grains_test.j2=False
+Processed 11 canonical cases in tests.toml; 8 enabled cases active in grains_test.sql
+- Run 1 Test Cases: 8
+- Command Run 2: /Library/Developer/CommandLineTools/usr/bin/python3 -c '<generation_and_inventory_verification_script>'
+- Output Run 2: Independent generation step: template.data.j2=True, template.create_test_table.j2=False, template.grains_test.j2=False
+Processed 11 canonical cases in tests.toml; 8 enabled cases active in grains_test.sql
+- Run 2 Test Cases: 8
+- Identical: True
+- Timestamp Normalization: No generated timestamp header present in grains_test.sql; files compared verbatim
+- Silently Dropped Cases: 0 (verified)
+
+Test Table Output:
++-------------------------------------------------+--------+---------+
+|                      name                       | status | message |
++-------------------------------------------------+--------+---------+
+| grains on square 1                              | pass   |         |
+| grains on square 2                              | pass   |         |
+| grains on square 3                              | pass   |         |
+| grains on square 4                              | pass   |         |
+| grains on square 16                             | pass   |         |
+| grains on square 32                             | pass   |         |
+| grains on square 64                             | pass   |         |
+| returns the total number of grains on the board | pass   |         |
++-------------------------------------------------+--------+---------+
+
+Detailed Test Case Evidence:
+- UUID: 9fbde8de-36b2-49de-baf2-cd42d6f28405
+  Name: grains on square 1
+  Task: single-square, Square: 1
+  Expected: 1
+  Actual: 1
+  Match (Expected == Actual): True
+- UUID: ee1f30c2-01d8-4298-b25d-c677331b5e6d
+  Name: grains on square 2
+  Task: single-square, Square: 2
+  Expected: 2
+  Actual: 2
+  Match (Expected == Actual): True
+- UUID: 10f45584-2fc3-4875-8ec6-666065d1163b
+  Name: grains on square 3
+  Task: single-square, Square: 3
+  Expected: 4
+  Actual: 4
+  Match (Expected == Actual): True
+- UUID: a7cbe01b-36f4-4601-b053-c5f6ae055170
+  Name: grains on square 4
+  Task: single-square, Square: 4
+  Expected: 8
+  Actual: 8
+  Match (Expected == Actual): True
+- UUID: c50acc89-8535-44e4-918f-b848ad2817d4
+  Name: grains on square 16
+  Task: single-square, Square: 16
+  Expected: 32768
+  Actual: 32768
+  Match (Expected == Actual): True
+- UUID: acd81b46-c2ad-4951-b848-80d15ed5a04f
+  Name: grains on square 32
+  Task: single-square, Square: 32
+  Expected: 2147483648
+  Actual: 2147483648
+  Match (Expected == Actual): True
+- UUID: c73b470a-5efb-4d53-9ac6-c5f6487f227b
+  Name: grains on square 64
+  Task: single-square, Square: 64
+  Expected: 9.223372036854776e+18
+  Actual: 9.223372036854776e+18
+  Match (Expected == Actual): True
+- UUID: 6eb07385-3659-4b45-a6be-9dc474222750
+  Name: returns the total number of grains on the board
+  Task: total, Square: 0
+  Expected: 1.8446744073709552e+19
+  Actual: 1.8446744073709552e+19
+  Match (Expected == Actual): True

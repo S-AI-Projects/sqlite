@@ -32,3 +32,11 @@ Here is an overview of what it does.
 4. Populates the test results based on the data in the table(s) updated by the solution.
 5. Displays test results (pass or fail and optional details).
 These CSV files contain the necessary data for testing various scenarios.
+
+## Test Maintenance and Canonical Synchronization
+
+For track maintainers:
+- Canonical test metadata is synchronized from `problem-specifications` via `bin/configlet sync --tests --exercise <slug>`. This recreates every `description` key/value pair, recreates every `reimplements` key/value pair where present in problem specifications, and preserves any other custom key/value pairs (such as `include = false` and `comment`).
+- Test fixtures (`data.csv` and `create_test_table.sql`) are generated using `bin/generate_tests <slug>`.
+- In exercises without Jinja test templates (such as `grains`), `<slug>_test.sql` is maintained manually.
+For complete maintenance instructions, see [CONTRIBUTING.md](../CONTRIBUTING.md).
