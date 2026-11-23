@@ -15,7 +15,8 @@ SET
         SELECT
           (
             WITH
-              remove_vowels (word, no_vowel) AS (
+              -- vowel_mask holds the word with each vowel replaced by a newline (CHAR(10)) to locate the first vowel
+    remove_vowels (word, vowel_mask) AS (
                 SELECT
                   word,
                   REPLACE(
@@ -49,8 +50,8 @@ SET
                 )
                 WHEN GLOB('[bcdfghjklmnpqrstvwxyz]*', word) THEN PRINTF(
                   '%s%say',
-                  SUBSTR(word, INSTR(no_vowel, CHAR(10))),
-                  SUBSTR(word, 1, INSTR(no_vowel, CHAR(10)) - 1)
+                  SUBSTR(word, INSTR(vowel_mask, CHAR(10))),
+                  SUBSTR(word, 1, INSTR(vowel_mask, CHAR(10)) - 1)
                 )
               END
             FROM

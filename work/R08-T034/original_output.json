@@ -1,0 +1,186 @@
+[
+  {
+    "description": "word beginning with a",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with e",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with i",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with o",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with u",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with a vowel and followed by a qu",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with p",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with k",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with x",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with q without a following u",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with consonant and vowel containing qu",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with ch",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with qu",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with qu and a preceding consonant",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with th",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with thr",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with sch",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with yt",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "word beginning with xr",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "y is treated like a consonant at the beginning of a word",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "y is treated like a vowel at the end of a consonant cluster",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "y as second letter in two letter word",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "a whole phrase",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  }
+]
