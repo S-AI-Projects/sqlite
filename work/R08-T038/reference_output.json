@@ -1,0 +1,11 @@
+[{"description":"lowercase letter","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
+{"description":"uppercase letter","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
+{"description":"valuable letter","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
+{"description":"short word","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
+{"description":"short, valuable word","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
+{"description":"medium word","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
+{"description":"medium, valuable word","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
+{"description":"long, mixed-case word","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
+{"description":"english-like word","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
+{"description":"empty input","status":"pass","message":null,"output":null,"test_code":null,"task_id":null},
+{"description":"entire alphabet available","status":"pass","message":null,"output":null,"test_code":null,"task_id":null}]
