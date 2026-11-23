@@ -1,0 +1,90 @@
+[
+  {
+    "description": "empty",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "no nesting",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "flattens a nested array",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "flattens array with just integers present",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "5 level nesting",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "6 level nesting",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "null values are omitted from the final result",
+    "status": "fail",
+    "message": "Result for \"[1,2,null]\" is <[1,2,null]> but should be <[1,2]>",
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "consecutive null values at the front of the array are omitted from the final result",
+    "status": "fail",
+    "message": "Result for \"[null,null,3]\" is <[null,null,3]> but should be <[3]>",
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "consecutive null values in the middle of the array are omitted from the final result",
+    "status": "fail",
+    "message": "Result for \"[1,null,null,4]\" is <[1,null,null,4]> but should be <[1,4]>",
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "6 level nested array with null values",
+    "status": "fail",
+    "message": "Result for \"[0,2,[[2,3],8,[[100]],null,[[null]]],-2]\" is <[0,2,2,3,8,100,null,null,-2]> but should be <[0,2,2,3,8,100,-2]>",
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "all values in nested array are null",
+    "status": "fail",
+    "message": "Result for \"[null,[[[null]]],null,null,[[null,null],null],null]\" is <[null,null,null,null,null,null,null,null]> but should be <[]>",
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  }
+]
