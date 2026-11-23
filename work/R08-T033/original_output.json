@@ -1,0 +1,90 @@
+[
+  {
+    "description": "empty",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "no nesting",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "flattens a nested array",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "flattens array with just integers present",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "5 level nesting",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "6 level nesting",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "null values are omitted from the final result",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "consecutive null values at the front of the array are omitted from the final result",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "consecutive null values in the middle of the array are omitted from the final result",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "6 level nested array with null values",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  },
+  {
+    "description": "all values in nested array are null",
+    "status": "pass",
+    "message": null,
+    "output": null,
+    "test_code": null,
+    "task_id": null
+  }
+]
